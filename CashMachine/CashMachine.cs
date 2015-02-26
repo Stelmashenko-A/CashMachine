@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+
 namespace CashMachine
 {
     class CashMachine
@@ -20,8 +21,8 @@ namespace CashMachine
             }
             string[] strArray = data.Split(' ');
             Container = new Dictionary<int, int>();
-            NumberOfPars = strArray.Length/2;
-            for(int i = 0; i < NumberOfPars; i++)
+            NumberOfPars = strArray.Length / 2;
+            for (int i = 0; i < NumberOfPars; i++)
             {
                 int par = int.Parse(strArray[i * 2]);
                 int num = int.Parse(strArray[i * 2 + 1]);
@@ -29,7 +30,9 @@ namespace CashMachine
                 Container.Add(par, num);
             }
         }
+
         Dictionary<int, int> Container { get; set; }
+
         int TotalAmountOfMoney;
 
         int NumberOfPars { get; set; }
@@ -37,28 +40,43 @@ namespace CashMachine
         public CashBack GetMoney(int Amount)
         {
             CashBack cashBack = new CashBack(Container.Keys.ToList());
+            if (TotalAmountOfMoney == 0)
+            {
+                cashBack.Result = States.IsEmpty;
+                return cashBack;
+            }
+            if (Amount > TotalAmountOfMoney)
+            {
+                cashBack.Result = States.MoneyDeficiency;
+                return cashBack;
+            }
             GenerateCashBack(Amount, cashBack, 0, 0);
             return cashBack;
         }
 
-        
-        States GenerateCashBack(int Amount, CashBack cashBack, int RecursionLevel, int BankNotes)
+        void GenerateCashBack(int Amount, CashBack cashBack, int RecursionLevel, int BankNotes)
         {
 
             int CurrentParPosition = RecursionLevel;
             int CurrentPar = Container.Keys.ElementAt(CurrentParPosition);
+
             int Remainder = Amount % CurrentPar;
-            if (BankNotes == 0 && Amount % CurrentPar != 0 && RecursionLevel == NumberOfPars-1)
+            if(Amount/CurrentPar > Container[CurrentPar])
             {
-                return States.AllCombinationsFailed;
+                Remainder = Amount - Container[CurrentPar] * CurrentPar;
+            }
+            if (RecursionLevel == NumberOfPars - 1 && BankNotes == 0 && ((Amount % CurrentPar) != 0 || ((Amount / CurrentPar) > Container[CurrentPar])))
+            {
+                cashBack.Result = States.AllCombinationsFailed;
+                return;
             }
 
-            cashBack.Value[CurrentPar] = Amount / CurrentPar;
-            BankNotes += Amount / CurrentPar;
+            cashBack.Value[CurrentPar] = Math.Min(Amount / CurrentPar, Container[CurrentPar]);
+            BankNotes += cashBack.Value[CurrentPar];
             if (Remainder == 0)
             {
-
-                return States.OK;
+                cashBack.Result = States.OK;
+                return;
             }
             RecursionLevel++;
             cashBack.Result = States.CombinationFailed;
@@ -67,7 +85,7 @@ namespace CashMachine
                 cashBack.Result = States.NULL;
                 while (cashBack.Result != States.OK && cashBack.Result != States.AllCombinationsFailed)
                 {
-                    cashBack.Result = GenerateCashBack(Remainder, cashBack, RecursionLevel, BankNotes);
+                    GenerateCashBack(Remainder, cashBack, RecursionLevel, BankNotes);
                     if (cashBack.Result == States.CombinationFailed)
                     {
                         if (cashBack.Value[CurrentPar] > 0)
@@ -78,13 +96,13 @@ namespace CashMachine
                         }
                         else
                         {
-                            return cashBack.Result;
+                            return;
                         }
                     }
                 }
             }
 
-            return cashBack.Result;
+            return;
         }
     }
 }

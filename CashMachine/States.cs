@@ -12,6 +12,7 @@ namespace CashMachine
         IsEmpty,
         CombinationFailed,
         AllCombinationsFailed,
+        MoneyDeficiency,
         NULL
 
     }
