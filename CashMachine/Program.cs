@@ -10,6 +10,13 @@ namespace CashMachine
     {
         static void Main(string[] args)
         {
+            CashMachine cashMachine = new CashMachine();
+            CashBack cashBack = cashMachine.GetMoney(300000000);
+            if(cashBack.Result == States.OK)
+            {
+                Console.WriteLine("ok");
+            }
+            Console.ReadKey();
         }
     }
 }

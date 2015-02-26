@@ -7,3 +7,6 @@ C:\Users\Андрей\Desktop\twitter\CashMachine\CashMachine\obj\Debug\CashMach
 C:\Users\Андрей\Documents\GitHubLabs\CashMachine\CashMachine\bin\Debug\CashMachine.exe.config
 C:\Users\Андрей\Documents\GitHubLabs\CashMachine\CashMachine\obj\Debug\CashMachine.exe
 C:\Users\Андрей\Documents\GitHubLabs\CashMachine\CashMachine\obj\Debug\CashMachine.pdb
+C:\Users\Андрей\Documents\GitHubLabs\CashMachine\CashMachine\bin\Debug\CashMachine.exe
+C:\Users\Андрей\Documents\GitHubLabs\CashMachine\CashMachine\bin\Debug\CashMachine.pdb
+C:\Users\Андрей\Documents\GitHubLabs\CashMachine\CashMachine\obj\Debug\CashMachine.csprojResolveAssemblyReference.cache
