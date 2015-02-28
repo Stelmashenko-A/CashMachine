@@ -15,12 +15,9 @@ namespace CashMachine
             {
                 Value.Add(par, 0);
             }
-
         }
-
         public States Result { get; set; }
         public Dictionary<int, int> Value { get; set; }
-
         public override string ToString()
         {
             var sb = new StringBuilder();
