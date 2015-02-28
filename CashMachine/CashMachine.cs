@@ -51,9 +51,13 @@ namespace CashMachine
                 return cashBack;
             }
             GenerateCashBack(Amount, cashBack, 0, 0);
-            foreach (var variable in cashBack.Value.Keys)
+            if (cashBack.Result == States.OK)
             {
-                Container[variable] -= cashBack.Value[variable];
+                foreach (var variable in cashBack.Value.Keys)
+                {
+                    Container[variable] -= cashBack.Value[variable];
+                }
+                TotalAmountOfMoney -= Amount;
             }
             return cashBack;
         }
