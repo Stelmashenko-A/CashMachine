@@ -11,9 +11,13 @@ namespace CashMachine
         static void Main(string[] args)
         {
             CashMachine cashMachine = new CashMachine();
-            CashBack cashBack = cashMachine.GetMoney(273);
-            Console.WriteLine(cashBack.ToString());
-            Console.ReadKey();
+            int amount;
+            
+            while (int.TryParse(Console.ReadLine(), out amount))
+            {
+                CashBack cashBack = cashMachine.GetMoney(amount);
+                Console.WriteLine(cashBack.ToString());
+            }
         }
     }
 }
