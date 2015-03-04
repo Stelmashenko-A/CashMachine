@@ -1,23 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CashMachine
 {
     internal class CashBack
     {
-        public CashBack(List<int> pars)
+        public CashBack(IEnumerable<int> pars)
         {
             Value = new Dictionary<int, int>();
-            foreach (int par in pars)
+            foreach (var par in pars)
             {
                 Value.Add(par, 0);
             }
         }
-        public States Result { get; set; }
-        public Dictionary<int, int> Value { get; set; }
+
+        public States Result
+        {
+            get; set;
+        }
+
+        public Dictionary<int, int> Value
+        {
+            get; set;
+        }
+
         public override string ToString()
         {
             var sb = new StringBuilder();
@@ -32,7 +38,7 @@ namespace CashMachine
                 case States.MoneyDeficiency:
                     sb.Append("Not enough money");
                     break;
-                case States.OK:
+                case States.Ok:
                     foreach (var variable in Value.Keys)
                     {
                         sb.Append(variable);

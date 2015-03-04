@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CashMachine
 {
@@ -10,12 +6,13 @@ namespace CashMachine
     {
         static void Main(string[] args)
         {
-            CashMachine cashMachine = new CashMachine();
+            if (args == null) throw new ArgumentNullException("args");
+            var cashMachine = new CashMachine();
             int amount;
             
             while (int.TryParse(Console.ReadLine(), out amount))
             {
-                CashBack cashBack = cashMachine.GetMoney(amount);
+                var cashBack = cashMachine.GetMoney(amount);
                 Console.WriteLine(cashBack.ToString());
             }
         }

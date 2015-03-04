@@ -3,12 +3,12 @@ namespace CashMachine
 {
     enum States
     {
-        OK,
+        Ok,
         IsEmpty,
         CombinationFailed,
         AllCombinationsFailed,
         MoneyDeficiency,
-        NULL
+        Null
 
     }
 }
