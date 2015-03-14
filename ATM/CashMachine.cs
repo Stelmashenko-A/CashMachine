@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace ATM
@@ -19,10 +20,20 @@ namespace ATM
         public CashMachine()
         {
             _container = new Money();
-            _container.Banknotes.Add(new MutablePair<Banknote, int>(new Banknote(200), 100));
-            _container.Banknotes.Add(new MutablePair<Banknote, int>(new Banknote(100), 0));
-            _container.Banknotes.Add(new MutablePair<Banknote, int>(new Banknote(50), 100));
-            _container.Banknotes.Add(new MutablePair<Banknote, int>(new Banknote(20), 100));
+            string data;
+            using (var sr = new StreamReader("Money.txt"))
+            {
+                data = sr.ReadLine();
+            }
+            if (data == null) return;
+            var strArray = data.Split(' ');
+            var numberOfPars = strArray.Length / 2;
+            for (var i = 0; i < numberOfPars; i++)
+            {
+                var nominal = int.Parse(strArray[i * 2]);
+                var num = int.Parse(strArray[i * 2 + 1]);
+                _container.Banknotes.Add(new MutablePair<Banknote, int>(new Banknote(nominal), num));
+            }
         }
 
         public Money Withdraw(int requestedSum)
@@ -73,6 +84,10 @@ namespace ATM
                 requestedSum += nominalUsed.Peek().Key.Nominal;
             }
             money.Result = States.Success;
+            foreach (var variable in moneyStack)
+            {
+                money.Banknotes.Add(variable);
+            }
             return money;
         }
     }

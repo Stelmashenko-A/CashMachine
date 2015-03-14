@@ -6,14 +6,15 @@ namespace ATM
     {
         static void Main()
         {
-            const int requestedSum = 385;
+            int requestedSum;
             
             var atm = new CashMachine();
             
-            var money = atm.Withdraw(requestedSum);
-
-            Console.WriteLine(money);
-            Console.Read();
+            while (int.TryParse(Console.ReadLine(), out requestedSum))
+            {
+                var money = atm.Withdraw(requestedSum);
+                Console.WriteLine(money.ToString());
+            }
         }
     }
 }

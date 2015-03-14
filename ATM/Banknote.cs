@@ -11,5 +11,10 @@
         {
             Nominal = nominal;
         }
+
+        public override string ToString()
+        {
+            return Nominal.ToString();
+        }
     }
 }

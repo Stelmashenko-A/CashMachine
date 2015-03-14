@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 
 namespace ATM
 {
@@ -17,6 +18,30 @@ namespace ATM
         public Money()
         {
             Banknotes = new List<MutablePair<Banknote, int>>();
+        }
+
+        public override string ToString()
+        {
+            var stringBuilder = new StringBuilder();
+            switch (Result)
+            {
+                case States.CombinationFailed:
+                    stringBuilder.Append("Enter other sum");
+                    break;
+                case States.MoneyDeficiency:
+                    stringBuilder.Append("Not enough money");
+                    break;
+                case States.Success:
+                    foreach (var variable in Banknotes)
+                    {
+                        stringBuilder.Append(variable.Key);
+                        stringBuilder.Append(' ');
+                        stringBuilder.Append(variable.Value);
+                        stringBuilder.Append('\n');
+                    }
+                    break;
+            }
+            return stringBuilder.ToString();
         }
     }
 }
