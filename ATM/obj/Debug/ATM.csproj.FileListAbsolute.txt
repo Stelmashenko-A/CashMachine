@@ -1,0 +1,12 @@
+C:\Users\Андрей\Desktop\CashMachine\ATM\ATM\bin\Debug\ATM.exe.config
+C:\Users\Андрей\Desktop\CashMachine\ATM\ATM\bin\Debug\ATM.exe
+C:\Users\Андрей\Desktop\CashMachine\ATM\ATM\bin\Debug\ATM.pdb
+C:\Users\Андрей\Desktop\CashMachine\ATM\ATM\obj\Debug\ATM.csprojResolveAssemblyReference.cache
+C:\Users\Андрей\Desktop\CashMachine\ATM\ATM\obj\Debug\ATM.exe
+C:\Users\Андрей\Desktop\CashMachine\ATM\ATM\obj\Debug\ATM.pdb
+C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\bin\Debug\ATM.exe.config
+C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\obj\Debug\ATM.exe
+C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\obj\Debug\ATM.pdb
+C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\bin\Debug\ATM.exe
+C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\bin\Debug\ATM.pdb
+C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\obj\Debug\ATM.csprojResolveAssemblyReference.cache
