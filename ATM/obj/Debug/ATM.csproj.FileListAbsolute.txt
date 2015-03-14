@@ -9,4 +9,5 @@ C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\obj\Debug\ATM.exe
 C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\obj\Debug\ATM.pdb
 C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\bin\Debug\ATM.exe
 C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\bin\Debug\ATM.pdb
-C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\obj\Debug\ATM.csprojResolveAssemblyReference.cache
+C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\bin\Debug\ATM.exe.CodeAnalysisLog.xml
+C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\bin\Debug\ATM.exe.lastcodeanalysissucceeded
