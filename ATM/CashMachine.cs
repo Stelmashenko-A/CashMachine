@@ -7,33 +7,19 @@ namespace ATM
 {
     public class CashMachine
     {
-        private readonly Money _container;
+        private readonly Cassete _container;
 
-        private int TotalSum
+        private decimal TotalSum
         {
-            get { return _container.Banknotes.Sum(item => item.Value*item.Key.Nominal); }
+            get { return _container.Money.Banknotes.Sum(item => item.Value*item.Key.Nominal); }
         }
 
-        public CashMachine()
+        public CashMachine(Cassete cassete)
         {
-            _container = new Money();
-            string data;
-            using (var sr = new StreamReader("Money.txt"))
-            {
-                data = sr.ReadLine();
-            }
-            if (data == null) return;
-            var strArray = data.Split(' ');
-            var numberOfPars = strArray.Length/2;
-            for (var i = 0; i < numberOfPars; i++)
-            {
-                var nominal = int.Parse(strArray[i*2]);
-                var num = int.Parse(strArray[i*2 + 1]);
-                _container.Banknotes.Add(new MutablePair<Banknote, int>(new Banknote(nominal), num));
-            }
+            _container = cassete;
         }
 
-        public Money Withdraw(int requestedSum)
+        public Money Withdraw(decimal requestedSum)
         {
             //Проверка на достаточность денег
             var money = new Money();
@@ -46,7 +32,7 @@ namespace ATM
             var nominalUsed = new Stack<MutablePair<Banknote, int>>();
             var nominalForUsing = new LinkedList<MutablePair<Banknote, int>>();
             var moneyStack = new Stack<MutablePair<Banknote, int>>();
-            foreach (var item in _container.Banknotes)
+            foreach (var item in _container.Money.Banknotes)
             {
                 nominalForUsing.AddFirst(item);
             }
@@ -66,7 +52,7 @@ namespace ATM
                     nominalForUsing.RemoveLast();
                     //находим наименьшее между количеством купюр в банкомате и максиммальным количеством купюр
                     //суммарное достоинство которых не превышает требуемой суммы
-                    var banknotesNumber = Math.Min(requestedSum/currenBanknotes.Key.Nominal,
+                    var banknotesNumber = Math.Min((int)(requestedSum/currenBanknotes.Key.Nominal),
                         currenBanknotes.Value);
                     //извлекаем купюры из кассеты
                     currenBanknotes.Value -= banknotesNumber;

@@ -7,8 +7,8 @@ namespace ATM
         static void Main()
         {
             int requestedSum;
-            
-            var atm = new CashMachine();
+            var cassete = AtmReader.ReadCassete("Money.txt");
+            var atm = new CashMachine(cassete);
             
             while (int.TryParse(Console.ReadLine(), out requestedSum))
             {

@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATMReader.cs" />
     <Compile Include="Banknote.cs" />
     <Compile Include="CashMachine.cs" />
+    <Compile Include="Cassete.cs" />
     <Compile Include="Money.cs" />
     <Compile Include="MutablePair.cs" />
     <Compile Include="Program.cs" />

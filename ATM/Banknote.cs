@@ -1,20 +1,22 @@
-﻿namespace ATM
+﻿using System.Globalization;
+
+namespace ATM
 {
     public class Banknote
     {
-        public int Nominal
+        public decimal Nominal
         {
             get; set;
         }
 
-        public Banknote(int nominal)
+        public Banknote(decimal nominal)
         {
             Nominal = nominal;
         }
 
         public override string ToString()
         {
-            return Nominal.ToString();
+            return Nominal.ToString(CultureInfo.InvariantCulture);
         }
     }
 }
