@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ATM
@@ -20,6 +21,13 @@ namespace ATM
             Banknotes = new List<MutablePair<Banknote, int>>();
         }
 
+        public decimal TotalSum
+        {
+            get
+            {
+                return Banknotes.Sum(item => item.Value*item.Key.Nominal);
+            }
+        }
         public override string ToString()
         {
             var stringBuilder = new StringBuilder();

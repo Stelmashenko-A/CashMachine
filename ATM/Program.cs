@@ -8,8 +8,7 @@ namespace ATM
         {
             int requestedSum;
             var cassete = AtmReader.ReadCassete("Money.txt");
-            var atm = new CashMachine(cassete);
-            
+            var atm = new CashMachine(cassete, new GreedyAlgorithm());
             while (int.TryParse(Console.ReadLine(), out requestedSum))
             {
                 var money = atm.Withdraw(requestedSum);

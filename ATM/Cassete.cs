@@ -2,14 +2,14 @@
 {
     public class Cassete
     {
-        public Money Money
+        public Money MoneyInCassete
         {
             get; set;
         }
 
         public Cassete()
         {
-            Money = new Money();
+            MoneyInCassete = new Money();
         }
     }
 }
