@@ -1,20 +1,21 @@
-﻿namespace ATM
+﻿using System.Collections.Generic;
+
+namespace ATM
 {
     public class CashMachine
     {
-        private readonly Cassete _container;
-
-        public CashMachine(Cassete cassete, IBanknoteSelector banknoteSelector)
+        private readonly List<Cassette> _moneyCassettes;
+        public CashMachine(List<Cassette> moneyCassettes, IBanknoteSelector banknoteSelector)
         {
-            _container = cassete;
             _banknoteSelector = banknoteSelector;
+            _moneyCassettes = moneyCassettes;
         }
 
         private readonly IBanknoteSelector _banknoteSelector;
 
         public Money Withdraw(decimal requestedSum)
         {
-            _banknoteSelector.Initialize(_container);
+            _banknoteSelector.Initialize(_moneyCassettes);
             _banknoteSelector.TrySelect(requestedSum);
             return _banknoteSelector.SelectedMoney;
         }

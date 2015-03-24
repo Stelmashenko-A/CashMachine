@@ -1,8 +1,10 @@
-﻿namespace ATM
+﻿using System.Collections.Generic;
+
+namespace ATM
 {
     public interface IBanknoteSelector
     {
-        void Initialize(Cassete cassete);
+        void Initialize(List<Cassette> moneyCassettes);
 
         void TrySelect(decimal sum);
 

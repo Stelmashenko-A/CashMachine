@@ -6,66 +6,73 @@ namespace ATM
 {
     internal class GreedyAlgorithm : IBanknoteSelector
     {
-        private Cassete _cassete;
+        private List<Cassette> _moneyCassettes;
 
-        public void Initialize(Cassete cassete)
+        public void Initialize(List<Cassette> moneyCassettes)
         {
-            _cassete = cassete;
+            _moneyCassettes = moneyCassettes;
             SelectedMoney = new Money();
         }
 
+        private decimal TotalSum
+        {
+            get
+            {
+                return _moneyCassettes.Sum(item => item.TotalSum);
+            }
+        }
         public void TrySelect(decimal requestedSum)
         {
 
-            if (_cassete.MoneyInCassete.TotalSum < requestedSum)
+            if (TotalSum < requestedSum)
             {
                 SelectedMoney.Result = States.MoneyDeficiency;
                 return;
             }
 
-            var nominalUsed = new Stack<MutablePair<Banknote, int>>();
-            var nominalForUsing = new LinkedList<MutablePair<Banknote, int>>();
+            var cassetteUsed = new Stack<Cassette>();
+            var cassetteForUsing = new LinkedList<Cassette>();
             var moneyStack = new Stack<MutablePair<Banknote, int>>();
-            foreach (var item in _cassete.MoneyInCassete.Banknotes)
+            foreach (var item in _moneyCassettes)
             {
-                nominalForUsing.AddFirst(item);
+                cassetteForUsing.AddFirst(item);
             }
             //пока для выдачи не останется ноль повторяем
             while (requestedSum > 0)
             {
                 //смотрим номинал купюр находящийся в вершине стека номиналов которые буду использованы
-                var currenBanknotes = nominalForUsing.Last();
+                var currentCassette = cassetteForUsing.Last();
 
                 //если кроме текущего номинала доступен хотя бы ещё один
                 //или с помощьью текущего номинала можно выдать оставшуюся сумму
-                if (nominalForUsing.Count() > 1 ||
-                    (requestedSum%currenBanknotes.Key.Nominal == 0 &&
-                     requestedSum%currenBanknotes.Key.Nominal <= currenBanknotes.Value))
+                if (cassetteForUsing.Count() > 1 ||
+                    (requestedSum%currentCassette.Banknote.Nominal == 0 &&
+                     requestedSum%currentCassette.Banknote.Nominal <= currentCassette.Number))
                 {
                     //извекаем текущий номинал из стека неиспользованных номиналов
-                    nominalForUsing.RemoveLast();
+                    cassetteForUsing.RemoveLast();
                     //находим наименьшее между количеством купюр в банкомате и максиммальным количеством купюр
                     //суммарное достоинство которых не превышает требуемой суммы
-                    var banknotesNumber = Math.Min((int) (requestedSum/currenBanknotes.Key.Nominal),
-                        currenBanknotes.Value);
+                    var banknotesNumber = Math.Min((int) (requestedSum/currentCassette.Banknote.Nominal),
+                        currentCassette.Number);
                     //извлекаем купюры из кассеты
-                    currenBanknotes.Value -= banknotesNumber;
+                    currentCassette.Number -= banknotesNumber;
                     //из запрошенной суммы вычитаем сумму выбранных на данном шаге купюр
-                    requestedSum -= currenBanknotes.Key.Nominal*banknotesNumber;
+                    requestedSum -= currentCassette.Banknote.Nominal * banknotesNumber;
                     //в стек использованных номиналов добавляем текущий номинал
-                    nominalUsed.Push(currenBanknotes);
+                    cassetteUsed.Push(currentCassette);
                     //в деньги для выдачи добавляем купюры, выбранные на текущем шаге 
-                    moneyStack.Push(new MutablePair<Banknote, int>(currenBanknotes.Key, banknotesNumber));
+                    moneyStack.Push(new MutablePair<Banknote, int>(currentCassette.Banknote, banknotesNumber));
                     continue;
                 }
 
                 //если цикл не пошёл на следующий шаг
                 //то пока есть использованные номиналы и количество
                 //купюр текущего номминала равно нулю
-                while (nominalUsed.Any() && moneyStack.Peek().Value == 0)
+                while (cassetteUsed.Any() && moneyStack.Peek().Value == 0)
                 {
                     //переносим использованные номиналы в стек неиспользованных
-                    nominalForUsing.AddLast(nominalUsed.Pop());
+                    cassetteForUsing.AddLast(cassetteUsed.Pop());
                     //извлекаем из выдачи номиналы с нулевым количеством
                     moneyStack.Pop();
                 }
@@ -83,9 +90,9 @@ namespace ATM
                 //номинала из вершины стека
                 moneyStack.Peek().Value--;
                 //возвращаем эту купюру в контейнер
-                nominalUsed.Peek().Value++;
+                cassetteUsed.Peek().Number++;
                 //увеличиваем сумму для подбора на номинал купюры, перемещённой обратно в банкомат
-                requestedSum += nominalUsed.Peek().Key.Nominal;
+                requestedSum += cassetteUsed.Peek().Banknote.Nominal;
             }
 
             //если произошёл успешный выход из цикла, состоянию присваиваем статус успешного завершения
