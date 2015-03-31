@@ -6,7 +6,8 @@ namespace ATM
 {
     public class CashMachine
     {
-        public readonly List<Cassette> MoneyCassettes;
+        private List<Cassette> _moneyCassettes;
+
         private Money _moneyForWithdraw;
         public States CurrentStates { get; private set; }
         public bool HaveMoneyForWithdrow { get; private set; }
@@ -29,10 +30,9 @@ namespace ATM
         {
             get; private set;
         }
-        public CashMachine(List<Cassette> moneyCassettes, IBanknoteSelector banknoteSelector)
+        public CashMachine(IBanknoteSelector banknoteSelector)
         {
             _banknoteSelector = banknoteSelector;
-            MoneyCassettes = moneyCassettes;
         }
 
         private readonly IBanknoteSelector _banknoteSelector;
@@ -54,7 +54,7 @@ namespace ATM
         public List<MutablePair<decimal, int>> ConvertCassettes()
         {
             return
-                MoneyCassettes.Select(item => new MutablePair<decimal, int>(item.Banknote.Nominal, item.Number))
+                _moneyCassettes.Select(item => new MutablePair<decimal, int>(item.Banknote.Nominal, item.Number))
                     .ToList();
         }
 
@@ -64,11 +64,16 @@ namespace ATM
             foreach (var variable in _moneyForWithdraw.Banknotes)
             {
                 var variableTmp = variable;
-                foreach (var item in MoneyCassettes.Where(item => item.Banknote.Nominal == variableTmp.Key.Nominal))
+                foreach (var item in _moneyCassettes.Where(item => item.Banknote.Nominal == variableTmp.Key.Nominal))
                 {
                     item.Erase(variable.Value);
                 }
             }
+        }
+
+        public void InserCassettes(List<Cassette> cassetes)
+        {
+            _moneyCassettes = cassetes;
         }
     }
 }

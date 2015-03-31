@@ -9,7 +9,8 @@ namespace ATM
         static void Main()
         {
             var moneyCassettes = CassetteReader.ReadCassette(Path);
-            var atm = new CashMachine(moneyCassettes, new GreedyAlgorithm());
+            var atm = new CashMachine(new GreedyAlgorithm());
+            atm.InserCassettes(moneyCassettes);
             Console.WriteLine("For finishing input \"exit\"");
             while (true)
             {
@@ -37,7 +38,6 @@ namespace ATM
                         break;
                 }
             }
-            CassetteWriter.Write(atm.MoneyCassettes, Path);
         }
     }
 }
