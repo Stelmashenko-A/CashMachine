@@ -1,13 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ATM
 {
     public interface IBanknoteSelector
     {
-        void Initialize(List<Cassette> moneyCassettes);
+        void Initialize(List<MutablePair<decimal, int>> moneyCassettes);
 
         void TrySelect(decimal sum);
 
-        Money SelectedMoney { get; }
+        ErrorMessages Result { get; }
+
+        List<MutablePair<decimal, int>> SelectedMoney { get; }
     }
 }

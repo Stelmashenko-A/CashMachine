@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AtmStates.cs" />
     <Compile Include="CassetteReader.cs" />
     <Compile Include="Banknote.cs" />
     <Compile Include="CashMachine.cs" />
     <Compile Include="Cassette.cs" />
+    <Compile Include="CassetteWriter.cs" />
     <Compile Include="GreedyAlgorithm.cs" />
     <Compile Include="IBanknoteSelector.cs" />
     <Compile Include="Money.cs" />

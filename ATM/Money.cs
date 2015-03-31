@@ -11,7 +11,7 @@ namespace ATM
             get; private set;
         }
 
-        public States Result
+        public ErrorMessages Result
         {
             get; set;
         }
@@ -28,28 +28,31 @@ namespace ATM
                 return Banknotes.Sum(item => item.Value*item.Key.Nominal);
             }
         }
+
         public override string ToString()
         {
             var stringBuilder = new StringBuilder();
-            switch (Result)
+
+            foreach (var variable in Banknotes)
             {
-                case States.CombinationFailed:
-                    stringBuilder.Append("Enter other sum");
-                    break;
-                case States.MoneyDeficiency:
-                    stringBuilder.Append("Not enough money");
-                    break;
-                case States.Success:
-                    foreach (var variable in Banknotes)
-                    {
-                        stringBuilder.Append(variable.Key);
-                        stringBuilder.Append(' ');
-                        stringBuilder.Append(variable.Value);
-                        stringBuilder.Append('\n');
-                    }
-                    break;
+                if (variable.Value == 0) continue;
+                stringBuilder.Append(variable.Key);
+                stringBuilder.Append(' ');
+                stringBuilder.Append(variable.Value);
+                stringBuilder.Append('\n');
             }
+
             return stringBuilder.ToString();
+        }
+
+        public static Money Parse(List<MutablePair<decimal, int>> combination)
+        {
+            var money = new Money();
+            foreach (var mutablePair in from variable in combination let banknote = new Banknote(variable.Key) select new MutablePair<Banknote, int>(banknote, variable.Value))
+            {
+                money.Banknotes.Add(mutablePair);
+            }
+            return money;
         }
     }
 }

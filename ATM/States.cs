@@ -1,10 +1,10 @@
 ﻿namespace ATM
 {
-    public enum States
+    public enum ErrorMessages
     {
         InProcess,
         CombinationFailed,
         MoneyDeficiency,
-        Success
+        NoError
     }
 }

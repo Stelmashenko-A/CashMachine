@@ -8,6 +8,7 @@ namespace ATM
         public static List<Cassette> ReadCassette(string fileName)
         {
             var moneyCassettes = new List<Cassette>();
+            
             string data;
             using (var sr = new StreamReader(fileName))
             {
