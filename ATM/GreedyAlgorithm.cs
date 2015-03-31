@@ -6,35 +6,26 @@ namespace ATM
 {
     internal class GreedyAlgorithm : IBanknoteSelector
     {
-        private List<MutablePair<decimal, int>> _moneyCassettes;
-
-        public ErrorMessages Result { get; private set; }
-        public void Initialize(List<MutablePair<decimal, int>> moneyCassettes)
+        private static decimal TotalSum(List<MutablePair<decimal, int>> moneyCassettes )
         {
-            _moneyCassettes = moneyCassettes;
-            SelectedMoney = new List<MutablePair<decimal, int>>();
+            if (moneyCassettes == null) throw new ArgumentNullException("moneyCassettes");
+            return moneyCassettes.Sum(variable => variable.Key*variable.Value);
         }
 
-        private decimal TotalSum
+        public bool TrySelect(List<MutablePair<decimal, int>> moneyCassettes, decimal requestedSum, out States result, out List<MutablePair<decimal, int>> selectedMoney)
         {
-            get
+            if (TotalSum(moneyCassettes) < requestedSum)
             {
-                return _moneyCassettes.Sum(variable => variable.Key*variable.Value);
+                result = States.MoneyDeficiency;
+                selectedMoney = null;
+                return false;
             }
-        }
-        public void TrySelect(decimal requestedSum)
-        {
-
-            if (TotalSum < requestedSum)
-            {
-                Result = ErrorMessages.MoneyDeficiency;
-                return;
-            }
+            selectedMoney = new List<MutablePair<decimal, int>>();
 
             var cassetteUsed = new Stack<MutablePair<decimal, int>>();
             var cassetteForUsing = new LinkedList<MutablePair<decimal, int>>();
             var moneyStack = new Stack<MutablePair<decimal, int>>();
-            foreach (var item in _moneyCassettes)
+            foreach (var item in moneyCassettes)
             {
                 cassetteForUsing.AddFirst(item);
             }
@@ -84,8 +75,8 @@ namespace ATM
                 if (!moneyStack.Any())
                 {
                     // то получить нужную сумму невозможно
-                    Result = ErrorMessages.CombinationFailed;
-                    return;
+                    result = States.CombinationFailed;
+                    return false;
                 }
 
                 //если номиналы остались, то уменьшаем на единицу количество купюр
@@ -98,14 +89,10 @@ namespace ATM
             }
 
             //если произошёл успешный выход из цикла, состоянию присваиваем статус успешного завершения
-            Result = ErrorMessages.NoError;
+            result = States.NoError;
             //деньги из стека перекладываем в объект класса Money и возвращаем результат
-            SelectedMoney.AddRange(moneyStack.ToArray());
-        }
-
-        public List<MutablePair<decimal, int>> SelectedMoney
-        {
-            get; private set;
+            selectedMoney.AddRange(moneyStack.ToArray());
+            return true;
         }
     }
 }

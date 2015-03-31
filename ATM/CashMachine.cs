@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ATM
@@ -7,23 +8,24 @@ namespace ATM
     {
         public readonly List<Cassette> MoneyCassettes;
         private Money _moneyForWithdraw;
-        public AtmStates CurrentStates { get; private set; }
+        public States CurrentStates { get; private set; }
+        public bool HaveMoneyForWithdrow { get; private set; }
         public Money MoneyForWithdraw
         {
             get
             {
                 var result = _moneyForWithdraw;
-                CurrentStates = AtmStates.NoMoneyForWithdraw;
+                HaveMoneyForWithdrow = false;
                 _moneyForWithdraw = null;
                 return result;
             }
             private set
             {
                 _moneyForWithdraw = value;
-                CurrentStates = AtmStates.HaveMoneyForWithdrow;
+                HaveMoneyForWithdrow = true;
             }
         }
-        public ErrorMessages State
+        public States State
         {
             get; private set;
         }
@@ -37,11 +39,16 @@ namespace ATM
 
         public void Withdraw(decimal requestedSum)
         {
-            _banknoteSelector.Initialize(ConvertCassettes());
-            _banknoteSelector.TrySelect(requestedSum);
-            State = _banknoteSelector.Result;
-            if (State != ErrorMessages.NoError) return;
-            EraseMoney(_banknoteSelector.SelectedMoney);
+            States result;
+            List<MutablePair<decimal, int>> combination;
+
+
+            if (!_banknoteSelector.TrySelect(ConvertCassettes(), requestedSum, out result, out combination))
+            {
+                CurrentStates = result;
+                return;
+            }
+            EraseMoney(combination);
         }
 
         public List<MutablePair<decimal, int>> ConvertCassettes()

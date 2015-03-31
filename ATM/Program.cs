@@ -22,11 +22,20 @@ namespace ATM
                     continue;
                 }
                 atm.Withdraw(requestedSum);
-                if (atm.CurrentStates == AtmStates.HaveMoneyForWithdrow)
+                if (atm.HaveMoneyForWithdrow)
                 {
                     Console.WriteLine(atm.MoneyForWithdraw);
+                    continue;
                 }
-
+                switch (atm.State)
+                {
+                    case States.CombinationFailed:
+                        Console.WriteLine("Enter other sum");
+                        break;
+                    case States.MoneyDeficiency:
+                        Console.WriteLine("Insufficient money");
+                        break;
+                }
             }
             CassetteWriter.Write(atm.MoneyCassettes, Path);
         }

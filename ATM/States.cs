@@ -1,8 +1,11 @@
-﻿namespace ATM
+﻿using System.ComponentModel;
+
+namespace ATM
 {
-    public enum ErrorMessages
+    public enum States
     {
         InProcess,
+        [Description("Not so cool")]
         CombinationFailed,
         MoneyDeficiency,
         NoError

@@ -11,7 +11,7 @@ namespace ATM
             get; private set;
         }
 
-        public ErrorMessages Result
+        public States Result
         {
             get; set;
         }
