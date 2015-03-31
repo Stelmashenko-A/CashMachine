@@ -8,16 +8,25 @@ namespace ATM
 
         static void Main()
         {
-            int requestedSum;
             var moneyCassettes = CassetteReader.ReadCassette(Path);
             var atm = new CashMachine(moneyCassettes, new GreedyAlgorithm());
-            while (int.TryParse(Console.ReadLine(), out requestedSum))
+            Console.WriteLine("For finishing input \"exit\"");
+            while (true)
             {
+                var input = Console.ReadLine();
+                if(input == "exit")break;
+                int requestedSum;
+                if (!int.TryParse(input, out requestedSum))
+                {
+                    Console.WriteLine("Wrong input");
+                    continue;
+                }
                 atm.Withdraw(requestedSum);
                 if (atm.CurrentStates == AtmStates.HaveMoneyForWithdrow)
                 {
                     Console.WriteLine(atm.MoneyForWithdraw);
                 }
+
             }
             CassetteWriter.Write(atm.MoneyCassettes, Path);
         }
