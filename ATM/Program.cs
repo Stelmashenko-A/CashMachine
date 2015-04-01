@@ -1,10 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ATM
 {
     class Program
     {
         private const string Path = "Money.txt";
+
+        private static readonly Dictionary<AtmState, string> ErrromMessage = new Dictionary<AtmState, string>
+        {
+            {AtmState.CombinationFailed, "Enter other sum"},
+            {AtmState.MoneyDeficiency, "Insufficient money"}
+        };
 
         static void Main()
         {
@@ -32,15 +39,7 @@ namespace ATM
                     continue;
                 }
 
-                switch (atm.CurrentState)
-                {
-                    case States.CombinationFailed:
-                        Console.WriteLine("Enter other sum");
-                        break;
-                    case States.MoneyDeficiency:
-                        Console.WriteLine("Insufficient money");
-                        break;
-                }
+                Console.WriteLine(ErrromMessage[atm.CurrentState]);
             }
         }
     }

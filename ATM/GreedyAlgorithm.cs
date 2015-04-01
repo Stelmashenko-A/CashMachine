@@ -12,12 +12,12 @@ namespace ATM
             return moneyCassettes.Sum(variable => variable.Key*variable.Value);
         }
 
-        public bool TrySelect(List<MutablePair<decimal, int>> moneyCassettes, decimal requestedSum, out States result,
+        public bool TrySelect(List<MutablePair<decimal, int>> moneyCassettes, decimal requestedSum, out AtmState result,
             out List<MutablePair<decimal, int>> selectedMoney)
         {
             if (TotalSum(moneyCassettes) < requestedSum)
             {
-                result = States.MoneyDeficiency;
+                result = AtmState.MoneyDeficiency;
                 selectedMoney = null;
                 return false;
             }
@@ -76,7 +76,7 @@ namespace ATM
                 if (!moneyStack.Any())
                 {
                     // то получить нужную сумму невозможно
-                    result = States.CombinationFailed;
+                    result = AtmState.CombinationFailed;
                     return false;
                 }
 
@@ -90,7 +90,7 @@ namespace ATM
             }
 
             //если произошёл успешный выход из цикла, состоянию присваиваем статус успешного завершения
-            result = States.NoError;
+            result = AtmState.NoError;
             //деньги из стека перекладываем в объект класса Money и возвращаем результат
             selectedMoney.AddRange(moneyStack.ToArray());
             return true;

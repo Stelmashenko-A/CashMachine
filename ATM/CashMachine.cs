@@ -8,7 +8,7 @@ namespace ATM
         private List<Cassette> _moneyCassettes;
 
         private Money _moneyForWithdraw;
-        public States CurrentState { get; private set; }
+        public AtmState CurrentState { get; private set; }
         public bool HaveMoneyForWithdrow { get; private set; }
         private Money PreparedMoney
         {
@@ -35,7 +35,7 @@ namespace ATM
 
         public Money Withdraw(decimal requestedSum)
         {
-            States result;
+            AtmState result;
             List<MutablePair<decimal, int>> combination;
 
             if (!_banknoteSelector.TrySelect(ConvertCassettes(), requestedSum, out result, out combination))
