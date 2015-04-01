@@ -6,13 +6,14 @@ namespace ATM
 {
     internal class GreedyAlgorithm : IBanknoteSelector
     {
-        private static decimal TotalSum(List<MutablePair<decimal, int>> moneyCassettes )
+        private static decimal TotalSum(List<MutablePair<decimal, int>> moneyCassettes)
         {
             if (moneyCassettes == null) throw new ArgumentNullException("moneyCassettes");
             return moneyCassettes.Sum(variable => variable.Key*variable.Value);
         }
 
-        public bool TrySelect(List<MutablePair<decimal, int>> moneyCassettes, decimal requestedSum, out States result, out List<MutablePair<decimal, int>> selectedMoney)
+        public bool TrySelect(List<MutablePair<decimal, int>> moneyCassettes, decimal requestedSum, out States result,
+            out List<MutablePair<decimal, int>> selectedMoney)
         {
             if (TotalSum(moneyCassettes) < requestedSum)
             {
@@ -37,9 +38,9 @@ namespace ATM
 
                 //если кроме текущего номинала доступен хотя бы ещё один
                 //или с помощьью текущего номинала можно выдать оставшуюся сумму
-                if ((cassetteForUsing.Count() > 1) ||(
-                    ((requestedSum%currentCassette.Key == 0) &&(
-                     requestedSum/currentCassette.Key <= currentCassette.Value))))
+                if ((cassetteForUsing.Count() > 1) || (
+                    ((requestedSum%currentCassette.Key == 0) && (
+                        requestedSum/currentCassette.Key <= currentCassette.Value))))
 
                 {
                     //извекаем текущий номинал из стека неиспользованных номиналов
@@ -51,7 +52,7 @@ namespace ATM
                     //извлекаем купюры из кассеты
                     currentCassette.Value -= banknotesNumber;
                     //из запрошенной суммы вычитаем сумму выбранных на данном шаге купюр
-                    requestedSum -= currentCassette.Key * banknotesNumber;
+                    requestedSum -= currentCassette.Key*banknotesNumber;
                     //в стек использованных номиналов добавляем текущий номинал
                     cassetteUsed.Push(currentCassette);
                     //в деньги для выдачи добавляем купюры, выбранные на текущем шаге 

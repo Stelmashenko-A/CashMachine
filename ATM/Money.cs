@@ -11,11 +11,6 @@ namespace ATM
             get; private set;
         }
 
-        public States Result
-        {
-            get; set;
-        }
-
         public Money()
         {
             Banknotes = new List<MutablePair<Banknote, int>>();
@@ -25,7 +20,7 @@ namespace ATM
         {
             get
             {
-                return Banknotes.Sum(item => item.Value*item.Key.Nominal);
+                return Banknotes == null ? 0 : Banknotes.Sum(item => item.Value*item.Key.Nominal);
             }
         }
 

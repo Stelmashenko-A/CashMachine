@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace ATM
@@ -9,9 +8,9 @@ namespace ATM
         private List<Cassette> _moneyCassettes;
 
         private Money _moneyForWithdraw;
-        public States CurrentStates { get; private set; }
+        public States CurrentState { get; private set; }
         public bool HaveMoneyForWithdrow { get; private set; }
-        public Money MoneyForWithdraw
+        private Money PreparedMoney
         {
             get
             {
@@ -20,16 +19,13 @@ namespace ATM
                 _moneyForWithdraw = null;
                 return result;
             }
-            private set
+            set
             {
                 _moneyForWithdraw = value;
                 HaveMoneyForWithdrow = true;
             }
         }
-        public States State
-        {
-            get; private set;
-        }
+
         public CashMachine(IBanknoteSelector banknoteSelector)
         {
             _banknoteSelector = banknoteSelector;
@@ -37,18 +33,18 @@ namespace ATM
 
         private readonly IBanknoteSelector _banknoteSelector;
 
-        public void Withdraw(decimal requestedSum)
+        public Money Withdraw(decimal requestedSum)
         {
             States result;
             List<MutablePair<decimal, int>> combination;
 
-
             if (!_banknoteSelector.TrySelect(ConvertCassettes(), requestedSum, out result, out combination))
             {
-                CurrentStates = result;
-                return;
+                CurrentState = result;
+                return new Money();
             }
-            EraseMoney(combination);
+            RemoveMoney(combination);
+            return PreparedMoney;
         }
 
         public List<MutablePair<decimal, int>> ConvertCassettes()
@@ -58,9 +54,9 @@ namespace ATM
                     .ToList();
         }
 
-        private void EraseMoney(List<MutablePair<decimal, int>> combination)
+        private void RemoveMoney(List<MutablePair<decimal, int>> combination)
         {
-            MoneyForWithdraw = Money.Parse(combination);
+            PreparedMoney = Money.Parse(combination);
             foreach (var variable in _moneyForWithdraw.Banknotes)
             {
                 var variableTmp = variable;

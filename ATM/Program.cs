@@ -16,19 +16,23 @@ namespace ATM
             {
                 var input = Console.ReadLine();
                 if(input == "exit")break;
+
                 int requestedSum;
                 if (!int.TryParse(input, out requestedSum))
                 {
                     Console.WriteLine("Wrong input");
                     continue;
                 }
-                atm.Withdraw(requestedSum);
-                if (atm.HaveMoneyForWithdrow)
+
+                var money = atm.Withdraw(requestedSum);
+
+                if (money.TotalSum!=0)
                 {
-                    Console.WriteLine(atm.MoneyForWithdraw);
+                    Console.WriteLine(money);
                     continue;
                 }
-                switch (atm.State)
+
+                switch (atm.CurrentState)
                 {
                     case States.CombinationFailed:
                         Console.WriteLine("Enter other sum");
