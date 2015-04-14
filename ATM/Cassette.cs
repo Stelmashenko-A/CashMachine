@@ -1,6 +1,8 @@
-﻿namespace ATM
+﻿using System;
+
+namespace ATM
 {
-    public class Cassette
+    public class Cassette:ICloneable
     {
         public int Number
         {
@@ -23,10 +25,14 @@
             Banknote = banknote;
         }
 
-        public void Erase(int number)
+        public void RemoveBanknotes(int banknotesCount)
         {
-            Number -= number;
+            Number -= banknotesCount;
         }
 
+        public object Clone()
+        {
+            return new Cassette((Banknote) Banknote.Clone(), Number);
+        }
     }
 }

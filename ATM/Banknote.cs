@@ -1,8 +1,9 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 
 namespace ATM
 {
-    public class Banknote
+    public class Banknote : ICloneable
     {
         public decimal Nominal
         {
@@ -17,6 +18,11 @@ namespace ATM
         public override string ToString()
         {
             return Nominal.ToString(CultureInfo.InvariantCulture);
+        }
+
+        public object Clone()
+        {
+            return new Banknote(Nominal);
         }
     }
 }
