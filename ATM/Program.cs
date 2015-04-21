@@ -16,37 +16,45 @@ namespace ATM
 
         private static void Main()
         {
-            _signalHandler += HandleConsoleSignal;
-            ConsoleHelper.SetSignalHandler(_signalHandler, true);
-
+            
             XmlConfigurator.Configure();
             Log.Info("start");
-
-            var errors = Configurator.Config();
-            var userViewer = new UserViewer(errors);
-
-            var moneyCassettes = CassetteReader.ReadCassette(Resources.PathToMoney);
-            var atm = new CashMachine(new GreedyAlgorithm());
-            atm.InsertCassettes(moneyCassettes);
-
-            Console.WriteLine(Language.ExitMessage);
-            
-
-            while (true)
+            try
             {
-                var input = Console.ReadLine();
-                if (input == Language.ExitFlag) break;
+                _signalHandler += HandleConsoleSignal;
+                ConsoleHelper.SetSignalHandler(_signalHandler, true);
 
-                int requestedSum;
-                if (!int.TryParse(input, out requestedSum) || requestedSum < 0)
+                var errors = Configurator.Config();
+                var userViewer = new UserViewer(errors);
+
+                var moneyCassettes = CassetteReader.ReadCassette(Resources.PathToMoney);
+                var atm = new CashMachine(new GreedyAlgorithm());
+                atm.InsertCassettes(moneyCassettes);
+
+                Console.WriteLine(Language.ExitMessage);
+
+
+                while (true)
                 {
-                    Console.WriteLine(Language.WrongInput);
-                    continue;
-                }
+                    var input = Console.ReadLine();
+                    if (input == Language.ExitFlag) break;
 
-                var money = atm.Withdraw(requestedSum);
-                Console.WriteLine(userViewer.ToString(money, atm.CurrentState));
+                    int requestedSum;
+                    if (!int.TryParse(input, out requestedSum) || requestedSum < 0)
+                    {
+                        Console.WriteLine(Language.WrongInput);
+                        continue;
+                    }
+
+                    var money = atm.Withdraw(requestedSum);
+                    Console.WriteLine(userViewer.ToString(money, atm.CurrentState));
+                }
             }
+            catch (Exception ex)
+            {
+                Log.Fatal(ex);
+            }
+
             Log.Info("end");
             
         }
