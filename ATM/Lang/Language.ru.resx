@@ -117,7 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PathToMoney" xml:space="preserve">
-    <value>Money.txt</value>
+  <data name="CombinationFailed" xml:space="preserve">
+    <value>Ввидите другую сумму</value>
+  </data>
+  <data name="ExitFlag" xml:space="preserve">
+    <value>выход</value>
+  </data>
+  <data name="ExitMessage" xml:space="preserve">
+    <value>Для завершения работы введите "выход"</value>
+  </data>
+  <data name="MoneyDeficiency" xml:space="preserve">
+    <value>Недостаточно средств в банкомате</value>
+  </data>
+  <data name="NoError" xml:space="preserve">
+    <value>Операция завершена успешно</value>
+  </data>
+  <data name="WrongInput" xml:space="preserve">
+    <value>Неверный ввод</value>
   </data>
 </root>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ATM.Properties {
+namespace ATM.Lang {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ATM.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class Language {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal Language() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ATM.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ATM.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ATM.Lang.Language", typeof(Language).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,56 @@ namespace ATM.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Money.txt.
+        ///   Ищет локализованную строку, похожую на CombinationFailed.
         /// </summary>
-        internal static string PathToMoney {
+        internal static string CombinationFailed {
             get {
-                return ResourceManager.GetString("PathToMoney", resourceCulture);
+                return ResourceManager.GetString("CombinationFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на exit.
+        /// </summary>
+        internal static string ExitFlag {
+            get {
+                return ResourceManager.GetString("ExitFlag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на For finishing input &quot;exit&quot;.
+        /// </summary>
+        internal static string ExitMessage {
+            get {
+                return ResourceManager.GetString("ExitMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на MoneyDeficiency.
+        /// </summary>
+        internal static string MoneyDeficiency {
+            get {
+                return ResourceManager.GetString("MoneyDeficiency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на NoError.
+        /// </summary>
+        internal static string NoError {
+            get {
+                return ResourceManager.GetString("NoError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Wrong Input.
+        /// </summary>
+        internal static string WrongInput {
+            get {
+                return ResourceManager.GetString("WrongInput", resourceCulture);
             }
         }
     }

@@ -1,46 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
+using ATM.Lang;
+using ATM.Properties;
+using log4net.Config;
 
+//log4net
 namespace ATM
 {
-    class Program
+    internal class Program
     {
-        private const string Path = "Money.txt";
-
-        private static readonly Dictionary<AtmState, string> ErrromMessage = new Dictionary<AtmState, string>
+        private static void Main()
         {
-            {AtmState.CombinationFailed, "Enter other sum"},
-            {AtmState.MoneyDeficiency, "Insufficient money"}
-        };
+            XmlConfigurator.Configure();
+            
 
-        static void Main()
-        {
-            var moneyCassettes = CassetteReader.ReadCassette(Path);
+            //Message message = new Message("en-US");
+            var errors = Configurator.Config();
+            var userViewer = new UserViewer(errors);
+            var moneyCassettes = CassetteReader.ReadCassette(Resources.PathToMoney);
             var atm = new CashMachine(new GreedyAlgorithm());
-            atm.InserCassettes(moneyCassettes);
-            Console.WriteLine("For finishing input \"exit\"");
+            atm.InsertCassettes(moneyCassettes);
+
+            Console.WriteLine(Language.ExitMessage);
+            
+
             while (true)
             {
                 var input = Console.ReadLine();
-                if(input == "exit")break;
+                if (input == Language.ExitFlag) break;
 
                 int requestedSum;
-                if (!int.TryParse(input, out requestedSum))
+                if (!int.TryParse(input, out requestedSum) || requestedSum < 0)
                 {
-                    Console.WriteLine("Wrong input");
+                    Console.WriteLine(Language.WrongInput);
                     continue;
                 }
 
                 var money = atm.Withdraw(requestedSum);
-
-                if (money.TotalSum!=0)
-                {
-                    Console.WriteLine(money);
-                    continue;
-                }
-
-                Console.WriteLine(ErrromMessage[atm.CurrentState]);
+                Console.WriteLine(userViewer.ToString(money, atm.CurrentState));
             }
         }
+
     }
 }

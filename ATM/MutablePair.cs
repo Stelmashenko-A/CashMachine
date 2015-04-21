@@ -1,6 +1,8 @@
-﻿namespace ATM
+﻿using System;
+
+namespace ATM
 {
-    public class MutablePair<TKey, TValue>
+    public class MutablePair<TKey, TValue>:ICloneable
     {
         public TKey Key
         {
@@ -16,6 +18,11 @@
         {
             Key = key;
             Value = value;
+        }
+
+        public object Clone()
+        {
+            return new MutablePair<TKey, TValue>(Key, Value);
         }
     }
 }

@@ -1,15 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace ATM
 {
-    public class Money
+    public class Money : ICloneable
     {
-        public List<MutablePair<Banknote, int>> Banknotes
-        {
-            get; private set;
-        }
+        public List<MutablePair<Banknote, int>> Banknotes { get; private set; }
 
         public Money()
         {
@@ -18,10 +16,7 @@ namespace ATM
 
         public decimal TotalSum
         {
-            get
-            {
-                return Banknotes == null ? 0 : Banknotes.Sum(item => item.Value*item.Key.Nominal);
-            }
+            get { return Banknotes == null ? 0 : Banknotes.Sum(item => item.Value*item.Key.Nominal); }
         }
 
         public override string ToString()
@@ -40,10 +35,22 @@ namespace ATM
             return stringBuilder.ToString();
         }
 
+        public object Clone()
+        {
+            var clone = new Money();
+            foreach (var variable in Banknotes)
+            {
+                clone.Banknotes.Add((MutablePair<Banknote, int>) variable.Clone());
+            }
+            return clone;
+        }
+
         public static Money Parse(List<MutablePair<decimal, int>> combination)
         {
             var money = new Money();
-            foreach (var mutablePair in from variable in combination let banknote = new Banknote(variable.Key) select new MutablePair<Banknote, int>(banknote, variable.Value))
+            foreach (var mutablePair in from variable in combination
+                let banknote = new Banknote(variable.Key)
+                select new MutablePair<Banknote, int>(banknote, variable.Value))
             {
                 money.Banknotes.Add(mutablePair);
             }
