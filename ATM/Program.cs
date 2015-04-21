@@ -11,8 +11,14 @@ namespace ATM
     internal class Program
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(Program));
+
+        private static SignalHandler _signalHandler;
+
         private static void Main()
         {
+            _signalHandler += HandleConsoleSignal;
+            ConsoleHelper.SetSignalHandler(_signalHandler, true);
+
             XmlConfigurator.Configure();
             Log.Info("start");
 
@@ -43,6 +49,10 @@ namespace ATM
             }
             Log.Info("end");
             
+        }
+        private static void HandleConsoleSignal(ConsoleSignal consoleSignal)
+        {
+            Log.Info("end (console close)");
         }
     }
 }

@@ -69,6 +69,7 @@
     <Compile Include="Cassette.cs" />
     <Compile Include="CassetteWriter.cs" />
     <Compile Include="Configurator.cs" />
+    <Compile Include="ConsoleHelper.cs" />
     <Compile Include="GreedyAlgorithm.cs" />
     <Compile Include="IBanknoteSelector.cs" />
     <Compile Include="IMoneyWriter.cs" />
