@@ -61,6 +61,15 @@ namespace ATM.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Atm.Lang.Language.
+        /// </summary>
+        internal static string PathToLanguage {
+            get {
+                return ResourceManager.GetString("PathToLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Money.txt.
         /// </summary>
         internal static string PathToMoney {

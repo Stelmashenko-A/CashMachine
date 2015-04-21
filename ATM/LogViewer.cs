@@ -1,24 +1,31 @@
 ﻿using System;
 using System.Text;
+using log4net;
 
 namespace ATM
 {
     internal class LogViewer : IMoneyWriter
     {
-     
+        private static readonly ILog Log = LogManager.GetLogger(typeof(LogViewer));
         public string ToString(Money money, AtmState state)
         {
-
             var stringBuilder = new StringBuilder();
-            stringBuilder.Append(Enum.GetName(typeof (AtmState),state) + ' ');
-            foreach (var variable in money.Banknotes)
+            try
             {
-                stringBuilder.Append('[');
-                stringBuilder.Append(variable.Key);
-                stringBuilder.Append('-');
-                stringBuilder.Append(variable.Value);
-                stringBuilder.Append(']');
-                stringBuilder.Append('\n');
+                stringBuilder.Append(Enum.GetName(typeof (AtmState), state) + ' ');
+                foreach (var variable in money.Banknotes)
+                {
+                    stringBuilder.Append('[');
+                    stringBuilder.Append(variable.Key);
+                    stringBuilder.Append('-');
+                    stringBuilder.Append(variable.Value);
+                    stringBuilder.Append(']');
+                    stringBuilder.Append('\n');
+                }
+            }
+            catch (ArgumentNullException ex)
+            {
+                Log.Error(ex);
             }
             return stringBuilder.ToString();
         }

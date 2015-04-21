@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using log4net;
 
@@ -6,11 +7,11 @@ namespace ATM
 {
     public class CashMachine
     {
-        public static readonly ILog Log = LogManager.GetLogger(typeof(CashMachine));
+        private static readonly ILog Log = LogManager.GetLogger(typeof(CashMachine));
 
         private readonly List<Cassette> _moneyCassettes = new List<Cassette>();
 
-        LogViewer logViewer = new LogViewer();
+        readonly LogViewer _logViewer = new LogViewer();
 
         private Money _moneyForWithdraw;
 
@@ -53,7 +54,7 @@ namespace ATM
                 moneyForWithdraw = (Money)PreparedMoney.Clone();
             }
             CurrentState = result;
-            Log.Info(logViewer.ToString(moneyForWithdraw,result));
+            Log.Info(_logViewer.ToString(moneyForWithdraw,result));
             return moneyForWithdraw;
         }
 
@@ -67,22 +68,55 @@ namespace ATM
 
         private void UpdateCassettes(List<MutablePair<decimal, int>> combination)
         {
-            PreparedMoney = Money.Parse(combination);
-            foreach (var variable in _moneyForWithdraw.Banknotes)
+            try
             {
-                var variableTmp = variable;
-                foreach (var item in _moneyCassettes.Where(item => item.Banknote.Nominal == variableTmp.Key.Nominal))
+                if (combination == null)
                 {
-                    item.RemoveBanknotes(variable.Value);
+                    throw new ArgumentNullException("combination");
+                }
+                Money money;
+                if (!Money.TryParse(combination, out money))
+                {
+                    throw new FormatException("combination");
+                }
+                PreparedMoney = money;
+                foreach (var variable in _moneyForWithdraw.Banknotes)
+                {
+                    var variableTmp = variable;
+                    foreach (var item in _moneyCassettes.Where(item => item.Banknote.Nominal == variableTmp.Key.Nominal)
+                        )
+                    {
+                        item.RemoveBanknotes(variable.Value);
+                    }
                 }
             }
+            catch (ArgumentNullException ex)
+            {
+                Log.Error(ex);
+            }
+            catch (FormatException ex)
+            {
+                Log.Error("Can't parse combination from algoritm (combintion can be equal null)", ex);
+            }
+
         }
 
         public void InsertCassettes(List<Cassette> cassetes)
         {
-            foreach (var variable in cassetes)
+            try
             {
-                _moneyCassettes.Add((Cassette)variable.Clone());
+                if (cassetes == null)
+                {
+                    throw new ArgumentNullException("cassetes");
+                }
+                foreach (var variable in cassetes)
+                {
+                    _moneyCassettes.Add((Cassette) variable.Clone());
+                }
+            }
+            catch (ArgumentNullException ex)
+            {
+                Log.Error(ex);
             }
         }
     }

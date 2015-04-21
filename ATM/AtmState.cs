@@ -4,6 +4,7 @@
     {
         CombinationFailed,
         MoneyDeficiency,
+        FormatError,
         NoError
     }
 }

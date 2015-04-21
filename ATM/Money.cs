@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using log4net;
 
 namespace ATM
 {
     public class Money : ICloneable
     {
+        private static readonly ILog Log = LogManager.GetLogger(typeof(Money));
         public List<MutablePair<Banknote, int>> Banknotes { get; private set; }
 
         public Money()
@@ -45,16 +47,27 @@ namespace ATM
             return clone;
         }
 
-        public static Money Parse(List<MutablePair<decimal, int>> combination)
+        public static bool TryParse(List<MutablePair<decimal, int>> combination, out Money money)
         {
-            var money = new Money();
-            foreach (var mutablePair in from variable in combination
-                let banknote = new Banknote(variable.Key)
-                select new MutablePair<Banknote, int>(banknote, variable.Value))
+
+
+            money = new Money();
+            if (combination == null) throw new NullReferenceException();
+            try
             {
-                money.Banknotes.Add(mutablePair);
+                foreach (var mutablePair in from variable in combination
+                    let banknote = new Banknote(variable.Key)
+                    select new MutablePair<Banknote, int>(banknote, variable.Value))
+                {
+                    money.Banknotes.Add(mutablePair);
+                }
             }
-            return money;
+            catch (NullReferenceException ex)
+            {
+                Log.Error(ex);
+                return false;
+            }
+            return true;
         }
     }
 }
