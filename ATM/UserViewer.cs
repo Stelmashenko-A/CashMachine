@@ -35,10 +35,12 @@ namespace ATM
             catch (KeyNotFoundException ex)
             {
                 Log.Error(ex);
+                throw;
             }
             catch (ArgumentNullException ex)
             {
                 Log.Error(ex);
+                throw;
             }
             return stringBuilder.ToString();
         }

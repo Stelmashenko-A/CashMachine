@@ -5,12 +5,16 @@ using log4net;
 
 namespace ATM
 {
-    static class CassetteReader
+    class CassetteReader//:IReader
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(CassetteReader));
-        public static List<Cassette> ReadCassette(string fileName)
+
+        public List<Cassette> ReadCassette(object obj)
         {
+            var fileName = (string) obj;
+            Log.Info(fileName);
             var moneyCassettes = new List<Cassette>();
+
             try
             {
                 string data;
@@ -23,7 +27,11 @@ namespace ATM
                     throw new NullReferenceException("data");
                 }
                 var strArray = data.Split(' ');
+                Log.Debug(strArray);
+
                 var numberOfPars = strArray.Length/2;
+                Log.Debug(numberOfPars);
+
                 for (var i = 0; i < numberOfPars; i++)
                 {
                     decimal nominal;
@@ -39,17 +47,22 @@ namespace ATM
                     }
 
                     var cassette = new Cassette(new Banknote(nominal), num);
+                    Log.Debug(cassette);
+
                     moneyCassettes.Add(cassette);
                 }
             }
             catch (ArgumentNullException ex)
             {
                 Log.Error(ex);
+                throw;
             }
             catch (FormatException ex)
             {
-                Log.Error( ex);
+                Log.Error(ex);
+                throw;
             }
+
             return moneyCassettes;
         }
     }

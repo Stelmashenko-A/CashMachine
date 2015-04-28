@@ -26,6 +26,7 @@ namespace ATM
             catch (ArgumentNullException ex)
             {
                 Log.Error(ex);
+                throw;
             }
             return stringBuilder.ToString();
         }

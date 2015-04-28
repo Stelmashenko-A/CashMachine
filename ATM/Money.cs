@@ -50,7 +50,8 @@ namespace ATM
         public static bool TryParse(List<MutablePair<decimal, int>> combination, out Money money)
         {
 
-
+            Log.Debug(combination);
+            
             money = new Money();
             if (combination == null) throw new NullReferenceException();
             try
@@ -61,7 +62,9 @@ namespace ATM
                 {
                     money.Banknotes.Add(mutablePair);
                 }
+                Log.Debug(money);
             }
+
             catch (NullReferenceException ex)
             {
                 Log.Error(ex);

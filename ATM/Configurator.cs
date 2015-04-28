@@ -20,12 +20,15 @@ namespace ATM
                 try
                 {
                     var specifiedCulture = ConfigurationManager.AppSettings["Lang"];
+                    Log.Info(specifiedCulture);
+
                     SetCulture(specifiedCulture);
                     var states = Enum.GetValues(typeof (AtmState));
-                    var resourceManager = new ResourceManager(Properties.Resources.PathToLanguage, Assembly.GetExecutingAssembly());
+                    var resourceManager = new ResourceManager(ConfigurationManager.AppSettings["PathToLanguage"], Assembly.GetExecutingAssembly());
                     foreach (AtmState state in states)
                     {
                         var type = Enum.GetName(typeof (AtmState), state);
+                        Log.Debug(type);
 
                         if (type != null)
                         {
@@ -36,6 +39,7 @@ namespace ATM
                 catch (MissingManifestResourceException ex)
                 {
                     Log.Error(ex);
+                    throw;
                 }}
                 return atmStates;
         }

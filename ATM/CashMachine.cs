@@ -27,7 +27,6 @@ namespace ATM
             {
                 var result = (Money)_moneyForWithdraw.Clone();
                 HaveMoneyForWithdraw = false;
-                _moneyForWithdraw = null;
                 return result;
             }
             set
@@ -44,6 +43,7 @@ namespace ATM
 
         public Money Withdraw(decimal requestedSum)
         {
+            Log.Info("Request for withdrw "+ requestedSum );
             AtmState result;
             List<MutablePair<decimal, int>> combination;
             var moneyForWithdraw = new Money();
@@ -61,6 +61,7 @@ namespace ATM
         public List<MutablePair<decimal, int>> ConvertCassettes()
         {
             CurrentState = AtmState.NoError;
+            Log.Debug(CurrentState);
             return
                 _moneyCassettes.Select(item => new MutablePair<decimal, int>(item.Banknote.Nominal, item.Number))
                     .ToList();
@@ -79,30 +80,38 @@ namespace ATM
                 {
                     throw new FormatException("combination");
                 }
+
                 PreparedMoney = money;
-                foreach (var variable in _moneyForWithdraw.Banknotes)
+                Log.Debug(_logViewer.ToString(PreparedMoney,CurrentState));
+
+                foreach (var variable in PreparedMoney.Banknotes)
                 {
                     var variableTmp = variable;
+                    Log.Debug(variable);
                     foreach (var item in _moneyCassettes.Where(item => item.Banknote.Nominal == variableTmp.Key.Nominal)
                         )
                     {
                         item.RemoveBanknotes(variable.Value);
                     }
                 }
+                Log.Info("Cassettes has been updated");
             }
             catch (ArgumentNullException ex)
             {
                 Log.Error(ex);
+                throw;
             }
             catch (FormatException ex)
             {
                 Log.Error("Can't parse combination from algoritm (combintion can be equal null)", ex);
+                throw;
             }
 
         }
 
         public void InsertCassettes(List<Cassette> cassetes)
         {
+            Log.Debug(cassetes);
             try
             {
                 if (cassetes == null)
@@ -113,10 +122,12 @@ namespace ATM
                 {
                     _moneyCassettes.Add((Cassette) variable.Clone());
                 }
+                Log.Info("Cassettes has been inserted");
             }
             catch (ArgumentNullException ex)
             {
                 Log.Error(ex);
+                throw;
             }
         }
     }

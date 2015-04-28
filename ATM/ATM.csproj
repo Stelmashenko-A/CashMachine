@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CassetteParser.cs" />
     <Compile Include="CassetteReader.cs" />
     <Compile Include="Banknote.cs" />
     <Compile Include="CashMachine.cs" />
@@ -73,6 +74,8 @@
     <Compile Include="GreedyAlgorithm.cs" />
     <Compile Include="IBanknoteSelector.cs" />
     <Compile Include="IMoneyWriter.cs" />
+    <Compile Include="IParser.cs" />
+    <Compile Include="IReader.cs" />
     <Compile Include="Lang\Language.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -99,6 +102,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Reader.cs" />
     <Compile Include="UserViewer.cs" />
   </ItemGroup>
   <ItemGroup>

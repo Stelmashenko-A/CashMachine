@@ -117,10 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PathToLanguage" xml:space="preserve">
-    <value>Atm.Lang.Language</value>
-  </data>
-  <data name="PathToMoney" xml:space="preserve">
-    <value>Money.txt</value>
-  </data>
 </root>
