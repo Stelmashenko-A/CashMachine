@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ATM.Utility;
 using log4net;
 
-namespace ATM
+namespace ATM.AtmOperations
 {
     internal class GreedyAlgorithm : IBanknoteSelector
     {

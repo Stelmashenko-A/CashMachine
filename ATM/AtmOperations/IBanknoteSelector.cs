@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using ATM.Utility;
 
-namespace ATM
+namespace ATM.AtmOperations
 {
     public interface IBanknoteSelector
     {

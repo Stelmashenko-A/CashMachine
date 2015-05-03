@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using log4net;
 
-namespace ATM
+namespace ATM.Viewers
 {
     internal class UserViewer : IMoneyWriter
     {

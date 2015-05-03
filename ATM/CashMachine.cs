@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ATM.AtmOperations;
+using ATM.Utility;
+using ATM.Viewers;
 using log4net;
 
 namespace ATM
@@ -9,7 +12,7 @@ namespace ATM
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(CashMachine));
 
-        private readonly List<Cassette> _moneyCassettes = new List<Cassette>();
+        private List<Cassette> _moneyCassettes = new List<Cassette>();
 
         readonly LogViewer _logViewer = new LogViewer();
 
@@ -129,6 +132,13 @@ namespace ATM
                 Log.Error(ex);
                 throw;
             }
+        }
+
+        public List<Cassette> RemoveCassettes()
+        {
+            var tmp = _moneyCassettes;
+            _moneyCassettes = null;
+            return tmp;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace ATM
+namespace ATM.Utility
 {
     internal delegate void SignalHandler(ConsoleSignal consoleSignal);
 

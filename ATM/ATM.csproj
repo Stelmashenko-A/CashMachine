@@ -47,15 +47,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CsvHelper">
+      <HintPath>..\packages\CsvHelper.2.13.0.0\lib\net40-client\CsvHelper.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\..\..\..\Downloads\log4net-1.2.13-bin-newkey\log4net-1.2.13\bin\net\4.0\release\log4net.dll</HintPath>
     </Reference>
     <Reference Include="resources">
       <HintPath>Properties\resources.dll</HintPath>
     </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.4.0.40\lib\net40\ServiceStack.Text.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,19 +70,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CassetteParser.cs" />
-    <Compile Include="CassetteReader.cs" />
+    <Compile Include="Output\CsvWriter.cs" />
     <Compile Include="Banknote.cs" />
     <Compile Include="CashMachine.cs" />
     <Compile Include="Cassette.cs" />
-    <Compile Include="CassetteWriter.cs" />
     <Compile Include="Configurator.cs" />
-    <Compile Include="ConsoleHelper.cs" />
-    <Compile Include="GreedyAlgorithm.cs" />
-    <Compile Include="IBanknoteSelector.cs" />
-    <Compile Include="IMoneyWriter.cs" />
-    <Compile Include="IParser.cs" />
-    <Compile Include="IReader.cs" />
+    <Compile Include="Input\CsvReader.cs" />
+    <Compile Include="Input\JsonReader.cs" />
+    <Compile Include="Input\XmlReader.cs" />
+    <Compile Include="Output\JSONWriter.cs" />
+    <Compile Include="Utility\ConsoleHelper.cs" />
+    <Compile Include="AtmOperations\GreedyAlgorithm.cs" />
+    <Compile Include="AtmOperations\IBanknoteSelector.cs" />
+    <Compile Include="Viewers\IMoneyWriter.cs" />
+    <Compile Include="Input\IReader.cs" />
     <Compile Include="Lang\Language.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,9 +94,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Language.en-US.resx</DependentUpon>
     </Compile>
-    <Compile Include="LogViewer.cs" />
+    <Compile Include="Viewers\LogViewer.cs" />
     <Compile Include="Money.cs" />
-    <Compile Include="MutablePair.cs" />
+    <Compile Include="Utility\MutablePair.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AtmState.cs" />
@@ -102,13 +110,14 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Reader.cs" />
-    <Compile Include="UserViewer.cs" />
+    <Compile Include="Viewers\UserViewer.cs" />
+    <Compile Include="Output\XMLWriter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -146,9 +155,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

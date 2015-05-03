@@ -1,14 +1,21 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace ATM
 {
+    [DataContract]
     public class Cassette:ICloneable
     {
+        public Cassette()
+        { }
+
+        [DataMember]
         public int Number
         {
             get; private set;
         }
 
+        [DataMember]
         public Banknote Banknote
         {
             get; private set;

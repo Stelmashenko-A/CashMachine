@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ATM
+namespace ATM.Utility
 {
     public class MutablePair<TKey, TValue>:ICloneable
     {

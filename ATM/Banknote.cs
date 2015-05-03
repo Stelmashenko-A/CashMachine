@@ -1,13 +1,18 @@
 ﻿using System;
 using System.Globalization;
+using System.Runtime.Serialization;
 
 namespace ATM
 {
+    [DataContract]
     public class Banknote : ICloneable
     {
+        public Banknote() { }
+
+        [DataMember]
         public decimal Nominal
         {
-            get; set;
+            get; private set;
         }
 
         public Banknote(decimal nominal)
