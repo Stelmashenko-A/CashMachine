@@ -3,7 +3,7 @@ using System.Runtime.Serialization.Json;
 
 namespace ATM.Output
 {
-    class JsonWriter<T>
+    public class JsonWriter<T>
     {
         public void Write(T data, string fileName)
         {

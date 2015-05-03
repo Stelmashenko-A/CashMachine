@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using ATM;
 using ATM.AtmOperations;
 using ATM.Input;
 using ATM.Lang;
@@ -10,20 +11,18 @@ using ATM.Viewers;
 using log4net;
 using log4net.Config;
 
-//log4net
-namespace ATM
+namespace ConsoleInterfaceForAtm
 {
-
     internal class Program
     {
-        private static readonly ILog Log = LogManager.GetLogger(typeof(Program));
-        static readonly LogViewer LogViewer = new LogViewer();
+        private static readonly ILog Log = LogManager.GetLogger(typeof (Program));
+        private static readonly LogViewer LogViewer = new LogViewer();
 
         private static SignalHandler _signalHandler;
 
         private static void Main()
         {
-            
+
             XmlConfigurator.Configure();
             Log.Info("start");
             try
@@ -73,8 +72,9 @@ namespace ATM
             }
 
             Log.Info("end");
-            
+
         }
+
         private static void HandleConsoleSignal(ConsoleSignal consoleSignal)
         {
             Log.Info("end (console close)");

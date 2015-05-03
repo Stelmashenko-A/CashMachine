@@ -3,7 +3,7 @@ using ServiceStack.Text;
 
 namespace ATM.Output
 {
-    class CsvWriterer<T>
+    public class CsvWriterer<T>
     {
         public void Write(T data, string fileName)
         {

@@ -3,7 +3,7 @@ using System.IO;
 
 namespace ATM.Input
 {
-    internal class CsvReader : IReader<List<Cassette>>
+    public class CsvReader : IReader<List<Cassette>>
     {
         public List<Cassette> Read(string fileName)
         {

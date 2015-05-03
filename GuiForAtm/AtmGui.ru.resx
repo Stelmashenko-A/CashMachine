@@ -117,25 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CombinationFailed" xml:space="preserve">
-    <value>CombinationFailed</value>
-  </data>
-  <data name="Enter" xml:space="preserve">
-    <value>Enter</value>
-  </data>
-  <data name="ExitFlag" xml:space="preserve">
-    <value>exit</value>
-  </data>
-  <data name="ExitMessage" xml:space="preserve">
-    <value>For finishing input "exit"</value>
-  </data>
-  <data name="MoneyDeficiency" xml:space="preserve">
-    <value>MoneyDeficiency</value>
-  </data>
-  <data name="NoError" xml:space="preserve">
-    <value>NoError</value>
-  </data>
-  <data name="WrongInput" xml:space="preserve">
-    <value>Wrong Input</value>
+  <data name="buttonEnter.Text" xml:space="preserve">
+    <value>Ввод</value>
   </data>
 </root>

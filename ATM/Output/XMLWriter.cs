@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 
 namespace ATM.Output
 {
-    class XmlWriter<T>
+    public class XmlWriter<T>
     {
         public void Write(T data, string filename)
         {

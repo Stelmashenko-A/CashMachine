@@ -6,7 +6,7 @@ using log4net;
 
 namespace ATM.AtmOperations
 {
-    internal class GreedyAlgorithm : IBanknoteSelector
+    public class GreedyAlgorithm : IBanknoteSelector
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(GreedyAlgorithm));
         private static decimal TotalSum(List<MutablePair<decimal, int>> moneyCassettes)

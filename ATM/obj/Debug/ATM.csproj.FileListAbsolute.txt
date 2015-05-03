@@ -10,12 +10,8 @@ C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\obj\Debug\ATM.pdb
 C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\bin\Debug\ATM.exe
 C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\bin\Debug\ATM.pdb
 C:\Users\Андрей\Documents\GitHubLabs\CashMachine\ATM\obj\Debug\ATM.csprojResolveAssemblyReference.cache
-C:\Users\Андрей\Source\Repos\CashMachine\ATM\bin\Debug\ATM.exe.config
-C:\Users\Андрей\Source\Repos\CashMachine\ATM\obj\Debug\ATM.exe
 C:\Users\Андрей\Source\Repos\CashMachine\ATM\obj\Debug\ATM.pdb
-C:\Users\Андрей\Source\Repos\CashMachine\ATM\bin\Debug\ATM.exe
 C:\Users\Андрей\Source\Repos\CashMachine\ATM\bin\Debug\ATM.pdb
-C:\Users\Андрей\Source\Repos\CashMachine\ATM\obj\Debug\ATM.csprojResolveAssemblyReference.cache
 C:\Users\Андрей\Source\Repos\CashMachine\ATM\obj\Debug\ATM.Properties.Resources.resources
 C:\Users\Андрей\Source\Repos\CashMachine\ATM\obj\Debug\ATM.csproj.GenerateResource.Cache
 C:\Users\Андрей\Source\Repos\CashMachine\ATM\bin\Debug\log4net.dll
@@ -33,3 +29,6 @@ C:\Users\Андрей\Source\Repos\CashMachine\ATM\bin\Debug\CsvHelper.pdb
 C:\Users\Андрей\Source\Repos\CashMachine\ATM\bin\Debug\CsvHelper.xml
 C:\Users\Андрей\Source\Repos\CashMachine\ATM\bin\Debug\ServiceStack.Text.dll
 C:\Users\Андрей\Source\Repos\CashMachine\ATM\bin\Debug\ServiceStack.Text.xml
+C:\Users\Андрей\Source\Repos\CashMachine\ATM\bin\Debug\ATM.dll
+C:\Users\Андрей\Source\Repos\CashMachine\ATM\obj\Debug\ATM.dll
+C:\Users\Андрей\Source\Repos\CashMachine\ATM\obj\Debug\ATM.csprojResolveAssemblyReference.cache

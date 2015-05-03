@@ -22,7 +22,7 @@ namespace ATM.Lang {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Language {
+    public class Language {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -70,9 +70,18 @@ namespace ATM.Lang {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Enter.
+        /// </summary>
+        internal static string Enter {
+            get {
+                return ResourceManager.GetString("Enter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на exit.
         /// </summary>
-        internal static string ExitFlag {
+        public static string ExitFlag {
             get {
                 return ResourceManager.GetString("ExitFlag", resourceCulture);
             }
@@ -81,7 +90,7 @@ namespace ATM.Lang {
         /// <summary>
         ///   Ищет локализованную строку, похожую на For finishing input &quot;exit&quot;.
         /// </summary>
-        internal static string ExitMessage {
+        public static string ExitMessage {
             get {
                 return ResourceManager.GetString("ExitMessage", resourceCulture);
             }
@@ -108,7 +117,7 @@ namespace ATM.Lang {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Wrong Input.
         /// </summary>
-        internal static string WrongInput {
+        public static string WrongInput {
             get {
                 return ResourceManager.GetString("WrongInput", resourceCulture);
             }

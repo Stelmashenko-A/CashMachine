@@ -6,7 +6,7 @@ using log4net;
 
 namespace ATM.Viewers
 {
-    internal class UserViewer : IMoneyWriter
+    public class UserViewer : IMoneyWriter
     {
         private static Dictionary<AtmState, string> _errromMessage;
         private static readonly ILog Log = LogManager.GetLogger(typeof(UserViewer));

@@ -117,25 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CombinationFailed" xml:space="preserve">
-    <value>CombinationFailed</value>
+  <data name="nominalDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Номинал</value>
   </data>
-  <data name="Enter" xml:space="preserve">
-    <value>Enter</value>
+  <data name="numberDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Количество</value>
   </data>
-  <data name="ExitFlag" xml:space="preserve">
-    <value>exit</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="metroGrid1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="ExitMessage" xml:space="preserve">
-    <value>For finishing input "exit"</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="metroGrid1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 25</value>
   </data>
-  <data name="MoneyDeficiency" xml:space="preserve">
-    <value>MoneyDeficiency</value>
+  <data name="metroGrid1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 127</value>
   </data>
-  <data name="NoError" xml:space="preserve">
-    <value>NoError</value>
-  </data>
-  <data name="WrongInput" xml:space="preserve">
-    <value>Wrong Input</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>195, 134</value>
   </data>
 </root>

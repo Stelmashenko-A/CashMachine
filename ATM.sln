@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM", "ATM\ATM.csproj", "{95915261-E768-4975-A39E-5D4491568D52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiForAtm", "GuiForAtm\GuiForAtm.csproj", "{91A33E5A-E433-4AE4-955F-A78C1C2CD149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleInterfaceForAtm", "ConsoleInterfaceForAtm\ConsoleInterfaceForAtm.csproj", "{FA3425B8-3D07-4491-90A9-3C75D764FFC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{95915261-E768-4975-A39E-5D4491568D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95915261-E768-4975-A39E-5D4491568D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95915261-E768-4975-A39E-5D4491568D52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91A33E5A-E433-4AE4-955F-A78C1C2CD149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91A33E5A-E433-4AE4-955F-A78C1C2CD149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91A33E5A-E433-4AE4-955F-A78C1C2CD149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91A33E5A-E433-4AE4-955F-A78C1C2CD149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA3425B8-3D07-4491-90A9-3C75D764FFC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA3425B8-3D07-4491-90A9-3C75D764FFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA3425B8-3D07-4491-90A9-3C75D764FFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA3425B8-3D07-4491-90A9-3C75D764FFC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

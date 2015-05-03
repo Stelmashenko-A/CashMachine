@@ -120,6 +120,9 @@
   <data name="CombinationFailed" xml:space="preserve">
     <value>Ввидите другую сумму</value>
   </data>
+  <data name="Enter" xml:space="preserve">
+    <value>Ввод</value>
+  </data>
   <data name="ExitFlag" xml:space="preserve">
     <value>выход</value>
   </data>
