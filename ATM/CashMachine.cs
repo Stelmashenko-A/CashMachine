@@ -18,6 +18,10 @@ namespace ATM
 
         private Money _moneyForWithdraw;
 
+        private Statistics _statistics;
+
+        
+
         public AtmState CurrentState { get; private set; }
 
         public bool HaveMoneyForWithdraw { get; private set; }
@@ -39,9 +43,10 @@ namespace ATM
             }
         }
 
-        public CashMachine(IBanknoteSelector banknoteSelector)
+        public CashMachine(IBanknoteSelector banknoteSelector, string pathForStatisticOutput = null)
         {
             _banknoteSelector = banknoteSelector;
+            _statistics = new Statistics(pathForStatisticOutput);
         }
 
         public Money Withdraw(decimal requestedSum)
@@ -58,6 +63,7 @@ namespace ATM
             }
             CurrentState = result;
             Log.Info(_logViewer.ToString(moneyForWithdraw,result));
+            _statistics.Add(moneyForWithdraw);
             return moneyForWithdraw;
         }
 
@@ -139,6 +145,11 @@ namespace ATM
             var tmp = _moneyCassettes;
             _moneyCassettes = null;
             return tmp;
+        }
+
+        ~CashMachine()
+        {
+            _statistics.OutToFile();
         }
     }
 }

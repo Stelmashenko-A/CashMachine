@@ -34,7 +34,7 @@ namespace ConsoleInterfaceForAtm
                 var userViewer = new UserViewer(errors);
                 IReader<List<Cassette>> reader = new CsvReader();
                 var moneyCassettes = reader.Read(ConfigurationManager.AppSettings["PathToMoney"]);
-                var atm = new CashMachine(new GreedyAlgorithm());
+                var atm = new CashMachine(new GreedyAlgorithm(), ConfigurationManager.AppSettings["StatisticOut"]);
                 atm.InsertCassettes(moneyCassettes);
 
                 Console.WriteLine(Language.ExitMessage);

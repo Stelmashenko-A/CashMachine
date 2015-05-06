@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashBack));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,7 +42,6 @@
             // 
             // metroGrid1
             // 
-            resources.ApplyResources(this.metroGrid1, "metroGrid1");
             this.metroGrid1.AllowUserToResizeRows = false;
             this.metroGrid1.AutoGenerateColumns = false;
             this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -71,8 +69,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.metroGrid1.Enabled = false;
             this.metroGrid1.EnableHeadersVisualStyles = false;
+            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.Location = new System.Drawing.Point(-1, 25);
             this.metroGrid1.MultiSelect = false;
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -87,18 +88,20 @@
             this.metroGrid1.RowHeadersVisible = false;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid1.Size = new System.Drawing.Size(203, 127);
             this.metroGrid1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroGrid1.TabIndex = 0;
             // 
             // nominalDataGridViewTextBoxColumn
             // 
             this.nominalDataGridViewTextBoxColumn.DataPropertyName = "Nominal";
-            resources.ApplyResources(this.nominalDataGridViewTextBoxColumn, "nominalDataGridViewTextBoxColumn");
+            this.nominalDataGridViewTextBoxColumn.HeaderText = "Номинал";
             this.nominalDataGridViewTextBoxColumn.Name = "nominalDataGridViewTextBoxColumn";
             // 
             // numberDataGridViewTextBoxColumn
             // 
             this.numberDataGridViewTextBoxColumn.DataPropertyName = "Number";
-            resources.ApplyResources(this.numberDataGridViewTextBoxColumn, "numberDataGridViewTextBoxColumn");
+            this.numberDataGridViewTextBoxColumn.HeaderText = "Количество";
             this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
             // 
             // moneyViewerBindingSource
@@ -107,11 +110,14 @@
             // 
             // CashBack
             // 
-            resources.ApplyResources(this, "$this");
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(195, 134);
             this.Controls.Add(this.metroGrid1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "CashBack";
+            this.Resizable = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
             this.TransparencyKey = System.Drawing.Color.LightSkyBlue;
             this.Load += new System.EventHandler(this.CashBack_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();

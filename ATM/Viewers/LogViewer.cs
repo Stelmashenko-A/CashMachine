@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using ATM.Output;
 using log4net;
 
 namespace ATM.Viewers

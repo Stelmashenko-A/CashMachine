@@ -1,4 +1,4 @@
-﻿namespace ATM.Viewers
+﻿namespace ATM.Output
 {
     interface IMoneyWriter
     {

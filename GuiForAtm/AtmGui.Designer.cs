@@ -50,7 +50,7 @@
             resources.ApplyResources(this.metroButton1, "metroButton1");
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton1.Click += new System.EventHandler(this.buttonNumber_Click);
             // 
             // metroButton2
             // 
@@ -58,7 +58,7 @@
             resources.ApplyResources(this.metroButton2, "metroButton2");
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton2.Click += new System.EventHandler(this.buttonNumber_Click);
             // 
             // metroButton3
             // 
@@ -66,7 +66,7 @@
             resources.ApplyResources(this.metroButton3, "metroButton3");
             this.metroButton3.Name = "metroButton3";
             this.metroButton3.UseSelectable = true;
-            this.metroButton3.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton3.Click += new System.EventHandler(this.buttonNumber_Click);
             // 
             // metroButton4
             // 
@@ -74,7 +74,7 @@
             resources.ApplyResources(this.metroButton4, "metroButton4");
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.UseSelectable = true;
-            this.metroButton4.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton4.Click += new System.EventHandler(this.buttonNumber_Click);
             // 
             // metroButton5
             // 
@@ -82,7 +82,7 @@
             resources.ApplyResources(this.metroButton5, "metroButton5");
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.UseSelectable = true;
-            this.metroButton5.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton5.Click += new System.EventHandler(this.buttonNumber_Click);
             // 
             // metroButton6
             // 
@@ -90,7 +90,7 @@
             resources.ApplyResources(this.metroButton6, "metroButton6");
             this.metroButton6.Name = "metroButton6";
             this.metroButton6.UseSelectable = true;
-            this.metroButton6.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton6.Click += new System.EventHandler(this.buttonNumber_Click);
             // 
             // metroButton7
             // 
@@ -98,7 +98,7 @@
             resources.ApplyResources(this.metroButton7, "metroButton7");
             this.metroButton7.Name = "metroButton7";
             this.metroButton7.UseSelectable = true;
-            this.metroButton7.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton7.Click += new System.EventHandler(this.buttonNumber_Click);
             // 
             // metroButton8
             // 
@@ -106,7 +106,7 @@
             resources.ApplyResources(this.metroButton8, "metroButton8");
             this.metroButton8.Name = "metroButton8";
             this.metroButton8.UseSelectable = true;
-            this.metroButton8.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton8.Click += new System.EventHandler(this.buttonNumber_Click);
             // 
             // metroButton9
             // 
@@ -114,7 +114,7 @@
             resources.ApplyResources(this.metroButton9, "metroButton9");
             this.metroButton9.Name = "metroButton9";
             this.metroButton9.UseSelectable = true;
-            this.metroButton9.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton9.Click += new System.EventHandler(this.buttonNumber_Click);
             // 
             // metroButton10
             // 
@@ -138,7 +138,7 @@
             resources.ApplyResources(this.metroButton12, "metroButton12");
             this.metroButton12.Name = "metroButton12";
             this.metroButton12.UseSelectable = true;
-            this.metroButton12.Click += new System.EventHandler(this.metroButton1_Click);
+            this.metroButton12.Click += new System.EventHandler(this.buttonNumber_Click);
             // 
             // metroTextBox1
             // 
@@ -170,6 +170,7 @@
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Name = "AtmGui";
+            this.Resizable = false;
             this.ResumeLayout(false);
 
         }
