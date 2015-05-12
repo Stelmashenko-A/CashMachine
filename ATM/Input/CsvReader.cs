@@ -18,12 +18,7 @@ namespace ATM.Input
                 {
                     var strs = str.Split(',');
                     var number = int.Parse(strs[0]);
-
-                    strs[1] = strs[1].Remove(strs[1].IndexOf('{'), 1);
-                    strs[1] = strs[1].Remove(strs[1].IndexOf('}'), 1);
-                    strs = strs[1].Split(':');
                     var nominal = int.Parse(strs[1]);
-
                     list.Add(new Cassette(new Banknote(nominal), number));
                 }
             }

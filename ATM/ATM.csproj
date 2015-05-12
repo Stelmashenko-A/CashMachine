@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Input\TxtReader.cs" />
     <Compile Include="Output\CsvWriter.cs" />
     <Compile Include="Banknote.cs" />
     <Compile Include="CashMachine.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Input\JsonReader.cs" />
     <Compile Include="Input\XmlReader.cs" />
     <Compile Include="Output\JSONWriter.cs" />
+    <Compile Include="Record.cs" />
     <Compile Include="Statistics.cs" />
     <Compile Include="Utility\ConsoleHelper.cs" />
     <Compile Include="AtmOperations\GreedyAlgorithm.cs" />

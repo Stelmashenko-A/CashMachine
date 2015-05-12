@@ -141,7 +141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroButton1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="metroButton2.Location" type="System.Drawing.Point, System.Drawing">
     <value>81, 199</value>
@@ -165,7 +165,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroButton2.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="metroButton3.Location" type="System.Drawing.Point, System.Drawing">
     <value>137, 199</value>
@@ -189,7 +189,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroButton3.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="metroButton4.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 255</value>
@@ -213,7 +213,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroButton4.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="metroButton5.Location" type="System.Drawing.Point, System.Drawing">
     <value>81, 255</value>
@@ -237,7 +237,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroButton5.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="metroButton6.Location" type="System.Drawing.Point, System.Drawing">
     <value>137, 255</value>
@@ -261,7 +261,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroButton6.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="metroButton7.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 311</value>
@@ -285,7 +285,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroButton7.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="metroButton8.Location" type="System.Drawing.Point, System.Drawing">
     <value>81, 311</value>
@@ -309,7 +309,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroButton8.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="metroButton9.Location" type="System.Drawing.Point, System.Drawing">
     <value>137, 311</value>
@@ -333,31 +333,31 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroButton9.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
-  <data name="metroButton10.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="buttonBackspace.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 199</value>
   </data>
-  <data name="metroButton10.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonBackspace.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 50</value>
   </data>
-  <data name="metroButton10.TabIndex" type="System.Int32, mscorlib">
+  <data name="buttonBackspace.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="metroButton10.Text" xml:space="preserve">
+  <data name="buttonBackspace.Text" xml:space="preserve">
     <value>←</value>
   </data>
-  <data name="&gt;&gt;metroButton10.Name" xml:space="preserve">
-    <value>metroButton10</value>
+  <data name="&gt;&gt;buttonBackspace.Name" xml:space="preserve">
+    <value>buttonBackspace</value>
   </data>
-  <data name="&gt;&gt;metroButton10.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonBackspace.Type" xml:space="preserve">
     <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="&gt;&gt;metroButton10.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonBackspace.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;metroButton10.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;buttonBackspace.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="buttonEnter.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 255</value>
@@ -381,7 +381,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonEnter.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="metroButton12.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 311</value>
@@ -405,7 +405,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroButton12.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="metroTextBox1.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -414,7 +414,7 @@
     <value>25, 63</value>
   </data>
   <data name="metroTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 120</value>
+    <value>414, 120</value>
   </data>
   <data name="metroTextBox1.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -429,6 +429,78 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroTextBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonInputCassettes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>296, 199</value>
+  </data>
+  <data name="buttonInputCassettes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 50</value>
+  </data>
+  <data name="buttonInputCassettes.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="buttonInputCassettes.Text" xml:space="preserve">
+    <value>Input Cassetes</value>
+  </data>
+  <data name="&gt;&gt;buttonInputCassettes.Name" xml:space="preserve">
+    <value>buttonInputCassettes</value>
+  </data>
+  <data name="&gt;&gt;buttonInputCassettes.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;buttonInputCassettes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonInputCassettes.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonRemoveCassettes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>295, 255</value>
+  </data>
+  <data name="buttonRemoveCassettes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 50</value>
+  </data>
+  <data name="buttonRemoveCassettes.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="buttonRemoveCassettes.Text" xml:space="preserve">
+    <value>Remove Cassetes</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveCassettes.Name" xml:space="preserve">
+    <value>buttonRemoveCassettes</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveCassettes.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveCassettes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonRemoveCassettes.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonStatistics.Location" type="System.Drawing.Point, System.Drawing">
+    <value>295, 311</value>
+  </data>
+  <data name="buttonStatistics.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 50</value>
+  </data>
+  <data name="buttonStatistics.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="buttonStatistics.Text" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="&gt;&gt;buttonStatistics.Name" xml:space="preserve">
+    <value>buttonStatistics</value>
+  </data>
+  <data name="&gt;&gt;buttonStatistics.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;buttonStatistics.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonStatistics.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -438,7 +510,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>323, 373</value>
+    <value>479, 373</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Atm</value>

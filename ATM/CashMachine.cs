@@ -18,7 +18,7 @@ namespace ATM
 
         private Money _moneyForWithdraw;
 
-        private Statistics _statistics;
+        public Statistics Statistics;
 
         
 
@@ -46,7 +46,7 @@ namespace ATM
         public CashMachine(IBanknoteSelector banknoteSelector, string pathForStatisticOutput = null)
         {
             _banknoteSelector = banknoteSelector;
-            _statistics = new Statistics(pathForStatisticOutput);
+            Statistics = new Statistics(pathForStatisticOutput);
         }
 
         public Money Withdraw(decimal requestedSum)
@@ -63,7 +63,7 @@ namespace ATM
             }
             CurrentState = result;
             Log.Info(_logViewer.ToString(moneyForWithdraw,result));
-            _statistics.Add(moneyForWithdraw);
+            Statistics.Add(requestedSum,moneyForWithdraw, CurrentState);
             return moneyForWithdraw;
         }
 
@@ -121,6 +121,7 @@ namespace ATM
         public void InsertCassettes(List<Cassette> cassetes)
         {
             Log.Debug(cassetes);
+            Statistics=new Statistics("Stat.txt");
             try
             {
                 if (cassetes == null)
@@ -145,11 +146,6 @@ namespace ATM
             var tmp = _moneyCassettes;
             _moneyCassettes = null;
             return tmp;
-        }
-
-        ~CashMachine()
-        {
-            _statistics.OutToFile();
         }
     }
 }

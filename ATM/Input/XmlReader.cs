@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 
 namespace ATM.Input
 {
-    class XmlReader<T>:IReader<T>
+    public class XmlReader<T>:IReader<T>
     {
         public T Read(string fileName)
         {

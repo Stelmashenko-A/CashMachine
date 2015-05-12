@@ -13,8 +13,8 @@ namespace GuiForAtm
         public CashBack(List<MutablePair<Banknote, int>> data)
         {
             InitializeComponent();
-            List<MoneyViewer> list =
-                (from variable in data where variable.Value != 0 select new MoneyViewer(variable)).ToList();
+            List<PreparedMoney> list =
+                (from variable in data where variable.Value != 0 select new PreparedMoney(variable)).ToList();
             metroGrid1.DataSource = list;
             
             

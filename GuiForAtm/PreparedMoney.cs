@@ -3,9 +3,9 @@ using ATM.Utility;
 
 namespace GuiForAtm
 {
-    class MoneyViewer
+    class PreparedMoney
     {
-        public MoneyViewer(MutablePair<Banknote, int> data)
+        public PreparedMoney(MutablePair<Banknote, int> data)
         {
             Nominal = data.Key.Nominal;
             Number = data.Value;

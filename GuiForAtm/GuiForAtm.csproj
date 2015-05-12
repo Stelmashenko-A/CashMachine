@@ -72,9 +72,23 @@
     <Compile Include="CashBack.Designer.cs">
       <DependentUpon>CashBack.cs</DependentUpon>
     </Compile>
-    <Compile Include="MoneyViewer.cs" />
+    <Compile Include="InputCassettes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputCassettes.Designer.cs">
+      <DependentUpon>InputCassettes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreparedMoney.cs" />
+    <Compile Include="Statistics\PreparedRecords.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistics\StatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics\StatisticsForm.Designer.cs">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\StatisticsPreparer.cs" />
     <EmbeddedResource Include="AtmGui.en.resx">
       <DependentUpon>AtmGui.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +104,9 @@
     <EmbeddedResource Include="CashBack.ru.resx">
       <DependentUpon>CashBack.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InputCassettes.resx">
+      <DependentUpon>InputCassettes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -99,9 +116,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Statistics\StatisticsForm.resx">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\StatisticsForm.ru.resx">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ATM.Banknote.datasource" />
     <None Include="Properties\DataSources\ATM.Money.datasource" />
+    <None Include="Properties\DataSources\GuiForAtm.Statistics.PreparedRecord.datasource" />
     <None Include="Properties\DataSources\MoneyViewer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -122,6 +146,7 @@
       <Name>ATM</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

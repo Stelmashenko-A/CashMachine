@@ -38,10 +38,13 @@
             this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.metroButton8 = new MetroFramework.Controls.MetroButton();
             this.metroButton9 = new MetroFramework.Controls.MetroButton();
-            this.metroButton10 = new MetroFramework.Controls.MetroButton();
+            this.buttonBackspace = new MetroFramework.Controls.MetroButton();
             this.buttonEnter = new MetroFramework.Controls.MetroButton();
             this.metroButton12 = new MetroFramework.Controls.MetroButton();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.buttonInputCassettes = new MetroFramework.Controls.MetroButton();
+            this.buttonRemoveCassettes = new MetroFramework.Controls.MetroButton();
+            this.buttonStatistics = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroButton1
@@ -116,13 +119,13 @@
             this.metroButton9.UseSelectable = true;
             this.metroButton9.Click += new System.EventHandler(this.buttonNumber_Click);
             // 
-            // metroButton10
+            // buttonBackspace
             // 
-            this.metroButton10.FontSize = MetroFramework.MetroButtonSize.Tall;
-            resources.ApplyResources(this.metroButton10, "metroButton10");
-            this.metroButton10.Name = "metroButton10";
-            this.metroButton10.UseSelectable = true;
-            this.metroButton10.Click += new System.EventHandler(this.metroButton10_Click);
+            this.buttonBackspace.FontSize = MetroFramework.MetroButtonSize.Tall;
+            resources.ApplyResources(this.buttonBackspace, "buttonBackspace");
+            this.buttonBackspace.Name = "buttonBackspace";
+            this.buttonBackspace.UseSelectable = true;
+            this.buttonBackspace.Click += new System.EventHandler(this.metroButton10_Click);
             // 
             // buttonEnter
             // 
@@ -152,14 +155,41 @@
             this.metroTextBox1.SelectedText = "";
             this.metroTextBox1.UseSelectable = true;
             // 
+            // buttonInputCassettes
+            // 
+            this.buttonInputCassettes.FontSize = MetroFramework.MetroButtonSize.Tall;
+            resources.ApplyResources(this.buttonInputCassettes, "buttonInputCassettes");
+            this.buttonInputCassettes.Name = "buttonInputCassettes";
+            this.buttonInputCassettes.UseSelectable = true;
+            this.buttonInputCassettes.Click += new System.EventHandler(this.buttonInputCassettes_Click);
+            // 
+            // buttonRemoveCassettes
+            // 
+            this.buttonRemoveCassettes.FontSize = MetroFramework.MetroButtonSize.Tall;
+            resources.ApplyResources(this.buttonRemoveCassettes, "buttonRemoveCassettes");
+            this.buttonRemoveCassettes.Name = "buttonRemoveCassettes";
+            this.buttonRemoveCassettes.UseSelectable = true;
+            this.buttonRemoveCassettes.Click += new System.EventHandler(this.buttonRemoveCassettes_Click);
+            // 
+            // buttonStatistics
+            // 
+            this.buttonStatistics.FontSize = MetroFramework.MetroButtonSize.Tall;
+            resources.ApplyResources(this.buttonStatistics, "buttonStatistics");
+            this.buttonStatistics.Name = "buttonStatistics";
+            this.buttonStatistics.UseSelectable = true;
+            this.buttonStatistics.Click += new System.EventHandler(this.buttonStatistics_Click);
+            // 
             // AtmGui
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonStatistics);
+            this.Controls.Add(this.buttonRemoveCassettes);
+            this.Controls.Add(this.buttonInputCassettes);
             this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.metroButton12);
             this.Controls.Add(this.buttonEnter);
-            this.Controls.Add(this.metroButton10);
+            this.Controls.Add(this.buttonBackspace);
             this.Controls.Add(this.metroButton9);
             this.Controls.Add(this.metroButton8);
             this.Controls.Add(this.metroButton7);
@@ -186,10 +216,13 @@
         private MetroFramework.Controls.MetroButton metroButton7;
         private MetroFramework.Controls.MetroButton metroButton8;
         private MetroFramework.Controls.MetroButton metroButton9;
-        private MetroFramework.Controls.MetroButton metroButton10;
+        private MetroFramework.Controls.MetroButton buttonBackspace;
         private MetroFramework.Controls.MetroButton buttonEnter;
         private MetroFramework.Controls.MetroButton metroButton12;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroButton buttonInputCassettes;
+        private MetroFramework.Controls.MetroButton buttonRemoveCassettes;
+        private MetroFramework.Controls.MetroButton buttonStatistics;
 
     }
 }
