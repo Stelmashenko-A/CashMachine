@@ -37,21 +37,23 @@ namespace ConsoleInterfaceForAtm
                 var atm = new CashMachine(new GreedyAlgorithm(), ConfigurationManager.AppSettings["StatisticOut"]);
                 atm.InsertCassettes(moneyCassettes);
 
-                Console.WriteLine(Language.ExitMessage);
+                Console.WriteLine(ConsoleLanguagePack.MainMessage);
 
                 while (true)
                 {
                     var input = Console.ReadLine();
                     Log.Debug(input);
 
-                    if (input == Language.ExitFlag) break;
+                    if (input != null && ConsoleLanguagePack.ExitFlags.Contains(input)) break;
 
                     int requestedSum;
                     if (!int.TryParse(input, out requestedSum) || requestedSum < 0)
                     {
-                        Console.WriteLine(Language.WrongInput);
-                        Log.Info("Wrong input");
-                        continue;
+                        if (!CommandPerfomer.TryPerfom(input, atm, errors))
+                        {
+                            Console.WriteLine(ConsoleLanguagePack.CommandNotFound);
+                            continue;
+                        }
                     }
 
                     var money = atm.Withdraw(requestedSum);

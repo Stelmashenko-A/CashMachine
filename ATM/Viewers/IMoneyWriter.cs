@@ -1,6 +1,6 @@
 ﻿namespace ATM.Output
 {
-    interface IMoneyWriter
+    public interface IMoneyViewer
     {
         string ToString(Money money, AtmState state);
     }

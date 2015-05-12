@@ -5,7 +5,7 @@ using log4net;
 
 namespace ATM.Viewers
 {
-    public class LogViewer : IMoneyWriter
+    public class LogViewer : IMoneyViewer
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(LogViewer));
         public string ToString(Money money, AtmState state)

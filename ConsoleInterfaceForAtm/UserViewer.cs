@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using ATM;
 using ATM.Output;
 using log4net;
 
-namespace ATM.Viewers
+namespace ConsoleInterfaceForAtm
 {
-    public class UserViewer : IMoneyWriter
+    public class UserViewer : IMoneyViewer
     {
         private static Dictionary<AtmState, string> _errromMessage;
         private static readonly ILog Log = LogManager.GetLogger(typeof(UserViewer));
@@ -27,10 +29,11 @@ namespace ATM.Viewers
                 if (state != AtmState.NoError) return _errromMessage[state];
                 foreach (var variable in money.Banknotes.Where(variable => variable.Value != 0))
                 {
+                    stringBuilder.Append("[");
                     stringBuilder.Append(variable.Key);
-                    stringBuilder.Append(' ');
+                    stringBuilder.Append(',');
                     stringBuilder.Append(variable.Value);
-                    stringBuilder.Append('\n');
+                    stringBuilder.Append("]");
                 }
             }
             catch (KeyNotFoundException ex)
