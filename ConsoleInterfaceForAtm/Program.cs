@@ -4,10 +4,11 @@ using System.Configuration;
 using ATM;
 using ATM.AtmOperations;
 using ATM.Input;
-using ATM.Lang;
 using ATM.Output;
 using ATM.Utility;
 using ATM.Viewers;
+using ConsoleInterfaceForAtm.Language;
+using ConsoleInterfaceForAtm.Preparers;
 using log4net;
 using log4net.Config;
 
@@ -52,14 +53,16 @@ namespace ConsoleInterfaceForAtm
                         if (!CommandPerfomer.TryPerfom(input, atm, errors))
                         {
                             Console.WriteLine(ConsoleLanguagePack.CommandNotFound);
-                            continue;
+                            
                         }
+                        continue;
                     }
 
                     var money = atm.Withdraw(requestedSum);
                     Console.WriteLine(userViewer.ToString(money, atm.CurrentState));
                     Log.Debug(LogViewer.ToString(money, atm.CurrentState));
                 }
+
                 var cassettes = atm.RemoveCassettes();
                 var writerJson = new JsonWriter<List<Cassette>>();
                 writerJson.Write(cassettes, "cassette.json");

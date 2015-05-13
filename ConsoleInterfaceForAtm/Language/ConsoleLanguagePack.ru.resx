@@ -117,29 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="buttonEnter.Text" xml:space="preserve">
-    <value>Ввод</value>
+  <data name="AtmAnswer" xml:space="preserve">
+    <value>Ответ банкомата</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="metroTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>431, 120</value>
+  <data name="CommandNotFound" xml:space="preserve">
+    <value>Команда не найдена</value>
   </data>
-  <data name="buttonInputCassettes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 50</value>
+  <data name="ExitFlags" xml:space="preserve">
+    <value>eEеЕ</value>
   </data>
-  <data name="buttonInputCassettes.Text" xml:space="preserve">
-    <value>Вставить кассеты</value>
+  <data name="FileCantBeRead" xml:space="preserve">
+    <value>Файл не может быть прочитан</value>
   </data>
-  <data name="buttonRemoveCassettes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 50</value>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Файл не найден</value>
   </data>
-  <data name="buttonRemoveCassettes.Text" xml:space="preserve">
-    <value>Извлечь кассеты</value>
+  <data name="FormatIsntDetected" xml:space="preserve">
+    <value>Формат не определён</value>
   </data>
-  <data name="buttonStatistics.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 50</value>
+  <data name="Help" xml:space="preserve">
+    <value>"e" - выход, "help" - список команд, "insert-fileName" - вставить кассеты из файла, "remove" - извлеч кассеты из банкомата, "stat" - получить статистику</value>
   </data>
-  <data name="buttonStatistics.Text" xml:space="preserve">
-    <value>Статистика</value>
+  <data name="HelpFlag" xml:space="preserve">
+    <value>help</value>
+  </data>
+  <data name="InsertFlag" xml:space="preserve">
+    <value>insert</value>
+  </data>
+  <data name="MainMessage" xml:space="preserve">
+    <value>Для выхода нажмите 'e', для получения списка комманд введите "help"</value>
+  </data>
+  <data name="ReadSuccessfully" xml:space="preserve">
+    <value>Файл считан успешно</value>
+  </data>
+  <data name="Remainder" xml:space="preserve">
+    <value> Остаток</value>
+  </data>
+  <data name="RemoveFlag" xml:space="preserve">
+    <value>remove</value>
+  </data>
+  <data name="RequestedSum" xml:space="preserve">
+    <value> Запрошенная сумма:  </value>
+  </data>
+  <data name="StatisticsFlag" xml:space="preserve">
+    <value>stat</value>
+  </data>
+  <data name="TimeOfInsert" xml:space="preserve">
+    <value>Время вставки кассет: </value>
+  </data>
+  <data name="TotalSum" xml:space="preserve">
+    <value>Итого: </value>
   </data>
 </root>

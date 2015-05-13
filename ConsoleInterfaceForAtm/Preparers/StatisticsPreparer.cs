@@ -2,8 +2,10 @@
 using System.Globalization;
 using System.Text;
 using ATM;
+using ATM.Stat;
+using ConsoleInterfaceForAtm.Language;
 
-namespace ConsoleInterfaceForAtm
+namespace ConsoleInterfaceForAtm.Preparers
 {
     internal static class StatisticsPreparer
     {
@@ -19,6 +21,7 @@ namespace ConsoleInterfaceForAtm
                           userViewer.ToString(variable.Money, variable.ResultOfOperation) + "\n");
             }
             sb.Append(ConsoleLanguagePack.TotalSum + statistics.TotalSum);
+            sb.Append(ConsoleLanguagePack.Remainder + statistics.Remainder);
             return sb.ToString();
         }
     }

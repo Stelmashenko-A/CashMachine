@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatisticsForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatisticsForm));
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.timeOfOperationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.requestedSumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,13 +41,13 @@
             this.preparedRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelTime = new MetroFramework.Controls.MetroLabel();
             this.labelTotalSum = new MetroFramework.Controls.MetroLabel();
+            this.labelRemainder = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.preparedRecordBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // metroGrid1
             // 
-            resources.ApplyResources(this.metroGrid1, "metroGrid1");
             this.metroGrid1.AllowUserToResizeRows = false;
             this.metroGrid1.AutoGenerateColumns = false;
             this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -78,6 +78,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
             this.metroGrid1.EnableHeadersVisualStyles = false;
+            resources.ApplyResources(this.metroGrid1, "metroGrid1");
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -133,11 +134,18 @@
             // 
             resources.ApplyResources(this.labelTotalSum, "labelTotalSum");
             this.labelTotalSum.Name = "labelTotalSum";
+            this.labelTotalSum.Click += new System.EventHandler(this.labelTotalSum_Click);
+            // 
+            // labelRemainder
+            // 
+            resources.ApplyResources(this.labelRemainder, "labelRemainder");
+            this.labelRemainder.Name = "labelRemainder";
             // 
             // StatisticsForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelRemainder);
             this.Controls.Add(this.labelTotalSum);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.metroGrid1);
@@ -160,6 +168,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn moneyDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroLabel labelTime;
         private MetroFramework.Controls.MetroLabel labelTotalSum;
+        private MetroFramework.Controls.MetroLabel labelRemainder;
 
     }
 }

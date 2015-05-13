@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using ATM.AtmOperations;
+using ATM.Stat;
 using ATM.Utility;
 using ATM.Viewers;
 using log4net;
@@ -20,7 +21,13 @@ namespace ATM
 
         public Statistics Statistics;
 
-        
+        public decimal TotalSum
+        {
+            get
+            {
+                return _moneyCassettes.Sum(moneyCassette => moneyCassette.TotalSum);
+            }
+        }
 
         public AtmState CurrentState { get; private set; }
 
@@ -46,7 +53,7 @@ namespace ATM
         public CashMachine(IBanknoteSelector banknoteSelector, string pathForStatisticOutput = null)
         {
             _banknoteSelector = banknoteSelector;
-            Statistics = new Statistics(pathForStatisticOutput);
+            Statistics = new Statistics(pathForStatisticOutput,0);
         }
 
         public Money Withdraw(decimal requestedSum)
@@ -121,7 +128,7 @@ namespace ATM
         public void InsertCassettes(List<Cassette> cassetes)
         {
             Log.Debug(cassetes);
-            Statistics=new Statistics("Stat.txt");
+            _moneyCassettes=new List<Cassette>();
             try
             {
                 if (cassetes == null)
@@ -139,6 +146,7 @@ namespace ATM
                 Log.Error(ex);
                 throw;
             }
+            Statistics = new Statistics("Stat.txt", TotalSum);
         }
 
         public List<Cassette> RemoveCassettes()

@@ -1,7 +1,7 @@
 ﻿using ATM;
 using ATM.Utility;
 
-namespace GuiForAtm
+namespace GuiForAtm.Output
 {
     class PreparedMoney
     {

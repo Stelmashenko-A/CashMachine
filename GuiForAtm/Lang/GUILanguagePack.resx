@@ -117,29 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="buttonEnter.Text" xml:space="preserve">
-    <value>Ввод</value>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>File not found</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="metroTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>431, 120</value>
+  <data name="InputIsWrong" xml:space="preserve">
+    <value>Wrong input</value>
   </data>
-  <data name="buttonInputCassettes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 50</value>
+  <data name="NoCassettes" xml:space="preserve">
+    <value>Atm is empty</value>
   </data>
-  <data name="buttonInputCassettes.Text" xml:space="preserve">
-    <value>Вставить кассеты</value>
+  <data name="ReadingFaild" xml:space="preserve">
+    <value>File can't be read</value>
   </data>
-  <data name="buttonRemoveCassettes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 50</value>
+  <data name="SuccessInput" xml:space="preserve">
+    <value>Cassettes were inputed</value>
   </data>
-  <data name="buttonRemoveCassettes.Text" xml:space="preserve">
-    <value>Извлечь кассеты</value>
+  <data name="WrongFormat" xml:space="preserve">
+    <value>Format is not detected</value>
   </data>
-  <data name="buttonStatistics.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 50</value>
-  </data>
-  <data name="buttonStatistics.Text" xml:space="preserve">
-    <value>Статистика</value>
+  <data name="WrongInput" xml:space="preserve">
+    <value>Wrong input</value>
   </data>
 </root>

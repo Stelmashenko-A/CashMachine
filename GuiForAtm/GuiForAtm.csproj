@@ -66,11 +66,21 @@
     <Compile Include="AtmGui.Designer.cs">
       <DependentUpon>AtmGui.cs</DependentUpon>
     </Compile>
-    <Compile Include="CashBack.cs">
+    <Compile Include="Output\CashBack.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CashBack.Designer.cs">
+    <Compile Include="Output\CashBack.Designer.cs">
       <DependentUpon>CashBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lang\GUILanguagePack.ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GUILanguagePack.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Lang\GUILanguagePack.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GUILanguagePack.resx</DependentUpon>
     </Compile>
     <Compile Include="InputCassettes.cs">
       <SubType>Form</SubType>
@@ -78,7 +88,7 @@
     <Compile Include="InputCassettes.Designer.cs">
       <DependentUpon>InputCassettes.cs</DependentUpon>
     </Compile>
-    <Compile Include="PreparedMoney.cs" />
+    <Compile Include="Output\PreparedMoney.cs" />
     <Compile Include="Statistics\PreparedRecords.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,11 +108,19 @@
     <EmbeddedResource Include="AtmGui.ru.resx">
       <DependentUpon>AtmGui.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashBack.resx">
+    <EmbeddedResource Include="Output\CashBack.resx">
       <DependentUpon>CashBack.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashBack.ru.resx">
+    <EmbeddedResource Include="Output\CashBack.ru.resx">
       <DependentUpon>CashBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\GUILanguagePack.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GUILanguagePack.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\GUILanguagePack.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GUILanguagePack.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="InputCassettes.resx">
       <DependentUpon>InputCassettes.cs</DependentUpon>

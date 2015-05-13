@@ -1,4 +1,4 @@
-﻿namespace GuiForAtm
+﻿namespace GuiForAtm.Output
 {
     partial class CashBack
     {
@@ -106,7 +106,7 @@
             // 
             // moneyViewerBindingSource
             // 
-            this.moneyViewerBindingSource.DataSource = typeof(GuiForAtm.PreparedMoney);
+            this.moneyViewerBindingSource.DataSource = typeof(PreparedMoney);
             // 
             // CashBack
             // 

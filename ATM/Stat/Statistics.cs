@@ -7,7 +7,7 @@ using ATM.Viewers;
 using log4net;
 using ServiceStack;
 
-namespace ATM
+namespace ATM.Stat
 {
     public class Statistics
     {
@@ -16,17 +16,21 @@ namespace ATM
 
         private readonly string _path;
 
+        public decimal Remainder { get; private set; }
+
         public DateTime StartTime { get; private set; }
 
-        public Statistics(string path)
+        public Statistics(string path, decimal remainder)
         {
             _path = path;
+            Remainder = remainder;
             StartTime = DateTime.Now;
             Records = new List<Record>();
         }
 
         public void Add(decimal requestedSum, Money money, AtmState state)
         {
+            Remainder -= money.TotalSum;
             Records.Add(new Record(DateTime.Now, requestedSum,money, state));
         }
         

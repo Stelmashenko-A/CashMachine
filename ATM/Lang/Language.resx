@@ -132,6 +132,9 @@
   <data name="MoneyDeficiency" xml:space="preserve">
     <value>MoneyDeficiency</value>
   </data>
+  <data name="NoCassettes" xml:space="preserve">
+    <value>Atm has no money</value>
+  </data>
   <data name="NoError" xml:space="preserve">
     <value>NoError</value>
   </data>

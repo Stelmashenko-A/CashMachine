@@ -117,52 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AtmAnswer" xml:space="preserve">
-    <value>Atm answer</value>
-  </data>
-  <data name="CommandNotFound" xml:space="preserve">
-    <value>Command not found</value>
-  </data>
-  <data name="ExitFlags" xml:space="preserve">
-    <value>eEеЕ</value>
-  </data>
-  <data name="FileCantBeRead" xml:space="preserve">
-    <value>File cant be read</value>
-  </data>
   <data name="FileNotFound" xml:space="preserve">
-    <value>File not found</value>
+    <value>Файл не найден</value>
   </data>
-  <data name="FormatIsntDetected" xml:space="preserve">
-    <value>Format isn't detected</value>
+  <data name="NoCassettes" xml:space="preserve">
+    <value>Банкомат пуст</value>
   </data>
-  <data name="Help" xml:space="preserve">
-    <value>"e" - exit, "help" - info about all commands, "insert-fileName" - insert cassettes from file, "remove" - remove cassettes from Atm, "stat" - to get statistics</value>
+  <data name="ReadingFaild" xml:space="preserve">
+    <value>Файл не может быть прочитан</value>
   </data>
-  <data name="HelpFlag" xml:space="preserve">
-    <value>help</value>
+  <data name="SuccessInput" xml:space="preserve">
+    <value>Касеты успешно вставлены</value>
   </data>
-  <data name="InsertFlag" xml:space="preserve">
-    <value>insert</value>
+  <data name="WrongFormat" xml:space="preserve">
+    <value>Не определён формат</value>
   </data>
-  <data name="MainMessage" xml:space="preserve">
-    <value>For exit press 'e', to get other information enter "help"</value>
-  </data>
-  <data name="ReadSuccessfully" xml:space="preserve">
-    <value>Read successfully</value>
-  </data>
-  <data name="RemoveFlag" xml:space="preserve">
-    <value>remove</value>
-  </data>
-  <data name="RequestedSum" xml:space="preserve">
-    <value>Requested sum: </value>
-  </data>
-  <data name="StatisticsFlag" xml:space="preserve">
-    <value>stat</value>
-  </data>
-  <data name="TimeOfInsert" xml:space="preserve">
-    <value>Cassettes were insert: </value>
-  </data>
-  <data name="TotalSum" xml:space="preserve">
-    <value>Total sum: </value>
+  <data name="WrongInput" xml:space="preserve">
+    <value>Некорректный ввод</value>
   </data>
 </root>

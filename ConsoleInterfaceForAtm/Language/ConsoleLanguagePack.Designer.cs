@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConsoleInterfaceForAtm {
+namespace ConsoleInterfaceForAtm.Language {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ConsoleInterfaceForAtm {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ConsoleInterfaceForAtm.ConsoleLanguagePack", typeof(ConsoleLanguagePack).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ConsoleInterfaceForAtm.Language.ConsoleLanguagePack", typeof(ConsoleLanguagePack).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -156,6 +156,15 @@ namespace ConsoleInterfaceForAtm {
         internal static string ReadSuccessfully {
             get {
                 return ResourceManager.GetString("ReadSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на  Remainder: .
+        /// </summary>
+        internal static string Remainder {
+            get {
+                return ResourceManager.GetString("Remainder", resourceCulture);
             }
         }
         

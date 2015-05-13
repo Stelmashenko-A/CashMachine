@@ -117,157 +117,177 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;resultOfOperationDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="timeOfOperationDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Time of operation</value>
-  </data>
-  <data name="&gt;&gt;timeOfOperationDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="labelTime.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="labelTotalSum.Text" xml:space="preserve">
-    <value>Total sum: </value>
-  </data>
-  <data name="labelTotalSum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>354, 9</value>
-  </data>
-  <data name="&gt;&gt;preparedRecordBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;metroGrid1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;timeOfOperationDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>timeOfOperationDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;moneyDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>moneyDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;labelTime.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>StatisticsForm</value>
-  </data>
-  <data name="labelTotalSum.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;labelTotalSum.Name" xml:space="preserve">
-    <value>labelTotalSum</value>
-  </data>
-  <data name="&gt;&gt;labelTime.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;labelTime.Name" xml:space="preserve">
-    <value>labelTime</value>
-  </data>
-  <data name="labelTime.Text" xml:space="preserve">
-    <value>Cassettes were inserted:</value>
-  </data>
-  <data name="&gt;&gt;moneyDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="metroGrid1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11px</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>670, 218</value>
-  </data>
-  <data name="&gt;&gt;preparedRecordBindingSource.Name" xml:space="preserve">
-    <value>preparedRecordBindingSource</value>
-  </data>
-  <data name="&gt;&gt;requestedSumDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>requestedSumDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;labelTotalSum.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="resultOfOperationDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Atm's answer</value>
-  </data>
-  <data name="&gt;&gt;resultOfOperationDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>resultOfOperationDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;labelTotalSum.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="labelTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 19</value>
   </data>
   <data name="requestedSumDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Requested sum</value>
   </data>
-  <data name="&gt;&gt;labelTime.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="labelTotalSum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 19</value>
-  </data>
-  <data name="&gt;&gt;metroGrid1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="moneyDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>300</value>
-  </data>
-  <data name="metroGrid1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>646, 175</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
-  </data>
-  <data name="&gt;&gt;labelTotalSum.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;requestedSumDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="metroGrid1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="resultOfOperationDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Atm's answer</value>
   </data>
   <data name="moneyDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
     <value>Money</value>
   </data>
-  <data name="labelTotalSum.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="moneyDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>300</value>
+  </data>
+  <metadata name="preparedRecordBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="metroGrid1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11px</value>
   </data>
   <data name="metroGrid1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 31</value>
   </data>
+  <data name="metroGrid1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>646, 175</value>
+  </data>
+  <data name="metroGrid1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;metroGrid1.Name" xml:space="preserve">
     <value>metroGrid1</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>StatisticsForm</value>
-  </data>
-  <data name="labelTime.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;metroGrid1.Type" xml:space="preserve">
     <value>MetroFramework.Controls.MetroGrid, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ru</value>
-  </metadata>
+  <data name="&gt;&gt;metroGrid1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;metroGrid1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelTime.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="labelTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 19</value>
+  </data>
+  <data name="labelTime.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelTime.Text" xml:space="preserve">
+    <value>Cassettes were inserted:</value>
+  </data>
+  <data name="&gt;&gt;labelTime.Name" xml:space="preserve">
+    <value>labelTime</value>
+  </data>
+  <data name="&gt;&gt;labelTime.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;labelTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelTime.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelTotalSum.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelTotalSum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>495, 9</value>
+  </data>
+  <data name="labelTotalSum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 19</value>
+  </data>
+  <data name="labelTotalSum.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelTotalSum.Text" xml:space="preserve">
+    <value>Total sum: </value>
+  </data>
+  <data name="&gt;&gt;labelTotalSum.Name" xml:space="preserve">
+    <value>labelTotalSum</value>
+  </data>
+  <data name="&gt;&gt;labelTotalSum.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;labelTotalSum.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelTotalSum.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelRemainder.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelRemainder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>345, 9</value>
+  </data>
+  <data name="labelRemainder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 19</value>
+  </data>
+  <data name="labelRemainder.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelRemainder.Text" xml:space="preserve">
+    <value>Remainder:</value>
+  </data>
+  <data name="&gt;&gt;labelRemainder.Name" xml:space="preserve">
+    <value>labelRemainder</value>
+  </data>
+  <data name="&gt;&gt;labelRemainder.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;labelRemainder.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelRemainder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="preparedRecordBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>670, 218</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>StatisticsForm</value>
+  </data>
+  <data name="&gt;&gt;timeOfOperationDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>timeOfOperationDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;timeOfOperationDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;requestedSumDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>requestedSumDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;requestedSumDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;resultOfOperationDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>resultOfOperationDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;resultOfOperationDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;moneyDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>moneyDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;moneyDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;preparedRecordBindingSource.Name" xml:space="preserve">
+    <value>preparedRecordBindingSource</value>
+  </data>
+  <data name="&gt;&gt;preparedRecordBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>StatisticsForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

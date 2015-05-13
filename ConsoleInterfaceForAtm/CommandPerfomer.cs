@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using ATM;
 using ATM.Input;
+using ConsoleInterfaceForAtm.Language;
+using ConsoleInterfaceForAtm.Preparers;
 
 namespace ConsoleInterfaceForAtm
 {
@@ -91,12 +93,12 @@ namespace ConsoleInterfaceForAtm
             {
                 atm.InsertCassettes(reader.Read(path));
             }
-            catch (FileNotFoundException exception)
+            catch (FileNotFoundException)
             {
                 Console.WriteLine(ConsoleLanguagePack.FileNotFound);
                 return;
             }
-            catch (SerializationException exception)
+            catch (SerializationException)
             {
                 Console.WriteLine(ConsoleLanguagePack.FileCantBeRead);
                 return;

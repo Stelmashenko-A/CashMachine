@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.Serialization;
 using System.Windows.Forms;
 using ATM;
 using ATM.Input;
+using GuiForAtm.Lang;
 using MetroFramework;
 
 namespace GuiForAtm
@@ -24,9 +21,10 @@ namespace GuiForAtm
         private void buttonEnter_Click(object sender, EventArgs e)
         {
             CashMachine atm;
-            if (Owner is AtmGui)
+            var gui = Owner as AtmGui;
+            if (gui != null)
             {
-                atm = (Owner as AtmGui).Atm;
+                atm = gui.Atm;
             }
             else
             {
@@ -54,24 +52,29 @@ namespace GuiForAtm
 
             if (!isFormatDetected)
             {
-                MetroMessageBox.Show(this, "Format isn't detected");
+                MetroMessageBox.Show(this, GUILanguagePack.WrongFormat);
                 return;
             }
             try
             {
                 atm.InsertCassettes(reader.Read(textBoxFileName.Text));
             }
-            catch (FileNotFoundException exception)
+            catch (FileNotFoundException)
             {
-                MetroMessageBox.Show(this, "File not found");
+                MetroMessageBox.Show(this, GUILanguagePack.FileNotFound);
                 return;
             }
-            catch (System.Runtime.Serialization.SerializationException exception)
+            catch (SerializationException)
             {
-                MetroMessageBox.Show(this, "File has wrong format");
+                MetroMessageBox.Show(this, GUILanguagePack.ReadingFaild);
                 return;
             }
-            this.Close();
+            Close();
+        }
+
+        private void InputCassettes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

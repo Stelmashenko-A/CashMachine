@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Text;
-using ATM.Output;
 using log4net;
 
 namespace ATM.Viewers
 {
-    public class LogViewer : IMoneyViewer
+    internal class LogViewer
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(LogViewer));
         public string ToString(Money money, AtmState state)

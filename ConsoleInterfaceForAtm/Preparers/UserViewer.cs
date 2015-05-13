@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using ATM;
 using ATM.Output;
 using log4net;
 
-namespace ConsoleInterfaceForAtm
+namespace ConsoleInterfaceForAtm.Preparers
 {
     public class UserViewer : IMoneyViewer
     {

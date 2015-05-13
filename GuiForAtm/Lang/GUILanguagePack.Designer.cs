@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ATM.Lang {
+namespace GuiForAtm.Lang {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ATM.Lang {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Language {
+    internal class GUILanguagePack {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Language() {
+        internal GUILanguagePack() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ATM.Lang {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ATM.Lang.Language", typeof(Language).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GuiForAtm.Lang.GUILanguagePack", typeof(GUILanguagePack).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,52 +61,25 @@ namespace ATM.Lang {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на CombinationFailed.
+        ///   Ищет локализованную строку, похожую на File not found.
         /// </summary>
-        internal static string CombinationFailed {
+        internal static string FileNotFound {
             get {
-                return ResourceManager.GetString("CombinationFailed", resourceCulture);
+                return ResourceManager.GetString("FileNotFound", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Enter.
+        ///   Ищет локализованную строку, похожую на Wrong input.
         /// </summary>
-        internal static string Enter {
+        internal static string InputIsWrong {
             get {
-                return ResourceManager.GetString("Enter", resourceCulture);
+                return ResourceManager.GetString("InputIsWrong", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на exit.
-        /// </summary>
-        internal static string ExitFlag {
-            get {
-                return ResourceManager.GetString("ExitFlag", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на For finishing input &quot;exit&quot;.
-        /// </summary>
-        internal static string ExitMessage {
-            get {
-                return ResourceManager.GetString("ExitMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на MoneyDeficiency.
-        /// </summary>
-        internal static string MoneyDeficiency {
-            get {
-                return ResourceManager.GetString("MoneyDeficiency", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Atm has no money.
+        ///   Ищет локализованную строку, похожую на Atm is empty.
         /// </summary>
         internal static string NoCassettes {
             get {
@@ -115,16 +88,34 @@ namespace ATM.Lang {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на NoError.
+        ///   Ищет локализованную строку, похожую на File can&apos;t be read.
         /// </summary>
-        internal static string NoError {
+        internal static string ReadingFaild {
             get {
-                return ResourceManager.GetString("NoError", resourceCulture);
+                return ResourceManager.GetString("ReadingFaild", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Wrong Input.
+        ///   Ищет локализованную строку, похожую на Cassettes were inputed.
+        /// </summary>
+        internal static string SuccessInput {
+            get {
+                return ResourceManager.GetString("SuccessInput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Format is not detected.
+        /// </summary>
+        internal static string WrongFormat {
+            get {
+                return ResourceManager.GetString("WrongFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Wrong input.
         /// </summary>
         internal static string WrongInput {
             get {

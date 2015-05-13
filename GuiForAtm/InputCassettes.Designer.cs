@@ -77,6 +77,7 @@
             this.Controls.Add(this.textBoxFileName);
             this.Name = "InputCassettes";
             this.Text = "InputCassettes";
+            this.Load += new System.EventHandler(this.InputCassettes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

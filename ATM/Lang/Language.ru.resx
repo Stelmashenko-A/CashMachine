@@ -132,6 +132,9 @@
   <data name="MoneyDeficiency" xml:space="preserve">
     <value>Недостаточно средств в банкомате</value>
   </data>
+  <data name="NoCassettes" xml:space="preserve">
+    <value>Банкомат пуст</value>
+  </data>
   <data name="NoError" xml:space="preserve">
     <value>Операция завершена успешно</value>
   </data>
