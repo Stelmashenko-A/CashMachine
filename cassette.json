@@ -1,0 +1,4 @@
+[ { "Banknote": { "Nominal": 200 }, "Number": 1000 }, 
+  { "Banknote": { "Nominal": 150 }, "Number": 1000 }, 
+  { "Banknote": { "Nominal": 48 }, "Number": 999 }, 
+  { "Banknote": { "Nominal": 25 }, "Number": 997 } ]

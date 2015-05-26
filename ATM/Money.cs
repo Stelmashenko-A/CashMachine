@@ -7,6 +7,7 @@ using log4net;
 
 namespace ATM
 {
+    [Serializable]
     public class Money : ICloneable
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(Money));

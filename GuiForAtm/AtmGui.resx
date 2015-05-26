@@ -117,73 +117,68 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;pictureBoxEnglish.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Screen.Name" xml:space="preserve">
+    <value>Screen</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="metroTextBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="labelCommand.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
-  <data name="buttonStatistics.Text" xml:space="preserve">
-    <value>Statistics</value>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
   </data>
-  <data name="metroButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="nominalDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Nominal</value>
   </data>
-  <data name="metroButton12.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;metroButton6.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;pictureBoxRussian.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="metroButton7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 311</value>
+  <data name="labelBanknotes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 103</value>
   </data>
-  <data name="&gt;&gt;metroButton7.Name" xml:space="preserve">
-    <value>metroButton7</value>
+  <data name="labelBanknotes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;buttonRemoveCassettes.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;labelBanknotes.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="metroButton7.Text" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AtmGui</value>
   </data>
-  <data name="&gt;&gt;metroButton8.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="buttonEnter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 37</value>
   </data>
-  <data name="buttonStatistics.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="pictureBoxRussian.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
   </data>
-  <data name="&gt;&gt;metroButton12.Name" xml:space="preserve">
-    <value>metroButton12</value>
+  <data name="&gt;&gt;metroGrid1.Name" xml:space="preserve">
+    <value>metroGrid1</value>
   </data>
-  <data name="metroButton6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
+  <data name="&gt;&gt;labelCommand.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialLabel, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="metroButton5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
+  <data name="labelCommand.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 38</value>
   </data>
-  <data name="metroButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
+  <data name="&gt;&gt;removeCassettesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="metroButton1.Text" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;numberDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>numberDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;metroButton2.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pictureBoxRussian.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="metroButton5.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="metroButton12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 311</value>
-  </data>
-  <data name="&gt;&gt;metroButton6.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="metroButton9.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="metroButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
+  <data name="buttonEnter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>304, 60</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -191,335 +186,260 @@
   <data name="buttonEnter.Text" xml:space="preserve">
     <value>Enter</value>
   </data>
-  <data name="buttonInputCassettes.Text" xml:space="preserve">
-    <value>Input Cassetes</value>
+  <data name="Screen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 37</value>
   </data>
-  <data name="metroButton9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
+  <data name="&gt;&gt;metroGrid1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroGrid, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
   </data>
-  <data name="buttonRemoveCassettes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 50</value>
+  <data name="withdrawToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 20</value>
   </data>
-  <data name="metroButton7.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="labelBanknotes.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
   </data>
-  <data name="&gt;&gt;metroButton4.Name" xml:space="preserve">
-    <value>metroButton4</value>
+  <data name="&gt;&gt;preparedMoneyBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;metroButton8.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;metroButton6.Name" xml:space="preserve">
-    <value>metroButton6</value>
-  </data>
-  <data name="metroButton12.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="buttonBackspace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 50</value>
-  </data>
-  <data name="&gt;&gt;metroButton2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonBackspace.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 199</value>
-  </data>
-  <data name="buttonEnter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 50</value>
-  </data>
-  <data name="&gt;&gt;metroButton9.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;metroButton7.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;buttonStatistics.Name" xml:space="preserve">
-    <value>buttonStatistics</value>
-  </data>
-  <data name="&gt;&gt;metroTextBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;metroButton8.Name" xml:space="preserve">
-    <value>metroButton8</value>
-  </data>
-  <data name="metroButton2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="buttonInputCassettes.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;buttonBackspace.Name" xml:space="preserve">
-    <value>buttonBackspace</value>
-  </data>
-  <data name="&gt;&gt;metroButton12.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;metroButton5.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroButton3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroButton7.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroButton3.Name" xml:space="preserve">
-    <value>metroButton3</value>
-  </data>
-  <data name="metroButton8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
-  </data>
-  <data name="&gt;&gt;metroButton5.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="metroTextBox1.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;buttonEnter.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonInputCassettes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 199</value>
-  </data>
-  <data name="&gt;&gt;metroButton1.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="metroButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 199</value>
-  </data>
-  <data name="&gt;&gt;metroButton3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="metroTextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 63</value>
-  </data>
-  <data name="metroButton5.Text" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;metroButton12.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonRemoveCassettes.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonStatistics.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;metroButton4.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;metroButton9.Name" xml:space="preserve">
-    <value>metroButton9</value>
-  </data>
-  <data name="&gt;&gt;buttonEnter.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;buttonStatistics.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="metroButton3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AtmGui</value>
-  </data>
-  <data name="&gt;&gt;metroButton6.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="metroButton9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 311</value>
-  </data>
-  <data name="&gt;&gt;buttonInputCassettes.Name" xml:space="preserve">
-    <value>buttonInputCassettes</value>
-  </data>
-  <data name="&gt;&gt;metroButton5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonRemoveCassettes.Text" xml:space="preserve">
-    <value>Remove Cassetes</value>
-  </data>
-  <data name="&gt;&gt;buttonBackspace.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;metroButton1.Name" xml:space="preserve">
-    <value>metroButton1</value>
-  </data>
-  <data name="metroButton9.Text" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;buttonInputCassettes.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="metroButton5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 255</value>
-  </data>
-  <data name="&gt;&gt;metroButton4.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroButton12.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;buttonRemoveCassettes.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="metroButton2.Text" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="metroButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 199</value>
-  </data>
-  <data name="metroButton8.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="metroButton8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 311</value>
-  </data>
-  <data name="&gt;&gt;metroButton4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="metroButton6.Text" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;buttonStatistics.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroButton7.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;buttonEnter.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;metroButton9.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="removeCassettesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remove cassettes</value>
   </data>
   <data name="&gt;&gt;buttonEnter.Name" xml:space="preserve">
     <value>buttonEnter</value>
   </data>
-  <data name="&gt;&gt;metroButton3.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="&gt;&gt;labelBanknotes.Type" xml:space="preserve">
+    <value>MaterialSkin.Controls.MaterialLabel, MaterialSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="labelBanknotes.Text" xml:space="preserve">
+    <value>materialLabel1</value>
+  </data>
+  <data name="metroGrid1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11px</value>
+  </data>
+  <data name="&gt;&gt;nominalDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;withdrawToolStripMenuItem.Name" xml:space="preserve">
+    <value>withdrawToolStripMenuItem</value>
+  </data>
+  <data name="statisticsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxEnglish.Name" xml:space="preserve">
+    <value>pictureBoxEnglish</value>
+  </data>
+  <data name="&gt;&gt;statisticsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;inputCassettesToolStripMenuItem.Name" xml:space="preserve">
+    <value>inputCassettesToolStripMenuItem</value>
+  </data>
+  <data name="metroGrid1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 125</value>
+  </data>
+  <data name="removeCassettesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 20</value>
+  </data>
+  <data name="pictureBoxRussian.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 27</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;withdrawToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cashMachineBindingSource.Name" xml:space="preserve">
+    <value>cashMachineBindingSource</value>
+  </data>
+  <data name="&gt;&gt;inputCassettesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCommand.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="inputCassettesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Input cassettes</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>430, 24</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cashMachineBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="statisticsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="&gt;&gt;Screen.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;buttonEnter.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="inputCassettesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 20</value>
+  </data>
+  <data name="&gt;&gt;labelCommand.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pictureBoxEnglish.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;preparedMoneyBindingSource.Name" xml:space="preserve">
+    <value>preparedMoneyBindingSource</value>
+  </data>
+  <data name="&gt;&gt;nominalDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>nominalDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="numberDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="Screen.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Screen.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;labelBanknotes.Name" xml:space="preserve">
+    <value>labelBanknotes</value>
+  </data>
+  <data name="labelCommand.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxRussian.Name" xml:space="preserve">
+    <value>pictureBoxRussian</value>
+  </data>
+  <data name="metroGrid1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 103</value>
+  </data>
+  <data name="&gt;&gt;removeCassettesToolStripMenuItem.Name" xml:space="preserve">
+    <value>removeCassettesToolStripMenuItem</value>
+  </data>
+  <data name="metroGrid1.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;buttonEnter.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>MetroFramework.Forms.MetroForm, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;metroButton2.Name" xml:space="preserve">
-    <value>metroButton2</value>
+  <data name="labelBanknotes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 19</value>
   </data>
-  <data name="&gt;&gt;metroTextBox1.Name" xml:space="preserve">
-    <value>metroTextBox1</value>
+  <data name="pictureBoxEnglish.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="metroButton3.Text" xml:space="preserve">
-    <value>3</value>
+  <data name="Screen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 60</value>
   </data>
-  <data name="metroButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 199</value>
+  <data name="&gt;&gt;statisticsToolStripMenuItem.Name" xml:space="preserve">
+    <value>statisticsToolStripMenuItem</value>
   </data>
-  <data name="buttonStatistics.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 50</value>
+  <data name="withdrawToolStripMenuItem.Text" xml:space="preserve">
+    <value>Withdraw</value>
   </data>
-  <data name="metroButton4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 255</value>
+  <data name="&gt;&gt;Screen.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="metroButton6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 255</value>
+  <data name="labelBanknotes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxEnglish.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="labelBanknotes.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="labelCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 19</value>
+  </data>
+  <data name="&gt;&gt;labelBanknotes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="metroGrid1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pictureBoxEnglish.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxRussian.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="labelCommand.Text" xml:space="preserve">
+    <value>Enter sum</value>
+  </data>
+  <data name="&gt;&gt;metroGrid1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxRussian.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Atm</value>
   </data>
-  <data name="metroButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
-  </data>
-  <data name="metroTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>414, 120</value>
-  </data>
-  <data name="metroButton7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 50</value>
-  </data>
-  <data name="metroButton8.Text" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="metroButton4.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;metroButton5.Name" xml:space="preserve">
-    <value>metroButton5</value>
-  </data>
-  <data name="&gt;&gt;metroButton8.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;metroButton1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="metroButton12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 50</value>
-  </data>
-  <data name="&gt;&gt;buttonBackspace.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;buttonBackspace.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="buttonInputCassettes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 50</value>
-  </data>
-  <data name="metroButton6.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;metroButton9.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;buttonRemoveCassettes.Name" xml:space="preserve">
-    <value>buttonRemoveCassettes</value>
-  </data>
-  <data name="buttonStatistics.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 311</value>
-  </data>
-  <data name="&gt;&gt;metroButton2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="buttonBackspace.Text" xml:space="preserve">
-    <value>←</value>
-  </data>
-  <data name="&gt;&gt;buttonInputCassettes.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;metroButton1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="buttonEnter.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;metroTextBox1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTextBox, MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  <data name="pictureBoxEnglish.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 27</value>
+  </data>
+  <data name="pictureBoxRussian.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>479, 373</value>
+    <value>430, 238</value>
   </data>
-  <data name="buttonEnter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 255</value>
+  <data name="labelCommand.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="buttonBackspace.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="pictureBoxRussian.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 27</value>
   </data>
-  <data name="&gt;&gt;buttonInputCassettes.Parent" xml:space="preserve">
+  <data name="labelCommand.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;metroGrid1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="metroButton4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
+  <data name="pictureBoxEnglish.Location" type="System.Drawing.Point, System.Drawing">
+    <value>370, 27</value>
   </data>
-  <data name="buttonRemoveCassettes.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="&gt;&gt;pictureBoxEnglish.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="metroButton4.Text" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;numberDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonRemoveCassettes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 255</value>
+  <data name="&gt;&gt;labelCommand.Name" xml:space="preserve">
+    <value>labelCommand</value>
   </data>
-  <data name="&gt;&gt;metroTextBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;buttonEnter.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
+  <metadata name="preparedMoneyBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>488, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>172, 17</value>
+  </metadata>
+  <metadata name="cashMachineBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>287, 17</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>ru</value>

@@ -117,17 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AtmIsEmpty" xml:space="preserve">
+    <value>Банкомат пуст</value>
+  </data>
+  <data name="Banknotes" xml:space="preserve">
+    <value>Доступные банкноты</value>
+  </data>
   <data name="FileNotFound" xml:space="preserve">
     <value>Файл не найден</value>
   </data>
   <data name="NoCassettes" xml:space="preserve">
     <value>Банкомат пуст</value>
   </data>
+  <data name="Notification" xml:space="preserve">
+    <value>Предупреждение</value>
+  </data>
   <data name="ReadingFaild" xml:space="preserve">
     <value>Файл не может быть прочитан</value>
   </data>
   <data name="SuccessInput" xml:space="preserve">
     <value>Касеты успешно вставлены</value>
+  </data>
+  <data name="Withdraw" xml:space="preserve">
+    <value>Выдача наличных</value>
   </data>
   <data name="WrongFormat" xml:space="preserve">
     <value>Не определён формат</value>

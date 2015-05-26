@@ -17,7 +17,6 @@ namespace ConsoleInterfaceForAtm
     internal class Program
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof (Program));
-        private static readonly LogViewer LogViewer = new LogViewer();
 
         private static SignalHandler _signalHandler;
 
@@ -60,7 +59,6 @@ namespace ConsoleInterfaceForAtm
 
                     var money = atm.Withdraw(requestedSum);
                     Console.WriteLine(userViewer.ToString(money, atm.CurrentState));
-                    Log.Debug(LogViewer.ToString(money, atm.CurrentState));
                 }
 
                 var cassettes = atm.RemoveCassettes();

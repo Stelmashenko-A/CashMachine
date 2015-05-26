@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using ATM.AtmOperations;
 using ATM.Stat;
 using ATM.Utility;
@@ -9,6 +11,7 @@ using log4net;
 
 namespace ATM
 {
+    [Serializable]
     public class CashMachine
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(CashMachine));
@@ -20,6 +23,7 @@ namespace ATM
         private Money _moneyForWithdraw;
 
         public Statistics Statistics;
+
 
         public decimal TotalSum
         {
@@ -50,11 +54,12 @@ namespace ATM
             }
         }
 
-        public CashMachine(IBanknoteSelector banknoteSelector, string pathForStatisticOutput = null)
+        public CashMachine(IBanknoteSelector banknoteSelector)
         {
             _banknoteSelector = banknoteSelector;
-            Statistics = new Statistics(pathForStatisticOutput,0);
+            Statistics = new Statistics(0,new List<Cassette>());
         }
+
 
         public Money Withdraw(decimal requestedSum)
         {
@@ -70,7 +75,7 @@ namespace ATM
             }
             CurrentState = result;
             Log.Info(_logViewer.ToString(moneyForWithdraw,result));
-            Statistics.Add(requestedSum,moneyForWithdraw, CurrentState);
+            Statistics.Update(requestedSum,moneyForWithdraw, CurrentState,new List<Cassette>(_moneyCassettes));
             return moneyForWithdraw;
         }
 
@@ -146,14 +151,40 @@ namespace ATM
                 Log.Error(ex);
                 throw;
             }
-            Statistics = new Statistics("Stat.txt", TotalSum);
+            Statistics = new Statistics(TotalSum, new List<Cassette>(_moneyCassettes));
         }
 
         public List<Cassette> RemoveCassettes()
         {
             var tmp = _moneyCassettes;
             _moneyCassettes = null;
+            Statistics.RemoveCassettes();
             return tmp;
+        }
+
+        public void Serialize(string fileName)
+        {
+            Stream testFileStream = File.Create(fileName);
+            var serializer = new BinaryFormatter();
+            serializer.Serialize(testFileStream, this);
+            testFileStream.Close();
+        }
+
+        public static CashMachine Deserialize(string fileName)
+        {
+            try
+            {
+                Stream stream = File.OpenRead(fileName);
+                var deserializer = new BinaryFormatter();
+                var cashMachine = (CashMachine)deserializer.Deserialize(stream);
+                stream.Close();
+                return cashMachine;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+   
         }
     }
 }

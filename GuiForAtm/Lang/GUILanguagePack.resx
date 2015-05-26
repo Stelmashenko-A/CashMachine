@@ -117,8 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AtmIsEmpty" xml:space="preserve">
+    <value>Atm is empty</value>
+  </data>
+  <data name="Banknotes" xml:space="preserve">
+    <value>Banknotes</value>
+  </data>
   <data name="FileNotFound" xml:space="preserve">
     <value>File not found</value>
+  </data>
+  <data name="InputCassettes" xml:space="preserve">
+    <value>Input path to cassettes</value>
   </data>
   <data name="InputIsWrong" xml:space="preserve">
     <value>Wrong input</value>
@@ -126,11 +135,17 @@
   <data name="NoCassettes" xml:space="preserve">
     <value>Atm is empty</value>
   </data>
+  <data name="Notification" xml:space="preserve">
+    <value>Notification</value>
+  </data>
   <data name="ReadingFaild" xml:space="preserve">
     <value>File can't be read</value>
   </data>
   <data name="SuccessInput" xml:space="preserve">
     <value>Cassettes were inputed</value>
+  </data>
+  <data name="Withdraw" xml:space="preserve">
+    <value>Withdraw money</value>
   </data>
   <data name="WrongFormat" xml:space="preserve">
     <value>Format is not detected</value>

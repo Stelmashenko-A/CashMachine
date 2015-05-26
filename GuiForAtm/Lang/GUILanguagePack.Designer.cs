@@ -61,11 +61,38 @@ namespace GuiForAtm.Lang {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Atm is empty.
+        /// </summary>
+        internal static string AtmIsEmpty {
+            get {
+                return ResourceManager.GetString("AtmIsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Banknotes.
+        /// </summary>
+        internal static string Banknotes {
+            get {
+                return ResourceManager.GetString("Banknotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на File not found.
         /// </summary>
         internal static string FileNotFound {
             get {
                 return ResourceManager.GetString("FileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Input path to cassettes.
+        /// </summary>
+        internal static string InputCassettes {
+            get {
+                return ResourceManager.GetString("InputCassettes", resourceCulture);
             }
         }
         
@@ -88,6 +115,15 @@ namespace GuiForAtm.Lang {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Notification.
+        /// </summary>
+        internal static string Notification {
+            get {
+                return ResourceManager.GetString("Notification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на File can&apos;t be read.
         /// </summary>
         internal static string ReadingFaild {
@@ -102,6 +138,15 @@ namespace GuiForAtm.Lang {
         internal static string SuccessInput {
             get {
                 return ResourceManager.GetString("SuccessInput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Withdraw money.
+        /// </summary>
+        internal static string Withdraw {
+            get {
+                return ResourceManager.GetString("Withdraw", resourceCulture);
             }
         }
         

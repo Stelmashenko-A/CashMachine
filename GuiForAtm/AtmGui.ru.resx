@@ -117,29 +117,59 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="labelCommand.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 11pt</value>
+  </data>
+  <data name="labelCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 19</value>
+  </data>
+  <data name="labelCommand.Text" xml:space="preserve">
+    <value>Введите сумму</value>
+  </data>
+  <data name="labelBanknotes.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Roboto, 11pt</value>
+  </data>
+  <data name="labelBanknotes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 103</value>
+  </data>
+  <data name="nominalDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Номинал</value>
+  </data>
+  <data name="numberDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Количество</value>
+  </data>
   <data name="buttonEnter.Text" xml:space="preserve">
     <value>Ввод</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="metroTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>431, 120</value>
+  <data name="inputCassettesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 20</value>
   </data>
-  <data name="buttonInputCassettes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 50</value>
+  <data name="inputCassettesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Вставка кассет</value>
   </data>
-  <data name="buttonInputCassettes.Text" xml:space="preserve">
-    <value>Вставить кассеты</value>
+  <data name="removeCassettesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 20</value>
   </data>
-  <data name="buttonRemoveCassettes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 50</value>
+  <data name="removeCassettesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Изъятие кассет</value>
   </data>
-  <data name="buttonRemoveCassettes.Text" xml:space="preserve">
-    <value>Извлечь кассеты</value>
+  <data name="statisticsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
   </data>
-  <data name="buttonStatistics.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 50</value>
-  </data>
-  <data name="buttonStatistics.Text" xml:space="preserve">
+  <data name="statisticsToolStripMenuItem.Text" xml:space="preserve">
     <value>Статистика</value>
+  </data>
+  <data name="withdrawToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="withdrawToolStripMenuItem.Text" xml:space="preserve">
+    <value>Выдача наличных</value>
+  </data>
+  <data name="pictureBoxEnglish.Location" type="System.Drawing.Point, System.Drawing">
+    <value>368, 27</value>
+  </data>
+  <data name="pictureBoxRussian.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 27</value>
   </data>
 </root>

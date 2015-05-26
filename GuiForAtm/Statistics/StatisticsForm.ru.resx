@@ -145,4 +145,10 @@
   <data name="labelTotalSum.Text" xml:space="preserve">
     <value>Итого выдано:  </value>
   </data>
+  <data name="labelRemainder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 19</value>
+  </data>
+  <data name="labelRemainder.Text" xml:space="preserve">
+    <value>Остаток:</value>
+  </data>
 </root>

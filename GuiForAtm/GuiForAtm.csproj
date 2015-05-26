@@ -66,12 +66,7 @@
     <Compile Include="AtmGui.Designer.cs">
       <DependentUpon>AtmGui.cs</DependentUpon>
     </Compile>
-    <Compile Include="Output\CashBack.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Output\CashBack.Designer.cs">
-      <DependentUpon>CashBack.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Operations.cs" />
     <Compile Include="Lang\GUILanguagePack.ru.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,12 +103,6 @@
     <EmbeddedResource Include="AtmGui.ru.resx">
       <DependentUpon>AtmGui.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Output\CashBack.resx">
-      <DependentUpon>CashBack.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Output\CashBack.ru.resx">
-      <DependentUpon>CashBack.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Lang\GUILanguagePack.ru.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GUILanguagePack.ru.Designer.cs</LastGenOutput>
@@ -133,6 +122,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Statistics\StatisticsForm.resx">
       <DependentUpon>StatisticsForm.cs</DependentUpon>
@@ -142,7 +132,9 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ATM.Banknote.datasource" />
+    <None Include="Properties\DataSources\ATM.CashMachine.datasource" />
     <None Include="Properties\DataSources\ATM.Money.datasource" />
+    <None Include="Properties\DataSources\GuiForAtm.Output.PreparedMoney.datasource" />
     <None Include="Properties\DataSources\GuiForAtm.Statistics.PreparedRecord.datasource" />
     <None Include="Properties\DataSources\MoneyViewer.datasource" />
     <None Include="Properties\Settings.settings">
@@ -164,7 +156,12 @@
       <Name>ATM</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\0000026797_velikobritaniia_enl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\409002_original.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

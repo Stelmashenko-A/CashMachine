@@ -6,6 +6,7 @@ using log4net;
 
 namespace ATM.AtmOperations
 {
+    [Serializable]
     public class GreedyAlgorithm : IBanknoteSelector
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(GreedyAlgorithm));

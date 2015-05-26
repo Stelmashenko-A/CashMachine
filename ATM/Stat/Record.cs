@@ -2,6 +2,7 @@
 
 namespace ATM.Stat
 {
+    [Serializable]
     public class Record
     {
         public Record( DateTime timeOfOperation,decimal requestedSum, Money money, AtmState resultOfOperation)

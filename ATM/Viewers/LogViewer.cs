@@ -4,6 +4,7 @@ using log4net;
 
 namespace ATM.Viewers
 {
+    [Serializable]
     internal class LogViewer
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(LogViewer));

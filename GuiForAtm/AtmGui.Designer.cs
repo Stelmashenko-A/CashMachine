@@ -28,104 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AtmGui));
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton6 = new MetroFramework.Controls.MetroButton();
-            this.metroButton7 = new MetroFramework.Controls.MetroButton();
-            this.metroButton8 = new MetroFramework.Controls.MetroButton();
-            this.metroButton9 = new MetroFramework.Controls.MetroButton();
-            this.buttonBackspace = new MetroFramework.Controls.MetroButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.labelCommand = new MaterialSkin.Controls.MaterialLabel();
+            this.Screen = new MetroFramework.Controls.MetroTextBox();
+            this.labelBanknotes = new MaterialSkin.Controls.MaterialLabel();
+            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.nominalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preparedMoneyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonEnter = new MetroFramework.Controls.MetroButton();
-            this.metroButton12 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.buttonInputCassettes = new MetroFramework.Controls.MetroButton();
-            this.buttonRemoveCassettes = new MetroFramework.Controls.MetroButton();
-            this.buttonStatistics = new MetroFramework.Controls.MetroButton();
+            this.inputCassettesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeCassettesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.withdrawToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pictureBoxEnglish = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRussian = new System.Windows.Forms.PictureBox();
+            this.cashMachineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preparedMoneyBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnglish)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRussian)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cashMachineBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // labelCommand
             // 
-            resources.ApplyResources(this.metroButton1, "metroButton1");
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.buttonNumber_Click);
+            resources.ApplyResources(this.labelCommand, "labelCommand");
+            this.labelCommand.Depth = 0;
+            this.labelCommand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelCommand.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelCommand.Name = "labelCommand";
             // 
-            // metroButton2
+            // Screen
             // 
-            resources.ApplyResources(this.metroButton2, "metroButton2");
-            this.metroButton2.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.Click += new System.EventHandler(this.buttonNumber_Click);
+            resources.ApplyResources(this.Screen, "Screen");
+            this.Screen.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.Screen.Lines = new string[0];
+            this.Screen.MaxLength = 32767;
+            this.Screen.Multiline = true;
+            this.Screen.Name = "Screen";
+            this.Screen.PasswordChar = '\0';
+            this.Screen.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Screen.SelectedText = "";
+            this.Screen.UseSelectable = true;
+            this.Screen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Screen_KeyDown);
             // 
-            // metroButton3
+            // labelBanknotes
             // 
-            resources.ApplyResources(this.metroButton3, "metroButton3");
-            this.metroButton3.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.Click += new System.EventHandler(this.buttonNumber_Click);
+            resources.ApplyResources(this.labelBanknotes, "labelBanknotes");
+            this.labelBanknotes.Depth = 0;
+            this.labelBanknotes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelBanknotes.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelBanknotes.Name = "labelBanknotes";
             // 
-            // metroButton4
+            // metroGrid1
             // 
-            resources.ApplyResources(this.metroButton4, "metroButton4");
-            this.metroButton4.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.UseSelectable = true;
-            this.metroButton4.Click += new System.EventHandler(this.buttonNumber_Click);
+            resources.ApplyResources(this.metroGrid1, "metroGrid1");
+            this.metroGrid1.AllowUserToResizeRows = false;
+            this.metroGrid1.AutoGenerateColumns = false;
+            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nominalDataGridViewTextBoxColumn,
+            this.numberDataGridViewTextBoxColumn});
+            this.metroGrid1.DataSource = this.preparedMoneyBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.metroGrid1.EnableHeadersVisualStyles = false;
+            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.MultiSelect = false;
+            this.metroGrid1.Name = "metroGrid1";
+            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.metroGrid1.RowHeadersVisible = false;
+            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid1.Style = MetroFramework.MetroColorStyle.Blue;
             // 
-            // metroButton5
+            // nominalDataGridViewTextBoxColumn
             // 
-            resources.ApplyResources(this.metroButton5, "metroButton5");
-            this.metroButton5.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.UseSelectable = true;
-            this.metroButton5.Click += new System.EventHandler(this.buttonNumber_Click);
+            this.nominalDataGridViewTextBoxColumn.DataPropertyName = "Nominal";
+            resources.ApplyResources(this.nominalDataGridViewTextBoxColumn, "nominalDataGridViewTextBoxColumn");
+            this.nominalDataGridViewTextBoxColumn.Name = "nominalDataGridViewTextBoxColumn";
             // 
-            // metroButton6
+            // numberDataGridViewTextBoxColumn
             // 
-            resources.ApplyResources(this.metroButton6, "metroButton6");
-            this.metroButton6.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton6.Name = "metroButton6";
-            this.metroButton6.UseSelectable = true;
-            this.metroButton6.Click += new System.EventHandler(this.buttonNumber_Click);
+            this.numberDataGridViewTextBoxColumn.DataPropertyName = "Number";
+            resources.ApplyResources(this.numberDataGridViewTextBoxColumn, "numberDataGridViewTextBoxColumn");
+            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
             // 
-            // metroButton7
+            // preparedMoneyBindingSource
             // 
-            resources.ApplyResources(this.metroButton7, "metroButton7");
-            this.metroButton7.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton7.Name = "metroButton7";
-            this.metroButton7.UseSelectable = true;
-            this.metroButton7.Click += new System.EventHandler(this.buttonNumber_Click);
-            // 
-            // metroButton8
-            // 
-            resources.ApplyResources(this.metroButton8, "metroButton8");
-            this.metroButton8.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton8.Name = "metroButton8";
-            this.metroButton8.UseSelectable = true;
-            this.metroButton8.Click += new System.EventHandler(this.buttonNumber_Click);
-            // 
-            // metroButton9
-            // 
-            resources.ApplyResources(this.metroButton9, "metroButton9");
-            this.metroButton9.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton9.Name = "metroButton9";
-            this.metroButton9.UseSelectable = true;
-            this.metroButton9.Click += new System.EventHandler(this.buttonNumber_Click);
-            // 
-            // buttonBackspace
-            // 
-            resources.ApplyResources(this.buttonBackspace, "buttonBackspace");
-            this.buttonBackspace.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.buttonBackspace.Name = "buttonBackspace";
-            this.buttonBackspace.UseSelectable = true;
-            this.buttonBackspace.Click += new System.EventHandler(this.metroButton10_Click);
+            this.preparedMoneyBindingSource.DataSource = typeof(GuiForAtm.Output.PreparedMoney);
             // 
             // buttonEnter
             // 
@@ -135,95 +159,106 @@
             this.buttonEnter.UseSelectable = true;
             this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
-            // metroButton12
+            // inputCassettesToolStripMenuItem
             // 
-            resources.ApplyResources(this.metroButton12, "metroButton12");
-            this.metroButton12.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.metroButton12.Name = "metroButton12";
-            this.metroButton12.UseSelectable = true;
-            this.metroButton12.Click += new System.EventHandler(this.buttonNumber_Click);
+            resources.ApplyResources(this.inputCassettesToolStripMenuItem, "inputCassettesToolStripMenuItem");
+            this.inputCassettesToolStripMenuItem.Name = "inputCassettesToolStripMenuItem";
+            this.inputCassettesToolStripMenuItem.Click += new System.EventHandler(this.inputCassettesToolStripMenuItem_Click);
             // 
-            // metroTextBox1
+            // removeCassettesToolStripMenuItem
             // 
-            resources.ApplyResources(this.metroTextBox1, "metroTextBox1");
-            this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.UseSelectable = true;
+            resources.ApplyResources(this.removeCassettesToolStripMenuItem, "removeCassettesToolStripMenuItem");
+            this.removeCassettesToolStripMenuItem.Name = "removeCassettesToolStripMenuItem";
+            this.removeCassettesToolStripMenuItem.Click += new System.EventHandler(this.removeCassettesToolStripMenuItem_Click);
             // 
-            // buttonInputCassettes
+            // statisticsToolStripMenuItem
             // 
-            resources.ApplyResources(this.buttonInputCassettes, "buttonInputCassettes");
-            this.buttonInputCassettes.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.buttonInputCassettes.Name = "buttonInputCassettes";
-            this.buttonInputCassettes.UseSelectable = true;
-            this.buttonInputCassettes.Click += new System.EventHandler(this.buttonInputCassettes_Click);
+            resources.ApplyResources(this.statisticsToolStripMenuItem, "statisticsToolStripMenuItem");
+            this.statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
+            this.statisticsToolStripMenuItem.Click += new System.EventHandler(this.statisticsToolStripMenuItem_Click);
             // 
-            // buttonRemoveCassettes
+            // withdrawToolStripMenuItem
             // 
-            resources.ApplyResources(this.buttonRemoveCassettes, "buttonRemoveCassettes");
-            this.buttonRemoveCassettes.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.buttonRemoveCassettes.Name = "buttonRemoveCassettes";
-            this.buttonRemoveCassettes.UseSelectable = true;
-            this.buttonRemoveCassettes.Click += new System.EventHandler(this.buttonRemoveCassettes_Click);
+            resources.ApplyResources(this.withdrawToolStripMenuItem, "withdrawToolStripMenuItem");
+            this.withdrawToolStripMenuItem.Name = "withdrawToolStripMenuItem";
+            this.withdrawToolStripMenuItem.Click += new System.EventHandler(this.withdrawToolStripMenuItem_Click);
             // 
-            // buttonStatistics
+            // menuStrip1
             // 
-            resources.ApplyResources(this.buttonStatistics, "buttonStatistics");
-            this.buttonStatistics.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.buttonStatistics.Name = "buttonStatistics";
-            this.buttonStatistics.UseSelectable = true;
-            this.buttonStatistics.Click += new System.EventHandler(this.buttonStatistics_Click);
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inputCassettesToolStripMenuItem,
+            this.removeCassettesToolStripMenuItem,
+            this.statisticsToolStripMenuItem,
+            this.withdrawToolStripMenuItem});
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // pictureBoxEnglish
+            // 
+            resources.ApplyResources(this.pictureBoxEnglish, "pictureBoxEnglish");
+            this.pictureBoxEnglish.Image = global::GuiForAtm.Properties.Resources._0000026797_velikobritaniia_enl;
+            this.pictureBoxEnglish.Name = "pictureBoxEnglish";
+            this.pictureBoxEnglish.TabStop = false;
+            this.pictureBoxEnglish.Click += new System.EventHandler(this.pictureBoxEnglish_Click);
+            // 
+            // pictureBoxRussian
+            // 
+            resources.ApplyResources(this.pictureBoxRussian, "pictureBoxRussian");
+            this.pictureBoxRussian.Image = global::GuiForAtm.Properties.Resources._409002_original;
+            this.pictureBoxRussian.Name = "pictureBoxRussian";
+            this.pictureBoxRussian.TabStop = false;
+            this.pictureBoxRussian.Click += new System.EventHandler(this.pictureBoxRussian_Click);
+            // 
+            // cashMachineBindingSource
+            // 
+            this.cashMachineBindingSource.DataSource = typeof(ATM.CashMachine);
             // 
             // AtmGui
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.buttonStatistics);
-            this.Controls.Add(this.buttonRemoveCassettes);
-            this.Controls.Add(this.buttonInputCassettes);
-            this.Controls.Add(this.metroTextBox1);
-            this.Controls.Add(this.metroButton12);
+            this.Controls.Add(this.pictureBoxEnglish);
+            this.Controls.Add(this.pictureBoxRussian);
+            this.Controls.Add(this.metroGrid1);
+            this.Controls.Add(this.labelBanknotes);
+            this.Controls.Add(this.Screen);
+            this.Controls.Add(this.labelCommand);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.buttonEnter);
-            this.Controls.Add(this.buttonBackspace);
-            this.Controls.Add(this.metroButton9);
-            this.Controls.Add(this.metroButton8);
-            this.Controls.Add(this.metroButton7);
-            this.Controls.Add(this.metroButton6);
-            this.Controls.Add(this.metroButton5);
-            this.Controls.Add(this.metroButton4);
-            this.Controls.Add(this.metroButton3);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "AtmGui";
-            this.Resizable = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AtmGui_FormClosing);
             this.Load += new System.EventHandler(this.AtmGui_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preparedMoneyBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnglish)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRussian)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cashMachineBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroButton metroButton5;
-        private MetroFramework.Controls.MetroButton metroButton6;
-        private MetroFramework.Controls.MetroButton metroButton7;
-        private MetroFramework.Controls.MetroButton metroButton8;
-        private MetroFramework.Controls.MetroButton metroButton9;
-        private MetroFramework.Controls.MetroButton buttonBackspace;
+        private MaterialSkin.Controls.MaterialLabel labelCommand;
+        private MetroFramework.Controls.MetroTextBox Screen;
+        private System.Windows.Forms.BindingSource cashMachineBindingSource;
+        private MaterialSkin.Controls.MaterialLabel labelBanknotes;
+        private MetroFramework.Controls.MetroGrid metroGrid1;
+        private System.Windows.Forms.BindingSource preparedMoneyBindingSource;
         private MetroFramework.Controls.MetroButton buttonEnter;
-        private MetroFramework.Controls.MetroButton metroButton12;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroButton buttonInputCassettes;
-        private MetroFramework.Controls.MetroButton buttonRemoveCassettes;
-        private MetroFramework.Controls.MetroButton buttonStatistics;
+        private System.Windows.Forms.ToolStripMenuItem inputCassettesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeCassettesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem statisticsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem withdrawToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.PictureBox pictureBoxRussian;
+        private System.Windows.Forms.PictureBox pictureBoxEnglish;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nominalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
 
     }
 }

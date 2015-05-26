@@ -2,17 +2,12 @@
 
 namespace ATM.Utility
 {
-    public class MutablePair<TKey, TValue>:ICloneable
+    [Serializable]
+    public class MutablePair<TKey, TValue> : ICloneable
     {
-        public TKey Key
-        {
-            get; private set;
-        }
+        public TKey Key { get; private set; }
 
-        public TValue Value
-        {
-            get; set;
-        }
+        public TValue Value { get; set; }
 
         public MutablePair(TKey key, TValue value)
         {

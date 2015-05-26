@@ -4,6 +4,7 @@ using System.Runtime.Serialization;
 namespace ATM
 {
     [DataContract]
+    [Serializable]
     public class Cassette:ICloneable
     {
         public Cassette()

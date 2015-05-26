@@ -4,6 +4,7 @@ using System.Runtime.Serialization;
 
 namespace ATM
 {
+    [Serializable]
     [DataContract]
     public class Banknote : ICloneable
     {
