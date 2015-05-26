@@ -130,6 +130,9 @@
     <value>Выданная сумма</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="metroGrid1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>635, 199</value>
+  </data>
   <data name="labelTime.Size" type="System.Drawing.Size, System.Drawing">
     <value>146, 19</value>
   </data>
@@ -150,5 +153,20 @@
   </data>
   <data name="labelRemainder.Text" xml:space="preserve">
     <value>Остаток:</value>
+  </data>
+  <data name="banknoteDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Номинал</value>
+  </data>
+  <data name="numberDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Количество</value>
+  </data>
+  <data name="totalSumDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Общая сумма</value>
+  </data>
+  <data name="metroLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 19</value>
+  </data>
+  <data name="metroLabel1.Text" xml:space="preserve">
+    <value>Содержимое банкомата</value>
   </data>
 </root>

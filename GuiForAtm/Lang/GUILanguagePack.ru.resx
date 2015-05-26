@@ -123,20 +123,8 @@
   <data name="Banknotes" xml:space="preserve">
     <value>Доступные банкноты</value>
   </data>
-  <data name="FileNotFound" xml:space="preserve">
-    <value>Файл не найден</value>
-  </data>
   <data name="NoCassettes" xml:space="preserve">
     <value>Банкомат пуст</value>
-  </data>
-  <data name="Notification" xml:space="preserve">
-    <value>Предупреждение</value>
-  </data>
-  <data name="ReadingFaild" xml:space="preserve">
-    <value>Файл не может быть прочитан</value>
-  </data>
-  <data name="SuccessInput" xml:space="preserve">
-    <value>Касеты успешно вставлены</value>
   </data>
   <data name="Withdraw" xml:space="preserve">
     <value>Выдача наличных</value>

@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Input\ReaderSelector.cs" />
     <Compile Include="Input\TxtReader.cs" />
     <Compile Include="Output\CsvWriter.cs" />
     <Compile Include="Banknote.cs" />

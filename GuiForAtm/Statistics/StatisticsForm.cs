@@ -1,4 +1,9 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Windows.Forms;
+using ATM.Utility;
+using GuiForAtm.Output;
 
 namespace GuiForAtm.Statistics
 {
@@ -12,21 +17,17 @@ namespace GuiForAtm.Statistics
 
         public StatisticsForm(ATM.Stat.Statistics statistics)
         {
+            var t = CultureInfo.CurrentCulture;
             InitializeComponent();
+            t = CultureInfo.CurrentCulture;
             metroGrid1.DataSource = StatisticsPreparer.Prepare(statistics);
-            labelTime.Text += statistics.StartTime;
+            metroGrid2.DataSource = statistics.Cassettes;
+            
+
+                labelTime.Text += statistics.StartTime;
             labelTotalSum.Text += statistics.TotalSum;
             labelRemainder.Text += statistics.Remainder;
-        }
-
-        private void StatisticsForm_Load(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void labelTotalSum_Click(object sender, System.EventArgs e)
-        {
-
+            
         }
     }
 }

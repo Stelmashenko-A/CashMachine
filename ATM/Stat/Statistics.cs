@@ -24,6 +24,7 @@ namespace ATM.Stat
             StartTime = DateTime.Now;
             Records = new List<Record>();
             Cassettes = cassettes;
+            Log.Info("Statistic initialize");
         }
 
         public List<decimal> Nominals
@@ -36,6 +37,7 @@ namespace ATM.Stat
             Remainder -= money.TotalSum;
             Records.Add(new Record(DateTime.Now, requestedSum, money, state));
             Cassettes = cassettes;
+            Log.Info("Statistic initialize at");
         }
 
 
@@ -52,7 +54,9 @@ namespace ATM.Stat
 
         public void RemoveCassettes()
         {
+            Remainder = 0;
             Cassettes = new List<Cassette>();
+            Log.Info("Cassettes were remover");
         }
     }
 }

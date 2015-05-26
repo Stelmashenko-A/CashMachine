@@ -29,6 +29,11 @@ namespace ATM
         {
             get
             {
+                if (_moneyCassettes == null || _moneyCassettes.Count == 0)
+                {
+                    return 0;
+                }
+
                 return _moneyCassettes.Sum(moneyCassette => moneyCassette.TotalSum);
             }
         }
@@ -83,9 +88,11 @@ namespace ATM
         {
             CurrentState = AtmState.NoError;
             Log.Debug(CurrentState);
+            if(_moneyCassettes!=null)
             return
                 _moneyCassettes.Select(item => new MutablePair<decimal, int>(item.Banknote.Nominal, item.Number))
                     .ToList();
+            return new List<MutablePair<decimal, int>>();
         }
 
         private void UpdateCassettes(List<MutablePair<decimal, int>> combination)

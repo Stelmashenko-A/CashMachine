@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ATM;
 using ATM.Output;
+using ATM.Viewers;
 using log4net;
 
 namespace ConsoleInterfaceForAtm.Preparers

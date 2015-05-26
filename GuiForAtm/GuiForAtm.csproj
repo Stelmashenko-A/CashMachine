@@ -77,12 +77,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GUILanguagePack.resx</DependentUpon>
     </Compile>
-    <Compile Include="InputCassettes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InputCassettes.Designer.cs">
-      <DependentUpon>InputCassettes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Output\PreparedMoney.cs" />
     <Compile Include="Statistics\PreparedRecords.cs" />
     <Compile Include="Program.cs" />
@@ -111,9 +105,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GUILanguagePack.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="InputCassettes.resx">
-      <DependentUpon>InputCassettes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -133,6 +124,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ATM.Banknote.datasource" />
     <None Include="Properties\DataSources\ATM.CashMachine.datasource" />
+    <None Include="Properties\DataSources\ATM.Cassette.datasource" />
     <None Include="Properties\DataSources\ATM.Money.datasource" />
     <None Include="Properties\DataSources\GuiForAtm.Output.PreparedMoney.datasource" />
     <None Include="Properties\DataSources\GuiForAtm.Statistics.PreparedRecord.datasource" />

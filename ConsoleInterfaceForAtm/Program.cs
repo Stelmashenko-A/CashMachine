@@ -6,7 +6,6 @@ using ATM.AtmOperations;
 using ATM.Input;
 using ATM.Output;
 using ATM.Utility;
-using ATM.Viewers;
 using ConsoleInterfaceForAtm.Language;
 using ConsoleInterfaceForAtm.Preparers;
 using log4net;
@@ -34,7 +33,7 @@ namespace ConsoleInterfaceForAtm
                 var userViewer = new UserViewer(errors);
                 IReader<List<Cassette>> reader = new CsvReader();
                 var moneyCassettes = reader.Read(ConfigurationManager.AppSettings["PathToMoney"]);
-                var atm = new CashMachine(new GreedyAlgorithm(), ConfigurationManager.AppSettings["StatisticOut"]);
+                var atm = new CashMachine(new GreedyAlgorithm());
                 atm.InsertCassettes(moneyCassettes);
 
                 Console.WriteLine(ConsoleLanguagePack.MainMessage);

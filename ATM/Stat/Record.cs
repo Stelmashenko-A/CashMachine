@@ -14,8 +14,11 @@ namespace ATM.Stat
         }
 
         public Money Money { get; private set; }
+
         public DateTime TimeOfOperation { get; private set; }
+
         public AtmState ResultOfOperation { get; private set; }
+
         public decimal RequestedSum { get; private set; }
 
     }

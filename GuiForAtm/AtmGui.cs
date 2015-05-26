@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
-using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Resources;
-using System.Runtime.Serialization;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using ATM;
 using ATM.AtmOperations;
@@ -38,16 +35,10 @@ namespace GuiForAtm
 
             XmlConfigurator.Configure();
             _errors = Configurator.Config();
-            Atm = CashMachine.Deserialize(ConfigurationManager.AppSettings["SerializationFile"]);
-            if (Atm == null)
-            {
-                Atm = new CashMachine(new GreedyAlgorithm());
-                IReader<List<Cassette>> reader = new XmlReader<List<Cassette>>();
-                var moneyCassettes = reader.Read(ConfigurationManager.AppSettings["PathToMoney"]);
-                Atm.InsertCassettes(moneyCassettes);
-                InitializeBanknotes();
-            }
+            Atm = CashMachine.Deserialize(ConfigurationManager.AppSettings["SerializationFile"]) ??
+                  new CashMachine(new GreedyAlgorithm());
             _operation = Operations.Withdraw;
+            InitializeBanknotes();
         }
 
         private void InitializeBanknotes()
@@ -83,70 +74,35 @@ namespace GuiForAtm
         }
         private void buttonEnter_Click(object sender, EventArgs e)
         {
-            if (_operation == Operations.Withdraw)
+            if (_operation != Operations.Withdraw) return;
+            decimal requestedSum;
+            if (!decimal.TryParse(Screen.Text, out requestedSum) || requestedSum < 0)
             {
-                decimal requestedSum;
-                if (!decimal.TryParse(Screen.Text, out requestedSum) || requestedSum < 0)
-                {
-                    Screen.Text = GUILanguagePack.InputIsWrong;
-                    Log.Info("Wrong input");
-                    return;
-                }
-
-                var money = Atm.Withdraw(requestedSum);
-                if (Atm.CurrentState != AtmState.NoError)
-                {
-                    Screen.Text = _errors[Atm.CurrentState];
-                    return;
-                }
-                OutMoney(money.Banknotes);
+                Screen.Text = GUILanguagePack.WrongInput;
+                Log.Info("Wrong input");
                 return;
             }
-            if (_operation != Operations.Input) return;
-            var format = Screen.Text.Split('.').Last();
-            format = format.ToLower();
-            var isFormatDetected = false;
-            IReader<List<Cassette>> reader = null;
-            if (format == "json")
-            {
-                isFormatDetected = true;
-                reader = new JsonReader<List<Cassette>>();
-            }
-            if (format == "xml")
-            {
-                isFormatDetected = true;
-                reader = new XmlReader<List<Cassette>>();
-            }
-            if (format == "csv")
-            {
-                isFormatDetected = true;
-                reader = new CsvReader();
-            }
 
-            if (!isFormatDetected)
+            var money = Atm.Withdraw(requestedSum);
+            if (Atm.CurrentState != AtmState.NoError)
             {
-                MetroMessageBox.Show(this, GUILanguagePack.WrongFormat,GUILanguagePack.Notification);
+                Screen.Text = _errors[Atm.CurrentState];
                 return;
             }
-            try
-            {
-                Atm.InsertCassettes(reader.Read(Screen.Text));
-            }
-            catch (FileNotFoundException)
-            {
-
-                MetroMessageBox.Show(this, GUILanguagePack.FileNotFound, GUILanguagePack.Notification);
-            }
-            catch (SerializationException)
-            {
-                MetroMessageBox.Show(this, GUILanguagePack.ReadingFaild,GUILanguagePack.Notification);
-            }
+            OutMoney(money.Banknotes);
+            InitializeBanknotes();
         }
 
         private void inputCassettesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            labelCommand.Text = GUILanguagePack.InputCassettes;
-            _operation=Operations.Input;
+            var openFileDialog = new OpenFileDialog
+            {
+                Filter = @"Json (*.json)|*.json|Xml (*.xml*)|*.xml*|CSV (*.csv*)|*.csv*"
+            };
+            if (openFileDialog.ShowDialog() != DialogResult.OK) return;
+            var reader = ReaderSelector.Select(openFileDialog.FileName);
+            Atm.InsertCassettes(reader.Read(openFileDialog.FileName));
+            buttonEnter.Enabled = true;
         }
 
         private void removeCassettesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -159,7 +115,6 @@ namespace GuiForAtm
         private void statisticsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var statisticsForm = new StatisticsForm(Atm.Statistics);
-            LocalizeForm(statisticsForm, new CultureInfo("ru"));
             statisticsForm.ShowDialog();
         }
 
@@ -184,11 +139,6 @@ namespace GuiForAtm
 
         }
 
-        private void AtmGui_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void withdrawToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _operation=Operations.Withdraw;
@@ -198,51 +148,32 @@ namespace GuiForAtm
 
         private void pictureBoxRussian_Click(object sender, EventArgs e)
         {
-            LocalizeForm(this, new CultureInfo("ru"));
-            InitializeBanknotes();
-            Refresh();
+            LocalizeForm(this, "ru");
         }
 
         private void pictureBoxEnglish_Click(object sender, EventArgs e)
         {
-            LocalizeForm(this,new CultureInfo("en"));
-            InitializeBanknotes();
-            Refresh();
+            LocalizeForm(this,"en");
         }
 
-        public void LocalizeForm(Form someForm, CultureInfo cultureInfo)
+        public void LocalizeForm(Form someForm, string cultureInfo)
         {
-            Type someFormType = someForm.GetType();
-            ResourceManager res = new ResourceManager(someFormType);
-
-  
-            string[] properties = { "Text", "Location" };
-
-            foreach (string propertyName in properties)
-            {
-                foreach (var fieldInfo in someFormType.GetFields(BindingFlags.NonPublic | BindingFlags.DeclaredOnly | BindingFlags.Instance))
-                {
-                    var propertyInfo = fieldInfo.FieldType.GetProperty(propertyName);
-                    if (propertyInfo == null)
-                        continue;
-                    var objProperty = res.GetObject(fieldInfo.Name + '.' + propertyInfo.Name, cultureInfo);
-                    if (objProperty == null) continue;
-                    var field = fieldInfo.GetValue(someForm);
-                    if (field != null)
-                        propertyInfo.SetValue(field, objProperty, null);
-                }
-                var propertyInfo1 = someFormType.GetProperty(propertyName);
-                if (propertyInfo1 == null)
-                    continue;
-                var objProperty1 = res.GetObject("$this." + propertyInfo1.Name, cultureInfo);
-                if (objProperty1 == null) continue;
-                propertyInfo1.SetValue(someForm, objProperty1, null);
-            }
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(cultureInfo);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultureInfo);
+            Controls.Clear();
+            InitializeComponent();
+            InitializeBanknotes();
+            Refresh();
         }
 
         private void AtmGui_FormClosing(object sender, FormClosingEventArgs e)
         {
             Atm.Serialize(ConfigurationManager.AppSettings["SerializationFile"]);
+        }
+
+        private void AtmGui_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace ATM.Output
+﻿namespace ATM.Viewers
 {
     public interface IMoneyViewer
     {
