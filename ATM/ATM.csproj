@@ -73,6 +73,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\AtmEvent.cs" />
+    <Compile Include="Events\InsertCassettesArgs.cs" />
+    <Compile Include="Events\RemoveCassettesArgs.cs" />
+    <Compile Include="Events\WithdrawArgs.cs" />
     <Compile Include="Input\ReaderSelector.cs" />
     <Compile Include="Input\TxtReader.cs" />
     <Compile Include="Output\CsvWriter.cs" />
@@ -84,8 +88,6 @@
     <Compile Include="Input\JsonReader.cs" />
     <Compile Include="Input\XmlReader.cs" />
     <Compile Include="Output\JSONWriter.cs" />
-    <Compile Include="Stat\Record.cs" />
-    <Compile Include="Stat\Statistics.cs" />
     <Compile Include="Utility\ConsoleHelper.cs" />
     <Compile Include="AtmOperations\GreedyAlgorithm.cs" />
     <Compile Include="AtmOperations\IBanknoteSelector.cs" />

@@ -70,6 +70,15 @@ namespace ConsoleInterfaceForAtm.Language {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Atm context.
+        /// </summary>
+        internal static string AtmContext {
+            get {
+                return ResourceManager.GetString("AtmContext", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Command not found.
         /// </summary>
         internal static string CommandNotFound {
@@ -115,7 +124,7 @@ namespace ConsoleInterfaceForAtm.Language {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на &quot;e&quot; - exit, &quot;help&quot; - info about all commands, &quot;insert-fileName&quot; - insert cassettes from file, &quot;remove&quot; - remove cassettes from Atm, &quot;stat&quot; - to get statistics.
+        ///   Ищет локализованную строку, похожую на &quot;e&quot; - exit, &quot;h&quot; - info about all commands, &quot;i-fileName&quot; - insert cassettes from file, &quot;r&quot; - remove cassettes from Atm, &quot;s&quot; - to get statistics.
         /// </summary>
         internal static string Help {
             get {
@@ -124,7 +133,7 @@ namespace ConsoleInterfaceForAtm.Language {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на help.
+        ///   Ищет локализованную строку, похожую на h.
         /// </summary>
         internal static string HelpFlag {
             get {
@@ -133,11 +142,20 @@ namespace ConsoleInterfaceForAtm.Language {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на insert.
+        ///   Ищет локализованную строку, похожую на i.
         /// </summary>
         internal static string InsertFlag {
             get {
                 return ResourceManager.GetString("InsertFlag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на l.
+        /// </summary>
+        internal static string LanguageFlag {
+            get {
+                return ResourceManager.GetString("LanguageFlag", resourceCulture);
             }
         }
         
@@ -147,6 +165,15 @@ namespace ConsoleInterfaceForAtm.Language {
         internal static string MainMessage {
             get {
                 return ResourceManager.GetString("MainMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Requested sum is negative.
+        /// </summary>
+        internal static string NegativeSum {
+            get {
+                return ResourceManager.GetString("NegativeSum", resourceCulture);
             }
         }
         
@@ -169,7 +196,7 @@ namespace ConsoleInterfaceForAtm.Language {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на remove.
+        ///   Ищет локализованную строку, похожую на r.
         /// </summary>
         internal static string RemoveFlag {
             get {
@@ -187,7 +214,7 @@ namespace ConsoleInterfaceForAtm.Language {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на stat.
+        ///   Ищет локализованную строку, похожую на s.
         /// </summary>
         internal static string StatisticsFlag {
             get {

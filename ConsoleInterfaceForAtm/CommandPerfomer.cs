@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Threading;
 using ATM;
 using ATM.Input;
 using ConsoleInterfaceForAtm.Language;
@@ -10,9 +12,9 @@ using ConsoleInterfaceForAtm.Preparers;
 
 namespace ConsoleInterfaceForAtm
 {
-    static class CommandPerfomer
+    internal static class CommandPerfomer
     {
-        public static bool TryPerfom(string command, CashMachine atm, Dictionary<AtmState, string> errors)
+        public static bool TryPerfom(string command, CashMachine atm, Dictionary<AtmState, string> errors, Statistics.Statistics statistics)
         {
             if (command == ConsoleLanguagePack.HelpFlag)
             {
@@ -27,23 +29,27 @@ namespace ConsoleInterfaceForAtm
             }
             if (command == ConsoleLanguagePack.StatisticsFlag)
             {
-                WriteStatistics(atm, errors);
+                WriteStatistics(statistics, errors);
                 return true;
             }
 
-            var strs = command.Split('-');
-            if (strs.Count() != 2 || strs[0] != ConsoleLanguagePack.InsertFlag)
+            var strs = command.Split(' ');
+            if (strs.Count() == 2 && strs[0] == ConsoleLanguagePack.InsertFlag)
             {
-                return false;
+                strs = strs[1].Split('.');
+                if (strs.Count() != 2)
+                {
+                    return false;
+                }
+                InsertCassette(command.Split(' ')[1], atm);
+                return true;
             }
-            strs = strs[1].Split('.');
-            if (strs.Count() != 2)
+            if (strs.Count() == 2 && strs[0] == ConsoleLanguagePack.LanguageFlag)
             {
-                return false;
+                RefreshLanguage(strs[1]);
+                return true;
             }
-            InsertCassette(command.Split('-')[1],atm);
-            return true;
-
+            return false;
         }
 
         private static void RemoveCassettes(CashMachine atm)
@@ -56,35 +62,16 @@ namespace ConsoleInterfaceForAtm
             Console.WriteLine(ConsoleLanguagePack.Help);
         }
 
-        private static void WriteStatistics(CashMachine atm, Dictionary<AtmState, string> errors)
+        private static void WriteStatistics(Statistics.Statistics statistics, Dictionary<AtmState, string> errors)
         {
-            Console.WriteLine(StatisticsPreparer.Prepare(atm.Statistics,errors));
+            Console.WriteLine(StatisticsPreparer.Prepare(statistics, errors));
         }
 
         private static void InsertCassette(string path, CashMachine atm)
         {
-            IReader<List<Cassette>> reader = null;
-            var format = path.Split('.').Last();
 
-            format = format.ToLower();
-            bool isFormatDetected = false;
-            if (format == "json")
-            {
-                isFormatDetected = true;
-                reader = new JsonReader<List<Cassette>>();
-            }
-            if (format == "xml")
-            {
-                isFormatDetected = true;
-                reader = new XmlReader<List<Cassette>>();
-            }
-            if (format == "csv")
-            {
-                isFormatDetected = true;
-                reader = new CsvReader();
-            }
-
-            if (!isFormatDetected)
+            var reader = ReaderSelector.Select(path);
+            if (reader == null)
             {
                 Console.WriteLine(ConsoleLanguagePack.FormatIsntDetected);
                 return;
@@ -104,6 +91,14 @@ namespace ConsoleInterfaceForAtm
                 return;
             }
             Console.WriteLine(ConsoleLanguagePack.ReadSuccessfully);
+        }
+
+        private static void RefreshLanguage(string cultureInfo)
+        {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(cultureInfo);
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultureInfo);
+            Console.Clear();
+            Console.WriteLine(ConsoleLanguagePack.MainMessage);
         }
     }
 }

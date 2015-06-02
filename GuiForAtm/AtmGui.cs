@@ -8,6 +8,7 @@ using System.Threading;
 using System.Windows.Forms;
 using ATM;
 using ATM.AtmOperations;
+using ATM.Events;
 using ATM.Input;
 using ATM.Utility;
 using GuiForAtm.Lang;
@@ -15,7 +16,6 @@ using GuiForAtm.Output;
 using GuiForAtm.Statistics;
 using log4net;
 using log4net.Config;
-using MetroFramework;
 using MetroFramework.Controls;
 
 namespace GuiForAtm
@@ -23,6 +23,7 @@ namespace GuiForAtm
     public partial class AtmGui : Form
     {
         public readonly CashMachine Atm;
+        public readonly global::Statistics.Statistics Stat;
         private readonly Dictionary<AtmState, string> _errors;
         private Operations _operation;
 
@@ -31,26 +32,33 @@ namespace GuiForAtm
         {
             Log.Info("start");
             InitializeComponent();
+            
             DisenableButtonSelection();
 
             XmlConfigurator.Configure();
             _errors = Configurator.Config();
-            Atm = CashMachine.Deserialize(ConfigurationManager.AppSettings["SerializationFile"]) ??
+            Atm = CashMachine.Deserialize(ConfigurationManager.AppSettings["SerializationAtm"]) ??
                   new CashMachine(new GreedyAlgorithm());
+            Stat = global::Statistics.Statistics.Deserialize(ConfigurationManager.AppSettings["SerializationStatistics"]) ??
+                  new global::Statistics.Statistics();
+            AtmEvent.InsertCassettesEvent += Stat.InsertCassettes;
+            AtmEvent.WithdrawMoneyEvent += Stat.WithdrawMoney;
+            AtmEvent.RemoveCassettesEvent += Stat.RemoveCassettes;
+
             _operation = Operations.Withdraw;
             InitializeBanknotes();
         }
 
         private void InitializeBanknotes()
         {
-            if (Atm.Statistics.Nominals.Count == 0)
+            if (Stat.Nominals.Count == 0)
             {
                 labelBanknotes.Text = GUILanguagePack.AtmIsEmpty;
                 return;
             }
             var sb = new StringBuilder();
             sb.Append(GUILanguagePack.Banknotes + ":");
-            foreach (var variable in Atm.Statistics.Nominals)
+            foreach (var variable in Stat.Nominals)
             {
                 sb.Append(variable + ", ");
             }
@@ -68,6 +76,7 @@ namespace GuiForAtm
 
         private void OutMoney(IEnumerable<MutablePair<Banknote, int>> data)
         {
+            Log.Info("out money");
             var list =
                 (from variable in data where variable.Value != 0 select new PreparedMoney(variable)).ToList();
             metroGrid1.DataSource = list;
@@ -114,7 +123,7 @@ namespace GuiForAtm
 
         private void statisticsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var statisticsForm = new StatisticsForm(Atm.Statistics);
+            var statisticsForm = new StatisticsForm(Stat);
             statisticsForm.ShowDialog();
         }
 
@@ -168,7 +177,8 @@ namespace GuiForAtm
 
         private void AtmGui_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Atm.Serialize(ConfigurationManager.AppSettings["SerializationFile"]);
+            Atm.Serialize(ConfigurationManager.AppSettings["SerializationAtm"]);
+            Stat.Serialize(ConfigurationManager.AppSettings["SerializationStatistics"]);
         }
 
         private void AtmGui_Load(object sender, EventArgs e)

@@ -120,6 +120,9 @@
   <data name="AtmAnswer" xml:space="preserve">
     <value>Ответ банкомата</value>
   </data>
+  <data name="AtmContext" xml:space="preserve">
+    <value>Содержимое банкомата</value>
+  </data>
   <data name="CommandNotFound" xml:space="preserve">
     <value>Команда не найдена</value>
   </data>
@@ -139,13 +142,16 @@
     <value>"e" - выход, "help" - список команд, "insert-fileName" - вставить кассеты из файла, "remove" - извлеч кассеты из банкомата, "stat" - получить статистику</value>
   </data>
   <data name="HelpFlag" xml:space="preserve">
-    <value>help</value>
+    <value>h</value>
   </data>
   <data name="InsertFlag" xml:space="preserve">
-    <value>insert</value>
+    <value>i</value>
   </data>
   <data name="MainMessage" xml:space="preserve">
     <value>Для выхода нажмите 'e', для получения списка комманд введите "help"</value>
+  </data>
+  <data name="NegativeSum" xml:space="preserve">
+    <value>Запрошена отрицательная сумма</value>
   </data>
   <data name="ReadSuccessfully" xml:space="preserve">
     <value>Файл считан успешно</value>
@@ -154,13 +160,13 @@
     <value> Остаток</value>
   </data>
   <data name="RemoveFlag" xml:space="preserve">
-    <value>remove</value>
+    <value>r</value>
   </data>
   <data name="RequestedSum" xml:space="preserve">
     <value> Запрошенная сумма:  </value>
   </data>
   <data name="StatisticsFlag" xml:space="preserve">
-    <value>stat</value>
+    <value>s</value>
   </data>
   <data name="TimeOfInsert" xml:space="preserve">
     <value>Время вставки кассет: </value>

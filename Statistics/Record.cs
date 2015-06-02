@@ -1,11 +1,12 @@
 ﻿using System;
+using ATM;
 
-namespace ATM.Stat
+namespace Statistics
 {
     [Serializable]
     public class Record
     {
-        public Record( DateTime timeOfOperation,decimal requestedSum, Money money, AtmState resultOfOperation)
+        public Record(DateTime timeOfOperation, decimal requestedSum, Money money, AtmState resultOfOperation)
         {
             Money = money;
             TimeOfOperation = timeOfOperation;
@@ -23,3 +24,4 @@ namespace ATM.Stat
 
     }
 }
+

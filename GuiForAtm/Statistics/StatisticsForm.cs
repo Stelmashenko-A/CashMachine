@@ -15,7 +15,7 @@ namespace GuiForAtm.Statistics
             
         }
 
-        public StatisticsForm(ATM.Stat.Statistics statistics)
+        public StatisticsForm(global::Statistics.Statistics statistics)
         {
             var t = CultureInfo.CurrentCulture;
             InitializeComponent();

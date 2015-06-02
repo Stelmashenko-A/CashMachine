@@ -31,4 +31,3 @@ C:\Users\Андрей\Source\Repos\CashMachine\ATM\bin\Debug\ServiceStack.Text.d
 C:\Users\Андрей\Source\Repos\CashMachine\ATM\bin\Debug\ServiceStack.Text.xml
 C:\Users\Андрей\Source\Repos\CashMachine\ATM\bin\Debug\ATM.dll
 C:\Users\Андрей\Source\Repos\CashMachine\ATM\obj\Debug\ATM.dll
-C:\Users\Андрей\Source\Repos\CashMachine\ATM\obj\Debug\ATM.csprojResolveAssemblyReference.cache

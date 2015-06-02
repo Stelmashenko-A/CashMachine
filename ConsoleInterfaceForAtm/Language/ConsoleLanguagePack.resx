@@ -120,6 +120,9 @@
   <data name="AtmAnswer" xml:space="preserve">
     <value>Atm answer</value>
   </data>
+  <data name="AtmContext" xml:space="preserve">
+    <value>Atm context</value>
+  </data>
   <data name="CommandNotFound" xml:space="preserve">
     <value>Command not found</value>
   </data>
@@ -136,16 +139,22 @@
     <value>Format isn't detected</value>
   </data>
   <data name="Help" xml:space="preserve">
-    <value>"e" - exit, "help" - info about all commands, "insert-fileName" - insert cassettes from file, "remove" - remove cassettes from Atm, "stat" - to get statistics</value>
+    <value>"e" - exit, "h" - info about all commands, "i-fileName" - insert cassettes from file, "r" - remove cassettes from Atm, "s" - to get statistics</value>
   </data>
   <data name="HelpFlag" xml:space="preserve">
-    <value>help</value>
+    <value>h</value>
   </data>
   <data name="InsertFlag" xml:space="preserve">
-    <value>insert</value>
+    <value>i</value>
+  </data>
+  <data name="LanguageFlag" xml:space="preserve">
+    <value>l</value>
   </data>
   <data name="MainMessage" xml:space="preserve">
     <value>For exit press 'e', to get other information enter "help"</value>
+  </data>
+  <data name="NegativeSum" xml:space="preserve">
+    <value>Requested sum is negative</value>
   </data>
   <data name="ReadSuccessfully" xml:space="preserve">
     <value>Read successfully</value>
@@ -154,13 +163,13 @@
     <value> Remainder: </value>
   </data>
   <data name="RemoveFlag" xml:space="preserve">
-    <value>remove</value>
+    <value>r</value>
   </data>
   <data name="RequestedSum" xml:space="preserve">
     <value>Requested sum: </value>
   </data>
   <data name="StatisticsFlag" xml:space="preserve">
-    <value>stat</value>
+    <value>s</value>
   </data>
   <data name="TimeOfInsert" xml:space="preserve">
     <value>Cassettes were insert: </value>

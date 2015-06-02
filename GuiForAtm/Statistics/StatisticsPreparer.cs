@@ -8,7 +8,7 @@ namespace GuiForAtm.Statistics
 {
     internal static class StatisticsPreparer
     {
-        public static List<PreparedRecord> Prepare(ATM.Stat.Statistics statistics)
+        public static List<PreparedRecord> Prepare(global::Statistics.Statistics statistics)
         {
             var states = Configurator.Config();
             return

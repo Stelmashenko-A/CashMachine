@@ -94,6 +94,9 @@
     <EmbeddedResource Include="AtmGui.resx">
       <DependentUpon>AtmGui.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AtmGui.ru-RU.resx">
+      <DependentUpon>AtmGui.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AtmGui.ru.resx">
       <DependentUpon>AtmGui.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +149,10 @@
     <ProjectReference Include="..\ATM\ATM.csproj">
       <Project>{95915261-e768-4975-a39e-5d4491568d52}</Project>
       <Name>ATM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Statistics\Statistics.csproj">
+      <Project>{588f569c-f102-4fa1-b1e4-9f2c7c7a70ca}</Project>
+      <Name>Statistics</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using ATM;
 using ATM.AtmOperations;
-using ATM.Input;
-using ATM.Output;
+using ATM.Events;
 using ATM.Utility;
 using ConsoleInterfaceForAtm.Language;
-using ConsoleInterfaceForAtm.Preparers;
 using log4net;
 using log4net.Config;
 
@@ -19,6 +16,9 @@ namespace ConsoleInterfaceForAtm
 
         private static SignalHandler _signalHandler;
 
+        private static CashMachine _atm;
+
+        private static Statistics.Statistics _statistics;
         private static void Main()
         {
 
@@ -30,43 +30,36 @@ namespace ConsoleInterfaceForAtm
                 ConsoleHelper.SetSignalHandler(_signalHandler, true);
 
                 var errors = Configurator.Config();
-                var userViewer = new UserViewer(errors);
-                IReader<List<Cassette>> reader = new CsvReader();
-                var moneyCassettes = reader.Read(ConfigurationManager.AppSettings["PathToMoney"]);
-                var atm = new CashMachine(new GreedyAlgorithm());
-                atm.InsertCassettes(moneyCassettes);
 
+                 _atm = CashMachine.Deserialize(ConfigurationManager.AppSettings["SerializationAtm"]) ??
+                  new CashMachine(new GreedyAlgorithm());
+                 _statistics = Statistics.Statistics.Deserialize(ConfigurationManager.AppSettings["SerializationStatistics"]) ??
+                   new Statistics.Statistics();
+
+                AtmEvent.InsertCassettesEvent += _statistics.InsertCassettes;
+                AtmEvent.WithdrawMoneyEvent += _statistics.WithdrawMoney;
+                AtmEvent.RemoveCassettesEvent += _statistics.RemoveCassettes;
+                
+                var commandPerfomer = new Commands.CommandPerfomer(_atm, errors, _statistics);
                 Console.WriteLine(ConsoleLanguagePack.MainMessage);
 
                 while (true)
                 {
                     var input = Console.ReadLine();
                     Log.Debug(input);
-
-                    if (input != null && ConsoleLanguagePack.ExitFlags.Contains(input)) break;
-
-                    int requestedSum;
-                    if (!int.TryParse(input, out requestedSum) || requestedSum < 0)
+                    if (string.IsNullOrEmpty(input))
                     {
-                        if (!CommandPerfomer.TryPerfom(input, atm, errors))
-                        {
-                            Console.WriteLine(ConsoleLanguagePack.CommandNotFound);
-                            
-                        }
                         continue;
                     }
+                    if (ConsoleLanguagePack.ExitFlags.Contains(input)) break;
 
-                    var money = atm.Withdraw(requestedSum);
-                    Console.WriteLine(userViewer.ToString(money, atm.CurrentState));
+                    if (!commandPerfomer.TryPerform(input))
+                    {
+                        Console.WriteLine(ConsoleLanguagePack.CommandNotFound);
+                    }
                 }
-
-                var cassettes = atm.RemoveCassettes();
-                var writerJson = new JsonWriter<List<Cassette>>();
-                writerJson.Write(cassettes, "cassette.json");
-                var writerXml = new XmlWriter<List<Cassette>>();
-                writerXml.Write(cassettes, "cassette.xml");
-                var writerCsv = new CsvWriterer<List<Cassette>>();
-                writerCsv.Write(cassettes, "cassette.csv");
+                _atm.Serialize(ConfigurationManager.AppSettings["SerializationAtm"]);
+                _statistics.Serialize(ConfigurationManager.AppSettings["SerializationStatistics"]);
             }
             catch (Exception ex)
             {

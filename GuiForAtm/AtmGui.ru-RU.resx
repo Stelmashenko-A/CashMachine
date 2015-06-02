@@ -121,49 +121,7 @@
   <data name="labelCommand.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 11pt</value>
   </data>
-  <data name="labelCommand.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 19</value>
-  </data>
-  <data name="labelCommand.Text" xml:space="preserve">
-    <value>Введите сумму</value>
-  </data>
   <data name="labelBanknotes.Font" type="System.Drawing.Font, System.Drawing">
     <value>Roboto, 11pt</value>
-  </data>
-  <data name="labelBanknotes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 103</value>
-  </data>
-  <data name="nominalDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Номинал</value>
-  </data>
-  <data name="numberDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Количество</value>
-  </data>
-  <data name="buttonEnter.Text" xml:space="preserve">
-    <value>Ввод</value>
-  </data>
-  <data name="inputCassettesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 20</value>
-  </data>
-  <data name="inputCassettesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Вставка кассет F1</value>
-  </data>
-  <data name="removeCassettesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 20</value>
-  </data>
-  <data name="removeCassettesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Изъятие кассет F2</value>
-  </data>
-  <data name="statisticsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 20</value>
-  </data>
-  <data name="statisticsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Статистика F3</value>
-  </data>
-  <data name="withdrawToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 20</value>
-  </data>
-  <data name="withdrawToolStripMenuItem.Text" xml:space="preserve">
-    <value>Выдача наличных F4</value>
   </data>
 </root>

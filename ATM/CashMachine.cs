@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using ATM.AtmOperations;
-using ATM.Stat;
+using ATM.Events;
 using ATM.Utility;
 using ATM.Viewers;
 using log4net;
@@ -22,7 +22,7 @@ namespace ATM
 
         private Money _moneyForWithdraw;
 
-        public Statistics Statistics;
+       // public Statistics Statistics;
 
 
         public decimal TotalSum
@@ -62,7 +62,7 @@ namespace ATM
         public CashMachine(IBanknoteSelector banknoteSelector)
         {
             _banknoteSelector = banknoteSelector;
-            Statistics = new Statistics(0,new List<Cassette>());
+          //  Statistics = new Statistics(0,new List<Cassette>());
         }
 
 
@@ -72,7 +72,10 @@ namespace ATM
             AtmState result;
             List<MutablePair<decimal, int>> combination;
             var moneyForWithdraw = new Money();
-
+            if (_moneyCassettes == null||_moneyCassettes.Count==0)
+            {
+                return moneyForWithdraw;
+            }
             if (_banknoteSelector.TrySelect(ConvertCassettes(), requestedSum, out result, out combination))
             {
                 UpdateCassettes(combination);
@@ -80,7 +83,8 @@ namespace ATM
             }
             CurrentState = result;
             Log.Info(_logViewer.ToString(moneyForWithdraw,result));
-            Statistics.Update(requestedSum,moneyForWithdraw, CurrentState,new List<Cassette>(_moneyCassettes));
+           // Statistics.Update(requestedSum,moneyForWithdraw, CurrentState,new List<Cassette>(_moneyCassettes));
+            AtmEvent.OnWithdrawMoneyEvent(requestedSum, CurrentState, moneyForWithdraw);
             return moneyForWithdraw;
         }
 
@@ -158,14 +162,16 @@ namespace ATM
                 Log.Error(ex);
                 throw;
             }
-            Statistics = new Statistics(TotalSum, new List<Cassette>(_moneyCassettes));
+            //Statistics = new Statistics(TotalSum, new List<Cassette>(_moneyCassettes));
+            AtmEvent.OnInsertCassettesEvent(_moneyCassettes);
         }
 
         public List<Cassette> RemoveCassettes()
         {
             var tmp = _moneyCassettes;
             _moneyCassettes = null;
-            Statistics.RemoveCassettes();
+            //Statistics.RemoveCassettes();
+            AtmEvent.OnRemoveCassettesEvent();
             return tmp;
         }
 
